@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">ToolBari</title>
+  <rect width="64" height="64" rx="15" fill="#17221f"/>
+  <path d="M17 18h30v8H36v22h-8V26H17z" fill="#fff9ee"/>
+  <circle cx="46" cy="46" r="8" fill="#bc3d26"/>
+</svg>

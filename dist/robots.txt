@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://toolbari.jben06503.chatgpt.site/sitemap.xml

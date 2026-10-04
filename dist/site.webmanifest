@@ -1,0 +1,20 @@
+{
+  "name": "টুলবাড়ি — ToolBari",
+  "short_name": "ToolBari",
+  "description": "বাংলা ও ইংরেজিতে দরকারি, গোপনীয়তা-কেন্দ্রিক ব্রাউজার টুল।",
+  "lang": "bn",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f4f0e7",
+  "theme_color": "#17221f",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
