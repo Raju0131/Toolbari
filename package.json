@@ -1,0 +1,26 @@
+{
+  "name": "toolbari",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.19.0",
+  "scripts": {
+    "serve": "node scripts/serve.mjs",
+    "test:e2e": "playwright test --project=chrome --project=edge --project=webkit --project=mobile-webkit",
+    "test:e2e:desktop": "playwright test --project=chrome --project=edge --project=webkit",
+    "test:e2e:mobile": "playwright test --project=mobile-webkit",
+    "test:e2e:headed": "playwright test --project=chrome --headed",
+    "test:firefox": "node tests/firefox-smoke.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "browser-id3-writer": "6.4.0",
+    "jspdf": "4.2.1",
+    "jsqr": "1.4.0",
+    "jszip": "3.10.1",
+    "pdf-lib": "1.17.1",
+    "pdfjs-dist": "6.3.289",
+    "qrcodejs": "1.0.0",
+    "selenium-webdriver": "4.37.0"
+  }
+}
