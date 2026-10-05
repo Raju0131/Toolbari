@@ -52,7 +52,7 @@ const tools = [
   defineTool(21, "bg-remover", "image", "service", "BG", "ইমেজ ব্যাকগ্রাউন্ড রিমুভার", "Image Background Remover", "AI দিয়ে ছবির ব্যাকগ্রাউন্ড আলাদা করুন", "Separate image backgrounds with an AI service", "#c9942d"),
   defineTool(22, "compressor", "image", "live", "IMG", "ইমেজ কম্প্রেসর", "Image Compressor", "মান ঠিক রেখে ছবির সাইজ কমান", "Reduce image size while preserving quality", "#bc3d26"),
   defineTool(23, "image-editor", "image", "live", "EDIT", "ইমেজ এডিটর", "Image Editor", "রোটেট, ফিল্টার ও এক্সপোর্ট করুন", "Rotate, filter and export images", "#c9942d"),
-  defineTool(24, "ocr", "image", "beta", "OCR", "ছবি থেকে লেখা", "Image Text Extractor", "ছবির লেখা বাংলা বা ইংরেজিতে তুলুন", "Extract Bangla or English text from an image", "#0f6b5d"),
+  defineTool(24, "ocr", "image", "live", "OCR", "ছবি থেকে লেখা", "Image Text Extractor", "ছবির লেখা বাংলা বা ইংরেজিতে তুলুন", "Extract Bangla or English text from an image", "#0f6b5d"),
   defineTool(25, "image-pdf", "document", "live", "PDF", "ইমেজ থেকে PDF", "Image to PDF", "ছবি সাজিয়ে একটি PDF তৈরি করুন", "Arrange images and create a PDF", "#6b4e9b"),
   defineTool(26, "img-ascii", "image", "live", "ASCII", "ইমেজ থেকে ASCII", "Image to ASCII", "ছবিকে টেক্সট-ভিত্তিক ASCII আর্টে নিন", "Turn an image into text-based ASCII art", "#17221f"),
   defineTool(27, "img-base64", "image", "live", "64", "ইমেজ থেকে Base64", "Image to Base64", "ছবিকে Base64 ডেটা URL-এ নিন", "Convert an image into a Base64 data URL", "#6b4e9b"),
@@ -688,7 +688,20 @@ function renderFileViewer(intro) {
 }
 
 function renderOcr(intro) {
-  return workspace(intro + '<div class="tool-form"><label class="field"><span>' + L("লেখাসহ ছবি", "Image containing text") + '</span><input id="ocrFile" type="file" accept="image/*"></label><label class="field"><span>' + L("ভাষা", "Language") + '</span><select id="ocrLang"><option value="eng">English</option><option value="ben">বাংলা</option><option value="eng+ben">' + L("বাংলা + English", "Bangla + English") + '</option></select></label><button class="tool-button" id="runOcr" type="button">' + L("লেখা তুলুন", "Extract text") + '</button><p class="micro-note">' + L("OCR ইঞ্জিন প্রথমবার অনলাইনে লোড হবে; ছবি লোকালেই প্রসেস হবে।", "The OCR engine loads online once; the image is processed locally.") + '</p>' + limitNote(15) + '</div>', L("ছবি থেকে লেখা", "Extracted text"), L("পরিষ্কার ছবি দিলে ভালো ফল পাবেন।", "A clear image produces the best result."));
+  return workspace(intro + '<div class="tool-form">' +
+    '<label class="field"><span>' + L("লেখাসহ ছবি বেছে নিন", "Choose an image with text") + '</span><input id="ocrFile" type="file" accept="image/*"></label>' +
+    '<div id="ocrPreviewWrap" style="display:none;margin:8px 0 12px;text-align:center;">' +
+      '<img id="ocrPreview" alt="Preview" style="max-height:160px;max-width:100%;border-radius:8px;border:1px solid rgba(0,0,0,0.12);object-fit:contain;" />' +
+    '</div>' +
+    '<div class="field-row">' +
+      '<label class="field"><span>' + L("ভাষা", "Language") + '</span><select id="ocrLang"><option value="eng">English</option><option value="ben">বাংলা</option><option value="eng+ben">' + L("বাংলা + English", "Bangla + English") + '</option></select></label>' +
+      '<label class="field"><span>' + L("ছবি প্রাক-প্রক্রিয়াকরণ", "Enhance image") + '</span><select id="ocrEnhance"><option value="auto">' + L("স্বয়ংক্রিয় উন্নত কনট্রাস্ট", "Auto contrast & sharpness") + '</option><option value="raw">' + L("আসল ছবি", "Original image") + '</option></select></label>' +
+    '</div>' +
+    '<button class="tool-button" id="runOcr" type="button">' + L("লেখা তুলুন", "Extract text") + '</button>' +
+    '<p class="micro-note">' + L("OCR ইঞ্জিন ও ভাষার মডেল প্রথমবার ডাউনলোড হয়ে ব্রাউজারে ক্যাশ থাকে; আপনার ছবি সম্পূর্ণ ডিভাইসে সুরক্ষিতভাবে প্রসেস হয়।", "The OCR engine and language models cache in your browser after the first download; your image is processed 100% locally.") + '</p>' +
+    limitNote(15) + '</div>',
+    L("তোলা লেখা", "Extracted text"),
+    L("পরিষ্কার ছবি দিলে সবচেয়ে ভালো ফল পাবেন।", "A clear image produces the best result."));
 }
 
 function renderImagePdf(intro) {
@@ -1560,28 +1573,165 @@ function bindFileViewer() {
 }
 
 function bindOcr() {
+  const fileInput = $("#ocrFile");
+  const previewWrap = $("#ocrPreviewWrap");
+  const previewImg = $("#ocrPreview");
+
+  if (fileInput && previewImg) {
+    fileInput.addEventListener("change", function() {
+      const file = this.files && this.files[0];
+      if (file) {
+        const url = URL.createObjectURL(file);
+        previewImg.src = url;
+        if (previewWrap) previewWrap.style.display = "block";
+      } else if (previewWrap) {
+        previewWrap.style.display = "none";
+      }
+    });
+  }
+
   $("#runOcr").addEventListener("click", async function() {
-    const file = $("#ocrFile").files[0];
+    const file = $("#ocrFile").files && $("#ocrFile").files[0];
     if (!file) return showToast(L("একটি ছবি বেছে নিন", "Choose an image"));
     const button = $("#runOcr");
     button.disabled = true;
-    button.textContent = L("OCR ইঞ্জিন লোড হচ্ছে…", "Loading OCR engine…");
+    button.textContent = L("OCR শুরু হচ্ছে…", "Starting OCR…");
     try {
       ensureFileLimit(file, 15);
       const dimensions = await readImage(file);
-      if (dimensions.naturalWidth * dimensions.naturalHeight > 25000000) throw new Error(L("OCR ছবির রেজোলিউশন খুব বড়—২৫ মেগাপিক্সেলের নিচে ব্যবহার করুন", "The OCR image is too large—use one under 25 megapixels"));
-      await loadScript("https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/tesseract.min.js", function() { return !!window.Tesseract; });
-      outputSet('<p class="workspace-kicker">OCR</p><h3 class="result-title">' + L("লেখা পড়া হচ্ছে…", "Reading the image…") + '</h3><p class="result-copy" id="ocrProgress">0%</p>');
-      const result = await Tesseract.recognize(file, $("#ocrLang").value, {
+      if (dimensions.naturalWidth * dimensions.naturalHeight > 25000000) {
+        throw new Error(L("OCR ছবির রেজোলিউশন খুব বড়—২৫ মেগাপিক্সেলের নিচে ব্যবহার করুন", "The OCR image is too large—use one under 25 megapixels"));
+      }
+
+      outputSet(
+        '<p class="workspace-kicker">OCR</p>' +
+        '<h3 class="result-title" id="ocrStatusTitle">' + L("ইঞ্জিন প্রস্তুত হচ্ছে…", "Preparing engine…") + '</h3>' +
+        '<div style="background:rgba(15,107,93,0.12);border-radius:8px;overflow:hidden;height:10px;margin:12px 0;">' +
+          '<div id="ocrProgressBar" style="width:8%;height:100%;background:#0f6b5d;transition:width 0.25s ease;"></div>' +
+        '</div>' +
+        '<p class="result-copy" id="ocrProgressMsg">' + L("মডিউল প্রস্তুত হচ্ছে…", "Initializing modules…") + '</p>'
+      );
+
+      // Load Tesseract: try local vendor first, fallback to CDN
+      if (!window.Tesseract) {
+        try {
+          await loadScript("./vendor/tesseract.min.js", function() { return !!window.Tesseract; });
+        } catch (e) {
+          await loadScript("https://cdn.jsdelivr.net/npm/tesseract.js@5.1.1/dist/tesseract.min.js", function() { return !!window.Tesseract; });
+        }
+      }
+
+      const updateProgress = function(percent, title, msg) {
+        const bar = $("#ocrProgressBar");
+        const titleEl = $("#ocrStatusTitle");
+        const msgEl = $("#ocrProgressMsg");
+        const pct = Math.max(8, Math.min(100, Math.round(percent)));
+        if (bar) bar.style.width = pct + "%";
+        if (titleEl && title) titleEl.textContent = title;
+        if (msgEl && msg) msgEl.textContent = msg + " (" + displayNumber(pct) + "%)";
+      };
+
+      // Client-side preprocessing (contrast and sharpening) if requested
+      let imageToRecognize = file;
+      const enhance = $("#ocrEnhance") ? $("#ocrEnhance").value : "auto";
+      if (enhance === "auto") {
+        try {
+          const img = new Image();
+          const imgUrl = URL.createObjectURL(file);
+          await new Promise(function(resolve, reject) {
+            img.onload = resolve;
+            img.onerror = reject;
+            img.src = imgUrl;
+          });
+          const canvas = document.createElement("canvas");
+          let width = img.naturalWidth;
+          let height = img.naturalHeight;
+          const maxDim = 2400;
+          if (width > maxDim || height > maxDim) {
+            const ratio = Math.min(maxDim / width, maxDim / height);
+            width = Math.round(width * ratio);
+            height = Math.round(height * ratio);
+          }
+          canvas.width = width;
+          canvas.height = height;
+          const ctx = canvas.getContext("2d");
+          ctx.drawImage(img, 0, 0, width, height);
+          URL.revokeObjectURL(imgUrl);
+
+          const imgData = ctx.getImageData(0, 0, width, height);
+          const data = imgData.data;
+          for (let i = 0; i < data.length; i += 4) {
+            const gray = data[i] * 0.299 + data[i + 1] * 0.587 + data[i + 2] * 0.114;
+            const contrast = Math.min(255, Math.max(0, (gray - 128) * 1.35 + 128));
+            data[i] = contrast;
+            data[i + 1] = contrast;
+            data[i + 2] = contrast;
+          }
+          ctx.putImageData(imgData, 0, 0);
+          imageToRecognize = canvas;
+        } catch (prepErr) {
+          console.warn("OCR preprocessing skipped:", prepErr);
+          imageToRecognize = file;
+        }
+      }
+
+      const lang = $("#ocrLang") ? $("#ocrLang").value : "eng";
+      const result = await Tesseract.recognize(imageToRecognize, lang, {
         logger: function(message) {
-          if (message.status === "recognizing text" && $("#ocrProgress")) $("#ocrProgress").textContent = displayNumber(Math.round(message.progress * 100)) + "%";
+          const status = message.status || "";
+          const progress = typeof message.progress === "number" ? message.progress * 100 : 0;
+          if (status.includes("tesseract core")) {
+            updateProgress(progress, L("OCR কোর প্রস্তুত হচ্ছে…", "Loading OCR core…"), L("কোর ইঞ্জিন", "Core engine"));
+          } else if (status.includes("traineddata")) {
+            updateProgress(progress, L("ভাষার মডেল প্রস্তুত হচ্ছে…", "Loading language model…"), L("মডেল লোডিং", "Loading model"));
+          } else if (status.includes("recognizing text")) {
+            updateProgress(progress, L("ছবি থেকে লেখা পড়া হচ্ছে…", "Recognizing text…"), L("শনাক্তকরণ", "Recognition"));
+          } else if (status) {
+            updateProgress(progress, L("প্রসেসিং হচ্ছে…", "Processing…"), status);
+          }
         }
       });
-      const textValue = result.data.text.trim();
-      outputSet('<p class="workspace-kicker">' + L("তোলা লেখা", "Extracted text") + '</p><div class="code-output">' + escapeHtml(textValue || L("কোনো লেখা পাওয়া যায়নি।", "No text was detected.")) + '</div><button class="tool-button secondary" id="copyOcr" type="button" style="margin-top:15px">' + L("কপি করুন", "Copy text") + '</button>');
-      $("#copyOcr").addEventListener("click", function() { copyText(textValue); });
+
+      const textValue = (result && result.data && result.data.text) ? result.data.text.trim() : "";
+      const wordCount = textValue ? textValue.split(/\s+/).filter(Boolean).length : 0;
+      const charCount = textValue ? textValue.length : 0;
+
+      const statsHtml = '<div style="display:flex;gap:15px;margin:10px 0;font-size:13px;color:var(--text-muted,#556960);">' +
+        '<span>' + L("শব্দ: ", "Words: ") + '<strong>' + displayNumber(wordCount) + '</strong></span>' +
+        '<span>' + L("অক্ষর: ", "Characters: ") + '<strong>' + displayNumber(charCount) + '</strong></span>' +
+        '</div>';
+
+      const actionsHtml = '<div style="display:flex;gap:10px;margin-top:15px;flex-wrap:wrap;">' +
+        '<button class="tool-button" id="copyOcr" type="button">' + L("লেখা কপি করুন", "Copy text") + '</button>' +
+        '<button class="tool-button secondary" id="downloadOcr" type="button">' + L("TXT ডাউনলোড", "Download .txt") + '</button>' +
+        '</div>';
+
+      outputSet(
+        '<p class="workspace-kicker">' + L("তোলা লেখা", "Extracted text") + '</p>' +
+        statsHtml +
+        '<div class="code-output" style="white-space:pre-wrap;max-height:360px;overflow-y:auto;font-family:inherit;font-size:14px;line-height:1.6;">' +
+          escapeHtml(textValue || L("কোনো স্পষ্ট লেখা পাওয়া যায়নি। দয়া করে আরও পরিষ্কার ও স্পষ্ট ছবি দিয়ে চেষ্টা করুন।", "No text was detected. Please try a clearer and sharper image.")) +
+        '</div>' +
+        (textValue ? actionsHtml : "")
+      );
+
+      if (textValue) {
+        $("#copyOcr").addEventListener("click", function() { copyText(textValue); });
+        $("#downloadOcr").addEventListener("click", function() {
+          const blob = new Blob([textValue], { type: "text/plain;charset=utf-8" });
+          downloadBlob(blob, "toolbari-extracted-text.txt");
+        });
+      }
     } catch (error) {
-      outputSet('<h3 class="result-title">' + L("OCR সম্পন্ন হয়নি", "OCR did not complete") + '</h3><p class="result-copy">' + escapeHtml(error.message || String(error)) + '</p>');
+      console.error("OCR error:", error);
+      outputSet(
+        '<h3 class="result-title">' + L("OCR সম্পন্ন হয়নি", "OCR did not complete") + '</h3>' +
+        '<p class="result-copy">' + escapeHtml(error.message || String(error)) + '</p>' +
+        '<p class="micro-note" style="margin-top:12px;">' +
+          L("পরামর্শ: প্রথমবার ভাষার মডেল ডাউনলোডের জন্য ইন্টারনেট সংযোগ চালু থাকা প্রয়োজন। পরিষ্কার আলোর ছবি ব্যবহার করুন।",
+            "Tip: Internet connection is needed for the initial language model download. Please use a clear, well-lit image.") +
+        '</p>'
+      );
     } finally {
       button.disabled = false;
       button.textContent = L("লেখা তুলুন", "Extract text");
