@@ -119,6 +119,14 @@ if (Array.isArray(window.TOOLBARI_ADVANCED_DEFINITIONS)) {
 }
 
 const categories = ["all", "calculators", "bangladesh", "text", "image", "document", "cards", "developer", "web", "links", "business"];
+try {
+  if (window.location.hash && window.location.hash.startsWith("#go/")) {
+    const slug = window.location.hash.replace("#go/", "").trim();
+    const stored = JSON.parse(localStorage.getItem("toolbari_shortener_links") || "[]");
+    const found = stored.find(function(l) { return l.alias === slug; });
+    if (found && found.target) window.location.replace(found.target);
+  }
+} catch (_) {}
 const initialParams = new URLSearchParams(window.location.search);
 function safeStoredLanguage() {
   try { return localStorage.getItem("toolbari-language"); }
@@ -3154,7 +3162,7 @@ function bindTrainInfo() {
 
     outputSet(outputHtml);
 
-    $("[data-copy-train]").forEach(btn => {
+    $$("[data-copy-train]").forEach(btn => {
       btn.addEventListener("click", () => copyText(btn.getAttribute("data-copy-train")));
     });
   }
@@ -3163,6 +3171,12 @@ function bindTrainInfo() {
   $("#trainRouteSelect").addEventListener("change", runSearch);
   $("#trainDaySelect").addEventListener("change", runSearch);
   $("#trainClassSelect").addEventListener("change", runSearch);
+  $("#trainSearchInput").addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      runSearch();
+    }
+  });
 }
 
 function bindCourierFraud() {
@@ -3198,7 +3212,8 @@ function bindCourierFraud() {
     const flagUrgent = $("#courierFlagUrgentCOD").checked;
 
     let phoneClean = rawPhone.replace(/\D/g, "");
-    if (phoneClean.startsWith("880")) phoneClean = phoneClean.slice(2);
+    if (phoneClean.startsWith("880")) phoneClean = phoneClean.slice(3);
+    else if (phoneClean.startsWith("88")) phoneClean = phoneClean.slice(2);
     if (phoneClean.length === 10 && phoneClean.startsWith("1")) phoneClean = "0" + phoneClean;
 
     const matchedOp = operators.find(op => phoneClean.startsWith(op.prefix));
@@ -3380,6 +3395,9 @@ function bindWatermark() {
     maskCtx = maskCanvas.getContext("2d");
     hasDrawn = false;
 
+    let lastX = 0;
+    let lastY = 0;
+
     function getCoords(evt) {
       const rect = maskCanvas.getBoundingClientRect();
       const scaleX = maskCanvas.width / rect.width;
@@ -3393,10 +3411,14 @@ function bindWatermark() {
     function startDraw(evt) {
       isDrawing = true;
       hasDrawn = true;
-      maskCtx.beginPath();
       const p = getCoords(evt);
-      maskCtx.moveTo(p.x, p.y);
-      draw(evt);
+      lastX = p.x;
+      lastY = p.y;
+      const bSize = parseInt($("#watermarkBrushSize").value, 10) || 28;
+      maskCtx.beginPath();
+      maskCtx.arc(p.x, p.y, bSize / 2, 0, Math.PI * 2);
+      maskCtx.fillStyle = "rgba(255, 59, 48, 0.65)";
+      maskCtx.fill();
     }
 
     function draw(evt) {
@@ -3407,8 +3429,12 @@ function bindWatermark() {
       maskCtx.lineJoin = "round";
       maskCtx.strokeStyle = "rgba(255, 59, 48, 0.65)";
       const p = getCoords(evt);
+      maskCtx.beginPath();
+      maskCtx.moveTo(lastX, lastY);
       maskCtx.lineTo(p.x, p.y);
       maskCtx.stroke();
+      lastX = p.x;
+      lastY = p.y;
     }
 
     function endDraw() {
@@ -3705,6 +3731,41 @@ function bindBgRemover() {
           const pIdx = idx * 4;
           if (isMatch(data[pIdx], data[pIdx + 1], data[pIdx + 2])) {
             isBg[idx] = 1;
+          }
+        }
+      }
+    }
+
+    if (feather > 0) {
+      const fRadius = Math.min(6, Math.max(1, feather));
+      for (let y = 0; y < h; y++) {
+        for (let x = 0; x < w; x++) {
+          const idx = y * w + x;
+          if (!isBg[idx]) {
+            let minBgDist = fRadius + 1;
+            for (let dy = -fRadius; dy <= fRadius; dy++) {
+              const ny = y + dy;
+              if (ny < 0 || ny >= h) continue;
+              for (let dx = -fRadius; dx <= fRadius; dx++) {
+                const nx = x + dx;
+                if (nx < 0 || nx >= w) continue;
+                if (isBg[ny * w + nx]) {
+                  const d = Math.hypot(dx, dy);
+                  if (d < minBgDist) minBgDist = d;
+                }
+              }
+            }
+            if (minBgDist <= fRadius) {
+              const alphaRatio = minBgDist / (fRadius + 1);
+              const pIdx = idx * 4;
+              if (outType === "transparent") {
+                data[pIdx + 3] = Math.round(data[pIdx + 3] * alphaRatio);
+              } else {
+                data[pIdx] = Math.round(data[pIdx] * alphaRatio + replace[0] * (1 - alphaRatio));
+                data[pIdx + 1] = Math.round(data[pIdx] * alphaRatio + replace[1] * (1 - alphaRatio));
+                data[pIdx + 2] = Math.round(data[pIdx] * alphaRatio + replace[2] * (1 - alphaRatio));
+              }
+            }
           }
         }
       }
@@ -4045,10 +4106,10 @@ function bindUrlShortener() {
   }
 
   function bindHistoryButtons() {
-    $("[data-copy-short]").forEach(btn => {
+    $$("[data-copy-short]").forEach(btn => {
       btn.addEventListener("click", () => copyText(btn.getAttribute("data-copy-short")));
     });
-    $("[data-del-short]").forEach(btn => {
+    $$("[data-del-short]").forEach(btn => {
       btn.addEventListener("click", () => {
         const idx = parseInt(btn.getAttribute("data-del-short"), 10);
         const links = getLinks();
@@ -4145,6 +4206,8 @@ function bindUrlShortener() {
       window.location.href = hit.target;
     }
   }
+
+  updateOutput();
 }
 
 function bindScreenshot() {
@@ -4222,8 +4285,11 @@ function bindScreenshot() {
     }
 
     let svgData = "";
-    if (rawCode.startsWith("<svg")) {
+    if (rawCode.toLowerCase().startsWith("<svg")) {
       svgData = rawCode;
+      if (!svgData.includes("xmlns=")) {
+        svgData = svgData.replace(/<svg/i, '<svg xmlns="http://www.w3.org/2000/svg"');
+      }
     } else {
       svgData = '<svg xmlns="http://www.w3.org/2000/svg" width="' + w + '" height="' + h + '">' +
         '<foreignObject width="100%" height="100%">' +

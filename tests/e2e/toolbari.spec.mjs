@@ -712,3 +712,86 @@ test.describe("new local-first tools", () => {
     await closeTool(page);
   });
 });
+
+test.describe("new live tools suite", () => {
+  test("exercises train schedules, courier risk, and security headers", async ({ page }) => {
+    await loadHome(page);
+    await useEnglish(page);
+
+    // 1. Train Info
+    await openTool(page, "train-info");
+    await page.locator("#trainRouteSelect").selectOption("dhaka-ctg");
+    await page.locator("#trainSearchInput").fill("Suborno");
+    await page.locator("#trainClassSelect").selectOption("snigdha");
+    await page.locator("#trainPassengers").fill("2");
+    await expectResultAfter(page, () => page.locator("#runTrainSearch").click());
+    await expect(page.locator("#workspaceOutput")).toContainText("Suborno Express");
+    await expect(page.locator("#workspaceOutput")).toContainText("Snigdha");
+    await expect(page.locator('[data-copy-train]').first()).toBeVisible();
+    await page.locator('[data-copy-train]').first().click();
+    await closeTool(page);
+
+    // 2. Courier Fraud
+    await openTool(page, "courier-fraud");
+    await page.locator("#courierPhone").fill("01712345678");
+    await page.locator("#courierAmount").fill("2500");
+    await page.locator("#courierProvider").selectOption("steadfast");
+    await page.locator("#courierTracking").fill("SF123456");
+    await expectResultAfter(page, () => page.locator("#runCourierCheck").click());
+    await expect(page.locator("#workspaceOutput")).toContainText("Grameenphone");
+    await expect(page.locator("#workspaceOutput")).toContainText("Risk Score");
+    await expect(page.locator("#copyCourierSms")).toBeVisible();
+    await page.locator("#copyCourierSms").click();
+    await closeTool(page);
+
+    // 3. Security Headers Audit
+    await openTool(page, "security-headers");
+    await page.locator("#secPresetSecure").click();
+    await expectResultAfter(page, () => page.locator("#runSecHeadersAudit").click());
+    await expect(page.locator("#workspaceOutput")).toContainText("A+");
+    await expect(page.locator("#workspaceOutput")).toContainText("Nginx Config");
+    await page.locator("#copySecNginx").click();
+    await closeTool(page);
+  });
+
+  test("exercises url expander, url shortener, and screenshot tools", async ({ page }) => {
+    await loadHome(page);
+    await useEnglish(page);
+
+    // 4. URL Expander
+    await openTool(page, "url-expander");
+    await page.locator("#expPresetFb").click();
+    await expectResultAfter(page, () => page.locator("#runUrlExpander").click());
+    await expect(page.locator("#workspaceOutput")).toContainText("example.com/shop");
+    await expect(page.locator("#workspaceOutput")).toContainText("Removed Trackers");
+    await page.locator("#copyCleanUrl").click();
+    await closeTool(page);
+
+    // 5. URL Shortener
+    await openTool(page, "url-shortener");
+    await page.locator("#shortenerUrl").fill("https://example.com/target-article");
+    await page.locator("#shortenerAlias").fill("test-article-alias");
+    await expectResultAfter(page, () => page.locator("#runUrlShortener").click());
+    await expect(page.locator("#workspaceOutput")).toContainText("#go/test-article-alias");
+    await expect(page.locator('[data-copy-short]').first()).toBeVisible();
+    await page.locator('[data-copy-short]').first().click();
+    await page.locator('[data-del-short]').first().click();
+    await closeTool(page);
+
+    // 6. Screenshot / HTML Renderer
+    await openTool(page, "screenshot");
+    await page.locator("#tabHtmlRender").click();
+    await expect(page.locator("#paneHtmlRender")).toBeVisible();
+    await page.locator("#htmlPresetSvg").click();
+    await expectResultAfter(page, () => page.locator("#runRenderHtml").click());
+    await expect(page.locator("#canvasMount canvas")).toBeVisible();
+    await closeTool(page);
+
+    // 7. WHOIS / DNS
+    await openTool(page, "whois");
+    await page.locator("#whoisPresetToolbari").click();
+    await expect(page.locator("#whoisDomain")).toHaveValue("toolbari.vercel.app");
+    await closeTool(page);
+  });
+});
+
