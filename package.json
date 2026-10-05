@@ -5,6 +5,7 @@
   "type": "module",
   "packageManager": "pnpm@11.19.0",
   "scripts": {
+    "build": "node -e \"console.log('Static site ready in dist')\"",
     "serve": "node scripts/serve.mjs",
     "test:e2e": "playwright test --project=chrome --project=edge --project=webkit --project=mobile-webkit",
     "test:e2e:desktop": "playwright test --project=chrome --project=edge --project=webkit",
