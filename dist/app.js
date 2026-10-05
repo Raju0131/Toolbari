@@ -36,20 +36,20 @@ const tools = [
   defineTool(5, "old-nid", "cards", "beta", "ID", "BD ডামি পুরোনো NID কার্ড", "BD Dummy Old NID Card", "শুধু ডেমোর জন্য স্পষ্ট SAMPLE কার্ড", "Create an unmistakable SAMPLE card for mockups", "#bc3d26"),
   defineTool(6, "smart-nid", "cards", "beta", "ID+", "BD ডামি স্মার্ট NID কার্ড", "BD Dummy Smart NID Card", "নিরাপদ, কাল্পনিক ও ওয়াটারমার্কযুক্ত মকআপ", "A safe fictional mockup with a permanent watermark", "#bc3d26"),
   defineTool(7, "govt-photo", "bangladesh", "live", "300", "সরকারি চাকরির ছবি রিসাইজার", "BD Govt Job Photo Resizer", "চাকরির আবেদনের মাপে ছবি তৈরি করুন", "Resize a photo for common job-application sizes", "#0f6b5d"),
-  defineTool(8, "train-info", "bangladesh", "service", "TRN", "বাংলাদেশ ট্রেন তথ্য", "BD Train Info", "লাইভ সময়সূচি ও ট্রেন তথ্য খুঁজুন", "Look up live train schedules and information", "#c9942d"),
+  defineTool(8, "train-info", "bangladesh", "live", "TRN", "বাংলাদেশ ট্রেন তথ্য", "BD Train Info", "বাংলাদেশ রেলওয়ের ট্রেনের সময়সূচি, ছুটি ও ভাড়া", "Search BD train schedules, weekly off-days and fares", "#c9942d"),
   defineTool(9, "bdix", "bangladesh", "beta", "MS", "BDIX সার্ভার টেস্টার", "BDIX Server Tester", "পাবলিক URL-এর ব্রাউজার লেটেন্সি মাপুন", "Measure browser latency to a public URL", "#0f6b5d"),
   defineTool(10, "birthday-card", "cards", "live", "BDAY", "জন্মদিনের কার্ড মেকার", "Birthday Card Maker", "নাম ও বার্তা দিয়ে শেয়ারযোগ্য কার্ড বানান", "Create a shareable card with a name and message", "#c9942d"),
   defineTool(11, "blur-faces", "image", "live", "BLUR", "মুখ ব্লার করুন", "Blur Faces", "মুখ স্বয়ংক্রিয়ভাবে শনাক্ত করুন বা নিজে অঞ্চল বেছে ব্লার করুন", "Detect faces automatically or manually choose a region to blur", "#6b4e9b"),
   defineTool(12, "bmi", "calculators", "live", "BMI", "BMI ক্যালকুলেটর", "BMI Calculator", "উচ্চতা ও ওজন থেকে BMI হিসাব করুন", "Calculate BMI from your height and weight", "#0f6b5d"),
   defineTool(13, "color", "image", "live", "HEX", "কালার কনভার্টার", "Color Converter", "HEX, RGB ও HSL একসাথে পান", "Convert a color between HEX, RGB and HSL", "#c9942d"),
-  defineTool(14, "courier-fraud", "bangladesh", "service", "CHK", "কুরিয়ার ফ্রড চেকার", "Courier Fraud Checker", "অনুমোদিত উৎসে কুরিয়ার ইতিহাস যাচাই করুন", "Verify courier history through an authorized source", "#c9942d"),
+  defineTool(14, "courier-fraud", "bangladesh", "live", "CHK", "কুরিয়ার ফ্রড চেকার", "Courier Fraud Checker", "ফোন নম্বর, ট্র্যাকিং কোড ও পার্সেল ঝুঁকি বিশ্লেষণ", "Analyze phone format, courier tracking and return risk", "#c9942d"),
   defineTool(15, "sheet-viewer", "document", "live", "XLS", "CSV ও XLS ভিউয়ার", "CSV & XLS Viewer", "স্প্রেডশিট ব্রাউজারেই প্রিভিউ করুন", "Preview spreadsheet files in your browser", "#0f6b5d"),
   defineTool(16, "emoji", "text", "live", "😊", "ইমোজি পিকার", "Emoji Picker", "খুঁজে এক ক্লিকে ইমোজি কপি করুন", "Find and copy emoji in one click", "#c9942d"),
   defineTool(17, "facebook-card", "cards", "beta", "FB", "Facebook প্রোফাইল কার্ড", "Facebook Profile Card", "নন-অফিশিয়াল SAMPLE প্রোফাইল কার্ড", "Create a non-official SAMPLE profile card", "#4267b2"),
-  defineTool(18, "watermark", "image", "restricted", "WM", "ইমেজ ক্লিনআপ সহকারী", "Image Cleanup Assistant", "নিজের ছবির নিরাপদ ক্রপ ও এডিট বিকল্প", "Safe crop and edit options for images you own", "#bc3d26"),
+  defineTool(18, "watermark", "image", "live", "WM", "ইমেজ ক্লিনআপ সহকারী", "Image Cleanup Assistant", "ছবির অপ্রয়োজনীয় অংশ, ওয়াটারমার্ক ও দাগ মুছুন", "Smart inpaint, blur or remove unwanted marks from images", "#bc3d26"),
   defineTool(19, "google-card", "cards", "beta", "G", "Google প্রোফাইল কার্ড", "Google Profile Card", "স্পষ্ট SAMPLE চিহ্নসহ প্রোফাইল মকআপ", "Profile mockup with a permanent SAMPLE mark", "#4285f4"),
   defineTool(20, "gpa", "calculators", "live", "GPA", "GPA/CGPA ক্যালকুলেটর", "GPA/CGPA Calculator", "কোর্স, ক্রেডিট ও গ্রেড দিয়ে ফল হিসাব করুন", "Calculate results from courses, credits and grades", "#c9942d"),
-  defineTool(21, "bg-remover", "image", "service", "BG", "ইমেজ ব্যাকগ্রাউন্ড রিমুভার", "Image Background Remover", "AI দিয়ে ছবির ব্যাকগ্রাউন্ড আলাদা করুন", "Separate image backgrounds with an AI service", "#c9942d"),
+  defineTool(21, "bg-remover", "image", "live", "BG", "ইমেজ ব্যাকগ্রাউন্ড রিমুভার", "Image Background Remover", "এক ক্লিকে ছবির ব্যাকগ্রাউন্ড মুছে স্বচ্ছ বা রঙিন করুন", "Remove solid or uniform image background to transparent PNG", "#c9942d"),
   defineTool(22, "compressor", "image", "live", "IMG", "ইমেজ কম্প্রেসর", "Image Compressor", "মান ঠিক রেখে ছবির সাইজ কমান", "Reduce image size while preserving quality", "#bc3d26"),
   defineTool(23, "image-editor", "image", "live", "EDIT", "ইমেজ এডিটর", "Image Editor", "রোটেট, ফিল্টার ও এক্সপোর্ট করুন", "Rotate, filter and export images", "#c9942d"),
   defineTool(24, "ocr", "image", "live", "OCR", "ছবি থেকে লেখা", "Image Text Extractor", "ছবির লেখা বাংলা বা ইংরেজিতে তুলুন", "Extract Bangla or English text from an image", "#0f6b5d"),
@@ -75,7 +75,7 @@ const tools = [
   defineTool(44, "qr-maker", "links", "live", "QR", "QR কোড মেকার", "QR Code Maker", "লিংক বা লেখা থেকে QR কোড বানান", "Create a QR code from a link or text", "#17221f"),
   defineTool(45, "qr-scanner", "links", "beta", "SCAN", "QR কোড স্ক্যানার", "QR Code Scanner", "ছবি থেকে QR কোড পড়ুন", "Read a QR code from an image", "#0f6b5d"),
   defineTool(46, "ats", "calculators", "live", "ATS", "রিজিউমে ATS চেকার", "Resume ATS Checker", "কীওয়ার্ড মিল ও রিজিউমের প্রস্তুতি যাচাই করুন", "Check keyword match and resume readiness", "#6b4e9b"),
-  defineTool(47, "security-headers", "web", "service", "HDR", "সিকিউরিটি হেডার", "Security Headers", "নিরাপদ সার্ভার দিয়ে পাবলিক ওয়েবসাইটের হেডার যাচাই করুন", "Inspect a public website through a secure header-check service", "#c9942d"),
+  defineTool(47, "security-headers", "web", "live", "HDR", "সিকিউরিটি হেডার", "Security Headers", "ওয়েবসাইটের নিরাপত্তা হেডার অডিট ও সার্ভার কনফিগ তৈরি", "Audit security headers and generate server config snippets", "#c9942d"),
   defineTool(48, "student-card", "cards", "beta", "ID", "স্টুডেন্ট ID কার্ড", "Student ID Card Maker", "স্পষ্ট SAMPLE চিহ্নসহ পরিচয় মকআপ", "Create an identity mockup with a SAMPLE mark", "#0f6b5d"),
   defineTool(49, "text-analyzer", "text", "live", "TXT", "টেক্সট অ্যানালাইজার", "Text Analyzer", "শব্দ, অক্ষর ও পড়ার সময় বিশ্লেষণ করুন", "Analyze words, characters and reading time", "#0f6b5d"),
   defineTool(50, "diff", "text", "live", "DIFF", "টেক্সট ডিফ ভিউয়ার", "Text Diff Viewer", "দুই লেখার লাইনভিত্তিক পার্থক্য দেখুন", "Compare two texts line by line", "#bc3d26"),
@@ -83,12 +83,12 @@ const tools = [
   defineTool(52, "text-ascii", "text", "live", "65", "টেক্সট থেকে ASCII", "Text to ASCII", "লেখাকে ASCII/Unicode কোডে নিন", "Convert text into ASCII or Unicode codes", "#17221f"),
   defineTool(53, "typing", "calculators", "live", "WPM", "টাইপিং টেস্ট", "Typing Test", "গতি ও নির্ভুলতা মাপুন", "Measure typing speed and accuracy", "#0f6b5d"),
   defineTool(54, "bijoy", "text", "beta", "বি", "Unicode ও Bijoy কনভার্টার", "Unicode & Bijoy Converter", "জনপ্রিয় অক্ষর ম্যাপিং দিয়ে লেখা বদলান", "Convert text with a practical character mapping", "#6b4e9b"),
-  defineTool(55, "url-expander", "links", "service", "↗", "URL এক্সপ্যান্ডার", "URL Expander", "শর্ট লিংকের শেষ গন্তব্য দেখুন", "Reveal the final destination of a short link", "#c9942d"),
+  defineTool(55, "url-expander", "links", "live", "↗", "URL এক্সপ্যান্ডার", "URL Expander", "রিডাইরেক্ট আনর‍্যাপ, ট্র্যাকিং রিমুভ ও নিরাপদ লিংক দেখুন", "Unwrap redirects, remove tracking parameters and view target URL", "#c9942d"),
   defineTool(56, "url-parser", "links", "live", "URL", "URL পার্সার", "URL Parser", "যেকোনো URL-এর অংশগুলো বুঝে নিন", "Inspect every part of a URL", "#c9942d"),
-  defineTool(57, "url-shortener", "links", "service", "↘", "URL শর্টনার", "URL Shortener", "শেয়ারযোগ্য ছোট লিংক তৈরি করুন", "Create a short, shareable link", "#0f6b5d"),
+  defineTool(57, "url-shortener", "links", "live", "↘", "URL শর্টনার", "URL Shortener", "লোকাল শর্ট লিংক, কাস্টম স্লাগ ও QR কোড তৈরি করুন", "Create local short links, custom aliases and instant QR codes", "#0f6b5d"),
   defineTool(58, "visiting-card", "cards", "live", "CARD", "ভিজিটিং কার্ড মেকার", "Visiting Card Maker", "নাম ও যোগাযোগ দিয়ে কার্ড বানান", "Create a card with your name and contact details", "#17221f"),
-  defineTool(59, "screenshot", "web", "service", "WEB", "ওয়েব স্ক্রিনশট টেকার", "Web Screenshot Taker", "পাবলিক ওয়েবপেজের স্ক্রিনশট নিন", "Capture a screenshot of a public web page", "#c9942d"),
-  defineTool(60, "whois", "web", "service", "WHO", "WHOIS", "WHOIS", "ডোমেইন রেজিস্ট্রেশন তথ্য দেখুন", "Look up domain registration information", "#0f6b5d"),
+  defineTool(59, "screenshot", "web", "live", "WEB", "ওয়েব স্ক্রিনশট টেকার", "Web Screenshot Taker", "ব্রাউজার স্ক্রিন/ট্যাব ক্যাপচার ও HTML ইমেজ রেন্ডারার", "Capture browser screen/tab or render HTML/SVG to image", "#c9942d"),
+  defineTool(60, "whois", "web", "live", "WHO", "WHOIS ও DNS লুকআপ", "WHOIS & DNS Lookup", "ডোমেইনের লাইভ A, AAAA, MX, TXT ও NS রেকর্ড পরীক্ষা", "Inspect live A, AAAA, MX, TXT and NS DNS records", "#0f6b5d"),
   defineTool(61, "word-pdf", "document", "beta", "DOC", "Word থেকে PDF", "Word to PDF", "DOCX-এর সাধারণ লেখা নিয়ে ব্রাউজারের প্রিন্টে PDF সেভ করুন", "Import basic DOCX text, then save as PDF using browser print", "#4285f4"),
   defineTool(62, "youtube-card", "cards", "beta", "YT", "YouTube ক্রিয়েটর কার্ড", "YouTube Creator Card", "নন-অফিশিয়াল SAMPLE ক্রিয়েটর কার্ড", "Create a non-official SAMPLE creator card", "#ff0000"),
   defineTool(63, "youtube-thumb", "business", "live", "YT", "YouTube থাম্বনেইল ডাউনলোডার", "YouTube Thumbnail Downloader", "পাবলিক ভিডিওর থাম্বনেইল দেখুন ও সেভ করুন", "Preview and save a public video thumbnail", "#bc3d26"),
@@ -532,8 +532,25 @@ function renderWorkspace(toolItem) {
       return renderYoutubeThumb(intro);
     case "speed":
     case "bdix":
-    case "security-headers":
       return renderNetworkTool(toolItem, intro);
+    case "train-info":
+      return renderTrainInfo(intro);
+    case "courier-fraud":
+      return renderCourierFraud(intro);
+    case "watermark":
+      return renderWatermark(intro);
+    case "bg-remover":
+      return renderBgRemover(intro);
+    case "security-headers":
+      return renderSecurityHeaders(intro);
+    case "url-expander":
+      return renderUrlExpander(intro);
+    case "url-shortener":
+      return renderUrlShortener(intro);
+    case "screenshot":
+      return renderScreenshot(intro);
+    case "whois":
+      return renderWhois(intro);
     case "invoice":
       return renderInvoice(intro);
     case "word-pdf":
@@ -603,7 +620,7 @@ function bindTool(toolItem) {
     "sheet-viewer": bindFileViewer, ocr: bindOcr, "image-pdf": bindImagePdf, "mp3-tags": bindMp3Tags,
     "pdf-compressor": bindPdfTool, "pdf-merger": bindPdfTool, "pdf-remove": bindPdfTool, "pdf-split": bindPdfTool, "pdf-to-image": bindPdfTool, "pdf-images": bindPdfTool, "pdf-to-word": bindPdfTool,
     "qr-maker": bindQrTool, "qr-scanner": bindQrTool, "youtube-thumb": bindYoutubeThumb,
-    speed: bindNetworkTool, bdix: bindNetworkTool, "security-headers": bindNetworkTool,
+    speed: bindNetworkTool, bdix: bindNetworkTool, "security-headers": bindSecurityHeaders, "train-info": bindTrainInfo, "courier-fraud": bindCourierFraud, watermark: bindWatermark, "bg-remover": bindBgRemover, "url-expander": bindUrlExpander, "url-shortener": bindUrlShortener, screenshot: bindScreenshot, whois: bindWhois,
     invoice: bindInvoice, "word-pdf": bindWordPdf,
     "birthday-card": bindCardTool, "old-nid": bindCardTool, "smart-nid": bindCardTool, "facebook-card": bindCardTool, "google-card": bindCardTool, cnic: bindCardTool, "student-card": bindCardTool, logo: bindCardTool, "visiting-card": bindCardTool, "youtube-card": bindCardTool,
     "unit-converter": bindExpansionTool, "land-converter": bindExpansionTool, percentage: bindExpansionTool, "loan-emi": bindExpansionTool, "date-business": bindExpansionTool, "taka-words": bindExpansionTool,
@@ -751,6 +768,304 @@ function renderNetworkTool(toolItem, intro) {
     return workspace(intro + '<div class="tool-form"><button class="tool-button" id="runNetwork" type="button">' + L("স্পিড টেস্ট শুরু করুন", "Start speed test") + '</button><p class="micro-note">' + L("প্রায় ৫ MB টেস্ট ডেটা ডাউনলোড হতে পারে। ফল আনুমানিক।", "About 5 MB of test data may be downloaded. Results are approximate.") + '</p></div>', L("ডাউনলোড স্পিড", "Download speed"), L("বোতাম চাপলে টেস্ট শুরু হবে।", "Start the test when you are ready."));
   }
   return workspace(intro + '<div class="tool-form">' + field("networkUrl", L("পাবলিক URL", "Public URL"), "url", "https://example.com") + '<button class="tool-button" id="runNetwork" type="button">' + (toolItem.key === "bdix" ? L("লেটেন্সি মাপুন", "Measure latency") : L("হেডার পরীক্ষা করুন", "Inspect headers")) + '</button><p class="micro-note">' + L("লোকাল/প্রাইভেট নেটওয়ার্ক ব্লক করা আছে। CORS নীতি প্রযোজ্য।", "Local/private networks are blocked. Browser CORS rules apply.") + '</p></div>', L("নেটওয়ার্ক ফল", "Network result"), L("একটি নিরাপদ পাবলিক URL দিন।", "Enter a safe public URL."));
+}
+
+function renderTrainInfo(intro) {
+  const dayOptions = [
+    ["all", L("সব দিন (সপ্তাহের যেকোনো দিন)", "All Days (Any day of week)")],
+    ["0", L("রবিবার (Sunday)", "Sunday")],
+    ["1", L("সোমবার (Monday)", "Monday")],
+    ["2", L("মঙ্গলবার (Tuesday)", "Tuesday")],
+    ["3", L("বুধবার (Wednesday)", "Wednesday")],
+    ["4", L("বৃহস্পতিবার (Thursday)", "Thursday")],
+    ["5", L("শুক্রবার (Friday)", "Friday")],
+    ["6", L("শনিবার (Saturday)", "Saturday")]
+  ];
+  const routeOptions = [
+    ["all", L("সব রুট / All Routes", "All Routes")],
+    ["dhaka-ctg", L("ঢাকা ⇄ চট্টগ্রাম (Dhaka ⇄ Chattogram)", "Dhaka ⇄ Chattogram")],
+    ["dhaka-cox", L("ঢাকা ⇄ কক্সবাজার (Dhaka ⇄ Cox's Bazar)", "Dhaka ⇄ Cox's Bazar")],
+    ["dhaka-sylhet", L("ঢাকা ⇄ সিলেট (Dhaka ⇄ Sylhet)", "Dhaka ⇄ Sylhet")],
+    ["dhaka-rajshahi", L("ঢাকা ⇄ রাজশাহী (Dhaka ⇄ Rajshahi)", "Dhaka ⇄ Rajshahi")],
+    ["dhaka-khulna", L("ঢাকা ⇄ খুলনা (Dhaka ⇄ Khulna)", "Dhaka ⇄ Khulna")],
+    ["dhaka-panchagarh", L("ঢাকা ⇄ পঞ্চগড় (Dhaka ⇄ Panchagarh)", "Dhaka ⇄ Panchagarh")],
+    ["dhaka-rangpur", L("ঢাকা ⇄ রংপুর ও কুড়িগ্রাম (Dhaka ⇄ Rangpur & Kurigram)", "Dhaka ⇄ Rangpur & Kurigram")],
+    ["ctg-sylhet", L("চট্টগ্রাম ⇄ সিলেট (Chattogram ⇄ Sylhet)", "Chattogram ⇄ Sylhet")]
+  ];
+  const classOptions = [
+    ["all", L("সব শ্রেণি (All Classes)", "All Classes")],
+    ["shovon", L("শোভন চেয়ার (Shovon Chair)", "Shovon Chair")],
+    ["snigdha", L("স্নিগ্ধা / AC Chair", "Snigdha / AC Chair")],
+    ["acSeat", L("এসি সিট (AC Seat)", "AC Seat")],
+    ["acBerth", L("এসি বার্থ (AC Berth / Cabin)", "AC Berth / Cabin")]
+  ];
+  const currentDay = new Date().getDay().toString();
+  return workspace(
+    intro +
+    '<div class="tool-form">' +
+      '<div class="field-row">' +
+        selectField("trainRouteSelect", L("রুট / গন্তব্য", "Route / Route Destination"), routeOptions) +
+        selectField("trainDaySelect", L("ভ্রমণের দিন (ছুটি যাচাই)", "Travel Day (Off-day check)"), dayOptions.map(function(opt) { return [opt[0], opt[1], opt[0] === currentDay]; })) +
+      '</div>' +
+      field("trainSearchInput", L("ট্রেন বা স্টেশনের নাম দিয়ে খুঁজুন", "Search train name or number"), "search", "", 'placeholder="' + escapeHtml(L("যেমন: সুবর্ণ, 701, পারাবত, Cox's Bazar...", "e.g. Suborno, 701, Parabat, Cox's Bazar...")) + '"') +
+      '<div class="field-row">' +
+        selectField("trainClassSelect", L("আসন শ্রেণি (ভাড়া দেখতে)", "Seat Class (For Fare)"), classOptions) +
+        field("trainPassengers", L("যাত্রী সংখ্যা", "Passengers"), "number", "1", 'min="1" max="10" step="1"') +
+      '</div>' +
+      '<button class="tool-button" id="runTrainSearch" type="button">' + L("সময়সূচি ও ভাড়া দেখুন", "Show Schedules & Fares") + '</button>' +
+      '<p class="micro-note">' + L("বাংলাদেশ রেলওয়ের অফিসিয়াল আন্তঃনগর ট্রেনের সময়সূচি, সাপ্তাহিক ছুটি ও ভাড়ার তালিকা। কোনো ইন্টারনেট সংযোগ বা রেজিস্ট্রেশন প্রয়োজন নেই।", "Official Bangladesh Railway intercity train schedules, off-days, and fares. Works 100% offline.") + '</p>' +
+      localNote() +
+    '</div>',
+    L("ট্রেন সময়সূচি ও তথ্য", "Train Schedule & Fares"),
+    L("রুট বেছে নিয়ে বা নাম লিখে সময়সূচি ও ভাড়া দেখুন।", "Select a route or search to view train schedules and fares.")
+  );
+}
+
+function renderCourierFraud(intro) {
+  const providerOptions = [
+    ["steadfast", "Steadfast Courier (স্টেডফাস্ট)"],
+    ["pathao", "Pathao Courier (পাঠাও)"],
+    ["redx", "RedX (রেডএক্স)"],
+    ["paperfly", "Paperfly (পেপারফ্লাই)"],
+    ["ecourier", "eCourier (ই-কুরিয়ার)"],
+    ["sundarban", "Sundarban Courier (সুন্দরবন)"],
+    ["saparibahan", "SA Paribahan (এস এ পরিবহন)"],
+    ["other", L("অন্যান্য / Other", "Other")]
+  ];
+  const zoneOptions = [
+    ["outside-dhaka", L("ঢাকার বাইরে জেলা/উপজেলা (Outside Dhaka)", "Outside Dhaka District/Upazila")],
+    ["suburbs", L("ঢাকা সাব-আর্ব (গাজীপুর/সাভার/কেরানীগঞ্জ)", "Dhaka Suburbs (Gazipur/Savar/Keraniganj)")],
+    ["inside-dhaka", L("ঢাকা মেট্রোপলিটন সিটি (Inside Dhaka City)", "Inside Dhaka Metro City")]
+  ];
+  const paymentOptions = [
+    ["cod", L("ক্যাশ অন ডেলিভারি (Cash on Delivery)", "Cash on Delivery (COD)")],
+    ["partial", L("ডেলিভারি চার্জ অগ্রিম (Delivery Charge Paid)", "Delivery Charge Paid in Advance")],
+    ["full", L("সম্পূর্ণ মূল্য অগ্রিম পরিশোধিত (Full Advance Paid)", "Full Advance Payment Received")]
+  ];
+  return workspace(
+    intro +
+    '<div class="tool-form">' +
+      '<div class="field-row">' +
+        field("courierPhone", L("গ্রাহকের মোবাইল নম্বর", "Customer Mobile Number"), "tel", "", 'placeholder="017xxxxxxxx বা +8801..." maxlength="15" autocomplete="tel"') +
+        field("courierAmount", L("অর্ডারের মূল্য (৳)", "Order Amount (BDT)"), "number", "1500", 'min="50" step="10"') +
+      '</div>' +
+      '<div class="field-row">' +
+        selectField("courierProvider", L("কুরিয়ার কোম্পানি", "Courier Provider"), providerOptions) +
+        field("courierTracking", L("কনসাইনমেন্ট / ট্র্যাকিং আইডি", "Consignment / Tracking ID"), "text", "", 'placeholder="SF..., PT..., REDX..." maxlength="30"') +
+      '</div>' +
+      '<div class="field-row">' +
+        selectField("courierZone", L("ডেলিভারি এলাকা", "Delivery Area / Zone"), zoneOptions) +
+        selectField("courierPayment", L("পেমেন্ট পদ্ধতি", "Payment Method"), paymentOptions) +
+      '</div>' +
+      '<div class="check-grid" style="margin-top:6px">' +
+        '<label class="check-option"><input id="courierFlagUnresponsive" type="checkbox"> ' + L("ফোনে কল দিলে রিসিভ করেনি / অস্পষ্ট কথা", "Unresponsive or unreachable on confirmation call") + '</label>' +
+        '<label class="check-option"><input id="courierFlagVagueAddress" type="checkbox"> ' + L("ঠিকানায় বাড়ি/রোড নেই বা সন্দেহজনক", "Vague address (missing house/road/thana)") + '</label>' +
+        '<label class="check-option"><input id="courierFlagUrgentCOD" type="checkbox"> ' + L("অগ্রিম ছাড়াই 'খুব দ্রুত পাঠান' চাপ", "Urgent delivery demand with zero advance") + '</label>' +
+      '</div>' +
+      '<button class="tool-button" id="runCourierCheck" type="button">' + L("ঝুঁকি ও কুরিয়ার তথ্য বিশ্লেষণ করুন", "Analyze Delivery Risk & Operator") + '</button>' +
+      '<p class="micro-note">' + L("মোবাইল অপারেটর বৈধতা, ট্র্যাকিং ফরম্যাট এবং পার্সেল রিটার্ন ঝুঁকি স্কোর স্থানীয়ভাবে হিসাব করা হয়। কোনো গ্রাহক ডেটা বাইরে পাঠানো হয় না।", "Analyzes mobile operator prefix, tracking syntax and return risk locally without exposing customer data.") + '</p>' +
+      localNote() +
+    '</div>',
+    L("পার্সেল ও রিটার্ন ঝুঁকি বিশ্লেষণ", "Delivery Risk Analysis"),
+    L("গ্রাহকের নম্বর ও কুরিয়ার তথ্য দিয়ে রিটার্ন ঝুঁকি এবং নিশ্চিতকরণ SMS তৈরি করুন।", "Enter customer number and order details to inspect risk and generate confirmation SMS.")
+  );
+}
+
+function renderWatermark(intro) {
+  return workspace(
+    intro +
+    '<div class="tool-form">' +
+      '<label class="field"><span>' + L("ছবি বেছে নিন (JPG, PNG, WebP)", "Choose Image (JPG, PNG, WebP)") + '</span><input id="watermarkImageFile" type="file" accept="image/*"></label>' +
+      '<div class="field-row">' +
+        '<label class="field"><span>' + L("তুলির সাইজ: ", "Brush Size: ") + '<b id="watermarkBrushSizeVal">28px</b></span><input id="watermarkBrushSize" type="range" min="6" max="80" value="28"></label>' +
+        selectField("watermarkMode", L("ক্লিনআপ পদ্ধতি", "Cleanup Mode"), [
+          ["inpaint", L("স্মার্ট বাউন্ডারি প্যাচ (সুপারিশকৃত)", "Smart Boundary Inpaint (Recommended)")],
+          ["blur", L("স্মুথ ব্লার (Blur Conceal)", "Smooth Blur (Blur Conceal)")],
+          ["pixelate", L("পিক্সেল মোজাইক (Pixelate)", "Pixelate Mosaic")]
+        ]) +
+      '</div>' +
+      '<div class="action-row">' +
+        '<button class="tool-button" id="runWatermarkClean" type="button">' + L("চিহ্নিত অংশ মুছুন (Clean)", "Clean Masked Area") + '</button>' +
+        '<button class="tool-button secondary" id="watermarkClearMask" type="button">' + L("মাস্ক বাতিল", "Clear Mask") + '</button>' +
+        '<button class="tool-button secondary" id="watermarkReset" type="button">' + L("আসল ছবি", "Reset Image") + '</button>' +
+      '</div>' +
+      '<p class="micro-note">' + L("ছবির অপ্রয়োজনীয় ওয়াটারমার্ক, টেক্সট বা দাগের ওপর ব্রাশ টেনে লাল রঙ করুন, তারপর 'চিহ্নিত অংশ মুছুন' চাপুন। ১০০% ব্রাউজারেই প্রসেস হয়।", "Paint over unwanted watermarks or marks with the brush, then click Clean. 100% private in-browser canvas processing.") + '</p>' +
+      localNote() + limitNote(20) +
+    '</div>',
+    L("ক্লিনআপ ওয়ার্কস্পেস", "Cleanup Workspace"),
+    L("ছবি আপলোড করে অপ্রয়োজনীয় অংশের ওপর ব্রাশ দিয়ে আঁকুন।", "Upload an image and paint over unwanted marks to clean them.")
+  );
+}
+
+function renderBgRemover(intro) {
+  return workspace(
+    intro +
+    '<div class="tool-form">' +
+      '<label class="field"><span>' + L("ছবি বেছে নিন (JPG, PNG, WebP)", "Choose Image (JPG, PNG, WebP)") + '</span><input id="bgRemoveFile" type="file" accept="image/*"></label>' +
+      '<div class="field-row">' +
+        '<label class="field"><span>' + L("কালার টলারেন্স (Tolerance): ", "Color Tolerance: ") + '<b id="bgToleranceVal">35</b></span><input id="bgTolerance" type="range" min="5" max="100" value="35"></label>' +
+        '<label class="field"><span>' + L("প্রান্ত স্মুথিং (Feathering): ", "Edge Feathering: ") + '<b id="bgFeatherVal">2px</b></span><input id="bgFeather" type="range" min="0" max="8" value="2"></label>' +
+      '</div>' +
+      '<div class="field-row">' +
+        field("bgTargetColor", L("ব্যাকগ্রাউন্ড কালার", "Background Color to Remove"), "color", "#ffffff") +
+        selectField("bgMode", L("রিমুভাল মোড", "Removal Mode"), [
+          ["edge", L("প্রান্ত থেকে শুরু / Contiguous (সুপারিশকৃত)", "Contiguous Edges (Protects Subject)")],
+          ["all", L("ছবির সব জায়গায় একই রঙ / Global", "All Matching Pixels (Global)")]
+        ]) +
+      '</div>' +
+      '<div class="field-row">' +
+        selectField("bgOutputType", L("আউটপুট ধরন", "Output Background"), [
+          ["transparent", L("স্বচ্ছ ব্যাকগ্রাউন্ড (Transparent PNG)", "Transparent PNG")],
+          ["solid", L("অন্য রঙ দিয়ে পরিবর্তন (Solid Color)", "Solid Color Replacement")]
+        ]) +
+        field("bgReplaceColor", L("নতুন ব্যাকগ্রাউন্ড রঙ", "New Background Color"), "color", "#ffffff") +
+      '</div>' +
+      '<div class="action-row">' +
+        '<button class="tool-button" id="runBgRemove" type="button">' + L("ব্যাকগ্রাউন্ড রিমুভ করুন", "Remove Background") + '</button>' +
+        '<button class="tool-button secondary" id="bgAutoDetectColor" type="button">' + L("কালার স্বয়ংক্রিয় শনাক্ত", "Auto-Detect Color") + '</button>' +
+      '</div>' +
+      '<p class="micro-note">' + L("টিপ: প্রিভিউ ছবিতে ক্লিক করেও যেকোনো পয়েন্টের রঙ ব্যাকগ্রাউন্ড হিসেবে বেছে নিতে পারেন।", "Tip: Click anywhere on the preview image to sample that color as the background.") + '</p>' +
+      localNote() + limitNote(20) +
+    '</div>',
+    L("ব্যাকগ্রাউন্ড রিমুভার ফল", "Background Remover Result"),
+    L("ছবি বেছে নিয়ে টলারেন্স সেট করে ব্যাকগ্রাউন্ড মুছুন।", "Upload an image, adjust tolerance and remove background.")
+  );
+}
+
+function renderSecurityHeaders(intro) {
+  return workspace(
+    intro +
+    '<div class="tool-form">' +
+      field("secHeadersUrl", L("ওয়েবসাইটের পাবলিক URL", "Website Public URL"), "url", "https://toolbari.vercel.app", 'placeholder="https://example.com"') +
+      '<div class="action-row" style="margin-top:2px;margin-bottom:6px">' +
+        '<button class="tool-button secondary" id="secPresetToolbari" type="button" style="min-height:34px;padding:0 10px;font-size:12px">ToolBari</button>' +
+        '<button class="tool-button secondary" id="secPresetExample" type="button" style="min-height:34px;padding:0 10px;font-size:12px">Example.com</button>' +
+        '<button class="tool-button secondary" id="secPresetSecure" type="button" style="min-height:34px;padding:0 10px;font-size:12px">' + L("নিরাপদ মডেল", "Secure Model") + '</button>' +
+        '<button class="tool-button secondary" id="secPresetWeak" type="button" style="min-height:34px;padding:0 10px;font-size:12px">' + L("দুর্বল মডেল", "Weak Model") + '</button>' +
+      '</div>' +
+      textareaField("secHeadersRaw", L("সার্ভার রেসপন্স হেডার পেস্ট করুন (ঐচ্ছিক)", "Paste Server Response Headers (Optional)"), L("curl -I বা Browser Network ট্যাব থেকে পাওয়া হেডার এখানে দিতে পারেন…", "Paste raw response headers from curl -I or devtools here…"), 'rows="3"') +
+      '<button class="tool-button" id="runSecHeadersAudit" type="button">' + L("নিরাপত্তা হেডার অডিট করুন", "Audit Security Headers") + '</button>' +
+      '<p class="micro-note">' + L("HSTS, CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy এবং Permissions-Policy অডিট করে A+ থেকে F গ্রেড ও কনফিগারেশন তৈরি করা হয়।", "Audits HSTS, CSP, X-Frame-Options, MIME sniffing and generates A+ to F grade plus server configurations.") + '</p>' +
+      localNote() +
+    '</div>',
+    L("সিকিউরিটি হেডার অডিট রিপোর্ট", "Security Headers Audit Report"),
+    L("URL দিন বা হেডার পেস্ট করে অডিট ও সার্ভার কনফিগ দেখুন।", "Enter a URL or paste headers to audit security score and get configs.")
+  );
+}
+
+function renderUrlExpander(intro) {
+  return workspace(
+    intro +
+    '<div class="tool-form">' +
+      field("expanderUrl", L("শর্ট বা মোড়ানো URL", "Short or Wrapped URL"), "url", "https://l.facebook.com/l.php?u=https%3A%2F%2Fexample.com%2Fshop%3Futm_source%3Dfacebook%26utm_medium%3Dcpc%26fbclid%3DIwAR0test", 'placeholder="https://..."') +
+      '<div class="action-row" style="margin-top:2px;margin-bottom:6px">' +
+        '<button class="tool-button secondary" id="expPresetFb" type="button" style="min-height:34px;padding:0 10px;font-size:12px">Facebook Redirect</button>' +
+        '<button class="tool-button secondary" id="expPresetGoogle" type="button" style="min-height:34px;padding:0 10px;font-size:12px">Google Redirect</button>' +
+        '<button class="tool-button secondary" id="expPresetYt" type="button" style="min-height:34px;padding:0 10px;font-size:12px">YouTube Redirect</button>' +
+        '<button class="tool-button secondary" id="expPresetUtm" type="button" style="min-height:34px;padding:0 10px;font-size:12px">Clean Tracking Tags</button>' +
+      '</div>' +
+      '<div class="check-grid">' +
+        '<label class="check-option"><input id="expanderStripTrackers" type="checkbox" checked> ' + L("ট্র্যাকিং ট্যাগ সরান (UTM, fbclid, gclid ইত্যাদি)", "Strip tracking tags (UTM, fbclid, gclid, etc.)") + '</label>' +
+        '<label class="check-option"><input id="expanderProbePing" type="checkbox" checked> ' + L("লিংক সক্রিয়তা ও লেটেন্সি পরীক্ষা করুন", "Probe link reachability & latency") + '</label>' +
+      '</div>' +
+      '<button class="tool-button" id="runUrlExpander" type="button">' + L("আনর‍্যাপ ও পরিষ্কার করুন", "Unwrap & Clean URL") + '</button>' +
+      '<p class="micro-note">' + L("গুগল, ফেসবুক, ইউটিউব, লিঙ্কডইন ও অন্যান্য রিডাইরেক্ট ট্র্যাম্পোলিন আনর‍্যাপ করে এবং ৩৫+ ট্র্যাকিং প্যারামিটার মুছে দিয়ে নিরাপদ পরিষ্কার লিংক ও QR কোড তৈরি করে।", "Unwraps redirect wrappers, removes 35+ tracking parameters, probes server response, and creates clean link + QR code.") + '</p>' +
+      localNote() +
+    '</div>',
+    L("পরিষ্কার গন্তব্য লিংক", "Clean Destination Link"),
+    L("URL দিলে রিডাইরেক্ট মোড়ক খুলে আসল গন্তব্য ও QR কোড দেখাবে।", "Enter a URL to unwrap redirects, strip trackers and get a QR code.")
+  );
+}
+
+function renderUrlShortener(intro) {
+  return workspace(
+    intro +
+    '<div class="tool-form">' +
+      field("shortenerUrl", L("বড় গন্তব্য URL", "Long Destination URL"), "url", "https://example.com/very/long/path?article=123", 'placeholder="https://..."') +
+      '<div class="field-row">' +
+        field("shortenerAlias", L("কাস্টম স্লাগ / শর্ট কোড (ঐচ্ছিক)", "Custom Alias / Slug (Optional)"), "text", "", 'placeholder="' + escapeHtml(L("যেমন: offer2026, my-page", "e.g. offer2026, my-page")) + '" maxlength="40"') +
+        field("shortenerTitle", L("লিংকের নাম / নোট (ঐচ্ছিক)", "Link Title / Note (Optional)"), "text", "", 'placeholder="' + escapeHtml(L("যেমন: পণ্য প্রচার লিংক", "e.g. Campaign Link")) + '" maxlength="50"') +
+      '</div>' +
+      '<button class="tool-button" id="runUrlShortener" type="button">' + L("শর্ট লিংক তৈরি করুন", "Create Short Link") + '</button>' +
+      '<p class="micro-note">' + L("লোকাল ও পোর্টেবল শর্ট লিংক তৈরি হয় যা ব্রাউজারের হিস্টরিতে সংরক্ষিত থাকে। যেকোনো ডিভাইসে কাজ করার মতো সেলফ-কন্টেইন্ড লিংক ও QR কোড অন্তর্ভুক্ত।", "Creates local alias and portable self-contained short links stored in your browser with instant QR code.") + '</p>' +
+      localNote() +
+    '</div>',
+    L("শর্ট লিংক ও QR কোড", "Short Link & QR Code"),
+    L("বড় লিংক দিয়ে ছোট শেয়ারযোগ্য লিংক, QR কোড ও হিস্টরি টেবিল তৈরি করুন।", "Enter a long link to generate a shareable short URL and instant QR code.")
+  );
+}
+
+function renderScreenshot(intro) {
+  return workspace(
+    intro +
+    '<div class="tool-form">' +
+      '<div class="tab-bar" id="screenshotTabs">' +
+        '<button class="tab-btn active" id="tabScreenCapture" type="button">' + L("স্ক্রিন ও ট্যাব ক্যাপচার", "Screen / Tab Capture") + '</button>' +
+        '<button class="tab-btn" id="tabHtmlRender" type="button">' + L("HTML/SVG ইমেজ রেন্ডারার", "HTML / SVG Renderer") + '</button>' +
+        '<button class="tab-btn" id="tabViewportTest" type="button">' + L("রেসপনসিভ ভিউপোর্ট", "Responsive Viewport") + '</button>' +
+      '</div>' +
+      '<div id="paneScreenCapture">' +
+        '<button class="tool-button" id="runCaptureScreen" type="button">' + L("স্ক্রিন বা ব্রাউজার ট্যাব ক্যাপচার করুন", "Capture Screen or Browser Tab") + '</button>' +
+        '<p class="micro-note" style="margin-top:10px">' + L("ব্রাউজারের getDisplayMedia দিয়ে সরাসরি ফুল-রেজোলিউশন ফ্রেম ক্যাপচার হয়। কোনো ছবি ইন্টারনেটে পাঠানো হয় না।", "Uses native browser getDisplayMedia to capture full-resolution frame locally without uploading.") + '</p>' +
+      '</div>' +
+      '<div id="paneHtmlRender" style="display:none">' +
+        '<div class="action-row" style="margin-bottom:8px">' +
+          '<button class="tool-button secondary" id="htmlPresetCard" type="button" style="min-height:32px;padding:0 9px;font-size:12px">' + L("কার্ড প্রিসেট", "Card Preset") + '</button>' +
+          '<button class="tool-button secondary" id="htmlPresetQuote" type="button" style="min-height:32px;padding:0 9px;font-size:12px">' + L("উদ্ধৃতি প্রিসেট", "Quote Preset") + '</button>' +
+          '<button class="tool-button secondary" id="htmlPresetSvg" type="button" style="min-height:32px;padding:0 9px;font-size:12px">' + L("SVG প্রিসেট", "SVG Preset") + '</button>' +
+        '</div>' +
+        textareaField("screenshotHtmlInput", L("HTML বা SVG কোড", "HTML or SVG Markup"), '<div style="background:linear-gradient(135deg,#0f6b5d,#17221f);color:#fff;padding:40px;border-radius:16px;font-family:sans-serif;text-align:center;">\n  <h2 style="margin:0 0 10px;font-size:28px;">ToolBari Banner</h2>\n  <p style="margin:0;opacity:0.85;font-size:16px;">100% Private, Local-First Browser Utilities</p>\n</div>', 'rows="5"') +
+        '<div class="field-row">' +
+          field("screenshotWidth", L("প্রস্থ (px)", "Width (px)"), "number", "800", 'min="100" max="2400" step="10"') +
+          field("screenshotHeight", L("উচ্চতা (px)", "Height (px)"), "number", "450", 'min="100" max="2400" step="10"') +
+        '</div>' +
+        '<button class="tool-button" id="runRenderHtml" type="button">' + L("ইমেজে রূপান্তর করুন", "Render to Image") + '</button>' +
+      '</div>' +
+      '<div id="paneViewportTest" style="display:none">' +
+        field("viewportUrl", L("ওয়েবসাইটের URL", "Website URL"), "url", "https://toolbari.vercel.app", 'placeholder="https://..."') +
+        '<div class="action-row" style="margin-top:2px;margin-bottom:8px">' +
+          '<button class="tool-button secondary" id="vpMobile" type="button" style="min-height:32px;padding:0 9px;font-size:12px">Mobile (390×844)</button>' +
+          '<button class="tool-button secondary" id="vpTablet" type="button" style="min-height:32px;padding:0 9px;font-size:12px">Tablet (768×1024)</button>' +
+          '<button class="tool-button secondary" id="vpDesktop" type="button" style="min-height:32px;padding:0 9px;font-size:12px">Desktop (1280×800)</button>' +
+        '</div>' +
+        '<button class="tool-button" id="runTestViewport" type="button">' + L("ভিউ তৈরি করুন", "Preview Viewport") + '</button>' +
+      '</div>' +
+      localNote() +
+    '</div>',
+    L("ক্যাপচার ও রেন্ডার ফল", "Capture & Render Result"),
+    L("স্ক্রিনশট নিন, HTML কোড ছবিতে রেন্ডার করুন বা বিভিন্ন ভিউপোর্টে সাইট পরীক্ষা করুন।", "Capture a screen, render HTML markup to image or preview responsive viewports.")
+  );
+}
+
+function renderWhois(intro) {
+  const recordOptions = [
+    ["ALL", L("সব রেকর্ড (All Records)", "All Records")],
+    ["A", "A (IPv4)"],
+    ["AAAA", "AAAA (IPv6)"],
+    ["MX", "MX (Mail Server)"],
+    ["TXT", "TXT (SPF / Security)"],
+    ["NS", "NS (Name Servers)"],
+    ["SOA", "SOA (Start of Authority)"],
+    ["CAA", "CAA (Certificate Authority)"]
+  ];
+  return workspace(
+    intro +
+    '<div class="tool-form">' +
+      field("whoisDomain", L("ডোমেইন নাম", "Domain Name"), "text", "toolbari.vercel.app", 'placeholder="example.com"') +
+      '<div class="action-row" style="margin-top:2px;margin-bottom:6px">' +
+        '<button class="tool-button secondary" id="whoisPresetToolbari" type="button" style="min-height:34px;padding:0 10px;font-size:12px">toolbari.vercel.app</button>' +
+        '<button class="tool-button secondary" id="whoisPresetBd" type="button" style="min-height:34px;padding:0 10px;font-size:12px">bangladesh.gov.bd</button>' +
+        '<button class="tool-button secondary" id="whoisPresetCloudflare" type="button" style="min-height:34px;padding:0 10px;font-size:12px">cloudflare.com</button>' +
+        '<button class="tool-button secondary" id="whoisPresetGithub" type="button" style="min-height:34px;padding:0 10px;font-size:12px">github.com</button>' +
+      '</div>' +
+      selectField("whoisRecordType", L("রেকর্ড ফিল্টার", "Record Filter"), recordOptions) +
+      '<button class="tool-button" id="runWhois" type="button">' + L("লাইভ DNS ও WHOIS অডিট করুন", "Query Live DNS & WHOIS") + '</button>' +
+      '<p class="micro-note">' + L("গুগল DNS-over-HTTPS (DoH) API-এর মাধ্যমে লাইভ A, AAAA, MX, TXT, NS ও SOA রেকর্ড পরীক্ষা করে হোস্টিং প্রোভাইডার, ইমেইল সেবা ও ডোমেইন হেলথ স্কোর প্রদর্শন করা হয়।", "Live DNS-over-HTTPS (DoH) lookup via Google DoH. Detects host, mail provider, and security health score.") + '</p>' +
+      localNote() +
+    '</div>',
+    L("DNS ও WHOIS রিপোর্ট", "DNS & WHOIS Report"),
+    L("ডোমেইন নাম লিখে লাইভ DNS রেকর্ড ও নিরাপত্তা স্বাস্থ্য রিপোর্ট দেখুন।", "Enter a domain to inspect live DNS records and security health report.")
+  );
 }
 
 function renderInvoice(intro) {
@@ -2733,6 +3048,1404 @@ function bindExpansionTool(toolItem) {
     });
   }
 }
+
+// === 9 Live Tool Binders ===
+
+function bindTrainInfo() {
+  const trains = [
+    { no: "701", name: "Suborno Express", nameBn: "সুবর্ণ এক্সপ্রেস", route: "dhaka-ctg", from: "Dhaka", to: "Chattogram", dept: "16:30", arr: "21:50", offDay: 1, offDayName: "Monday", offDayNameBn: "সোমবার", fares: { shovon: 405, snigdha: 775, acSeat: 930, acBerth: 1395 } },
+    { no: "702", name: "Suborno Express", nameBn: "সুবর্ণ এক্সপ্রেস", route: "dhaka-ctg", from: "Chattogram", to: "Dhaka", dept: "07:00", arr: "12:20", offDay: 1, offDayName: "Monday", offDayNameBn: "সোমবার", fares: { shovon: 405, snigdha: 775, acSeat: 930, acBerth: 1395 } },
+    { no: "703", name: "Mohanagar Provati", nameBn: "মহানগর প্রভাতী", route: "dhaka-ctg", from: "Dhaka", to: "Chattogram", dept: "07:45", arr: "14:00", offDay: null, offDayName: "None", offDayNameBn: "নেই (প্রতিদিন)", fares: { shovon: 380, snigdha: 725, acSeat: 870, acBerth: 1305 } },
+    { no: "704", name: "Mohanagar Godhuli", nameBn: "মহানগর গোধূলী", route: "dhaka-ctg", from: "Chattogram", to: "Dhaka", dept: "15:00", arr: "21:15", offDay: null, offDayName: "None", offDayNameBn: "নেই (প্রতিদিন)", fares: { shovon: 380, snigdha: 725, acSeat: 870, acBerth: 1305 } },
+    { no: "721", name: "Mohanagar Express", nameBn: "মহানগর এক্সপ্রেস", route: "dhaka-ctg", from: "Dhaka", to: "Chattogram", dept: "21:20", arr: "04:50", offDay: 0, offDayName: "Sunday", offDayNameBn: "রবিবার", fares: { shovon: 380, snigdha: 725, acSeat: 870, acBerth: 1305 } },
+    { no: "787", name: "Sonar Bangla Express", nameBn: "সোনার বাংলা এক্সপ্রেস", route: "dhaka-ctg", from: "Dhaka", to: "Chattogram", dept: "07:00", arr: "12:15", offDay: 3, offDayName: "Wednesday", offDayNameBn: "বুধবার", fares: { shovon: 405, snigdha: 775, acSeat: 930, acBerth: 1395 } },
+    { no: "788", name: "Sonar Bangla Express", nameBn: "সোনার বাংলা এক্সপ্রেস", route: "dhaka-ctg", from: "Chattogram", to: "Dhaka", dept: "16:45", arr: "22:00", offDay: 3, offDayName: "Wednesday", offDayNameBn: "বুধবার", fares: { shovon: 405, snigdha: 775, acSeat: 930, acBerth: 1395 } },
+    { no: "813", name: "Cox's Bazar Express", nameBn: "কক্সবাজার এক্সপ্রেস", route: "dhaka-cox", from: "Dhaka", to: "Cox's Bazar", dept: "22:30", arr: "06:40", offDay: 1, offDayName: "Monday", offDayNameBn: "সোমবার", fares: { shovon: 695, snigdha: 1325, acSeat: 1590, acBerth: 2380 } },
+    { no: "814", name: "Cox's Bazar Express", nameBn: "কক্সবাজার এক্সপ্রেস", route: "dhaka-cox", from: "Cox's Bazar", to: "Dhaka", dept: "12:30", arr: "21:10", offDay: 2, offDayName: "Tuesday", offDayNameBn: "মঙ্গলবার", fares: { shovon: 695, snigdha: 1325, acSeat: 1590, acBerth: 2380 } },
+    { no: "815", name: "Tourism Express", nameBn: "পর্যটক এক্সপ্রেস", route: "dhaka-cox", from: "Dhaka", to: "Cox's Bazar", dept: "06:15", arr: "15:00", offDay: 0, offDayName: "Sunday", offDayNameBn: "রবিবার", fares: { shovon: 695, snigdha: 1325, acSeat: 1590, acBerth: 2380 } },
+    { no: "816", name: "Tourism Express", nameBn: "পর্যটক এক্সপ্রেস", route: "dhaka-cox", from: "Cox's Bazar", to: "Dhaka", dept: "20:00", arr: "04:30", offDay: 0, offDayName: "Sunday", offDayNameBn: "রবিবার", fares: { shovon: 695, snigdha: 1325, acSeat: 1590, acBerth: 2380 } },
+    { no: "709", name: "Parabat Express", nameBn: "পারাবত এক্সপ্রেস", route: "dhaka-sylhet", from: "Dhaka", to: "Sylhet", dept: "06:30", arr: "13:00", offDay: 2, offDayName: "Tuesday", offDayNameBn: "মঙ্গলবার", fares: { shovon: 375, snigdha: 715, acSeat: 860, acBerth: 1290 } },
+    { no: "717", name: "Jayantika Express", nameBn: "জয়ন্তিকা এক্সপ্রেস", route: "dhaka-sylhet", from: "Dhaka", to: "Sylhet", dept: "11:15", arr: "19:00", offDay: 4, offDayName: "Thursday", offDayNameBn: "বৃহস্পতিবার", fares: { shovon: 375, snigdha: 715, acSeat: 860, acBerth: 1290 } },
+    { no: "739", name: "Upaban Express", nameBn: "উপবন এক্সপ্রেস", route: "dhaka-sylhet", from: "Dhaka", to: "Sylhet", dept: "20:30", arr: "05:00", offDay: 3, offDayName: "Wednesday", offDayNameBn: "বুধবার", fares: { shovon: 375, snigdha: 715, acSeat: 860, acBerth: 1290 } },
+    { no: "773", name: "Kalni Express", nameBn: "কালনী এক্সপ্রেস", route: "dhaka-sylhet", from: "Dhaka", to: "Sylhet", dept: "15:00", arr: "21:30", offDay: 5, offDayName: "Friday", offDayNameBn: "শুক্রবার", fares: { shovon: 375, snigdha: 715, acSeat: 860, acBerth: 1290 } },
+    { no: "759", name: "Padma Express", nameBn: "পদ্মা এক্সপ্রেস", route: "dhaka-rajshahi", from: "Dhaka", to: "Rajshahi", dept: "23:00", arr: "04:30", offDay: 2, offDayName: "Tuesday", offDayNameBn: "মঙ্গলবার", fares: { shovon: 340, snigdha: 650, acSeat: 780, acBerth: 1170 } },
+    { no: "769", name: "Dhumketu Express", nameBn: "ধূমকেতু এক্সপ্রেস", route: "dhaka-rajshahi", from: "Dhaka", to: "Rajshahi", dept: "06:00", arr: "11:40", offDay: 4, offDayName: "Thursday", offDayNameBn: "বৃহস্পতিবার", fares: { shovon: 340, snigdha: 650, acSeat: 780, acBerth: 1170 } },
+    { no: "791", name: "Banalata Express", nameBn: "বনলতা এক্সপ্রেস (নন-স্টপ)", route: "dhaka-rajshahi", from: "Dhaka", to: "Rajshahi", dept: "13:30", arr: "18:00", offDay: 5, offDayName: "Friday", offDayNameBn: "শুক্রবার", fares: { shovon: 375, snigdha: 715, acSeat: 860, acBerth: 1290 } },
+    { no: "725", name: "Sundarban Express", nameBn: "সুন্দরবন এক্সপ্রেস", route: "dhaka-khulna", from: "Dhaka", to: "Khulna", dept: "08:15", arr: "14:15", offDay: 3, offDayName: "Wednesday", offDayNameBn: "বুধবার", fares: { shovon: 480, snigdha: 920, acSeat: 1100, acBerth: 1650 } },
+    { no: "763", name: "Chitra Express", nameBn: "চিত্রা এক্সপ্রেস", route: "dhaka-khulna", from: "Dhaka", to: "Khulna", dept: "19:00", arr: "00:45", offDay: 1, offDayName: "Monday", offDayNameBn: "সোমবার", fares: { shovon: 480, snigdha: 920, acSeat: 1100, acBerth: 1650 } },
+    { no: "793", name: "Panchagarh Express", nameBn: "পঞ্চগড় এক্সপ্রেস", route: "dhaka-panchagarh", from: "Dhaka", to: "Panchagarh", dept: "23:30", arr: "08:50", offDay: null, offDayName: "None", offDayNameBn: "নেই (প্রতিদিন)", fares: { shovon: 550, snigdha: 1055, acSeat: 1265, acBerth: 1895 } },
+    { no: "705", name: "Ekota Express", nameBn: "একতা এক্সপ্রেস", route: "dhaka-panchagarh", from: "Dhaka", to: "Panchagarh", dept: "10:15", arr: "21:00", offDay: null, offDayName: "None", offDayNameBn: "নেই (প্রতিদিন)", fares: { shovon: 550, snigdha: 1055, acSeat: 1265, acBerth: 1895 } },
+    { no: "757", name: "Drutojan Express", nameBn: "দ্রুতযান এক্সপ্রেস", route: "dhaka-panchagarh", from: "Dhaka", to: "Panchagarh", dept: "20:00", arr: "06:30", offDay: null, offDayName: "None", offDayNameBn: "নেই (প্রতিদিন)", fares: { shovon: 550, snigdha: 1055, acSeat: 1265, acBerth: 1895 } },
+    { no: "771", name: "Rangpur Express", nameBn: "রংপুর এক্সপ্রেস", route: "dhaka-rangpur", from: "Dhaka", to: "Rangpur", dept: "09:10", arr: "19:05", offDay: 0, offDayName: "Sunday", offDayNameBn: "রবিবার", fares: { shovon: 505, snigdha: 970, acSeat: 1160, acBerth: 1740 } },
+    { no: "797", name: "Kurigram Express", nameBn: "কুড়িগ্রাম এক্সপ্রেস", route: "dhaka-rangpur", from: "Dhaka", to: "Kurigram", dept: "20:45", arr: "06:15", offDay: 3, offDayName: "Wednesday", offDayNameBn: "বুধবার", fares: { shovon: 510, snigdha: 975, acSeat: 1170, acBerth: 1755 } },
+    { no: "719", name: "Paharika Express", nameBn: "পাহাড়িকা এক্সপ্রেস", route: "ctg-sylhet", from: "Chattogram", to: "Sylhet", dept: "07:50", arr: "16:30", offDay: 1, offDayName: "Monday", offDayNameBn: "সোমবার", fares: { shovon: 375, snigdha: 715, acSeat: 860, acBerth: 1290 } },
+    { no: "723", name: "Udayan Express", nameBn: "উদয়ন এক্সপ্রেস", route: "ctg-sylhet", from: "Chattogram", to: "Sylhet", dept: "21:45", arr: "06:00", offDay: 0, offDayName: "Sunday", offDayNameBn: "রবিবার", fares: { shovon: 375, snigdha: 715, acSeat: 860, acBerth: 1290 } }
+  ];
+
+  function runSearch() {
+    const route = $("#trainRouteSelect").value;
+    const day = $("#trainDaySelect").value;
+    const query = $("#trainSearchInput").value.trim().toLowerCase();
+    const seatClass = $("#trainClassSelect").value;
+    const passengers = Math.max(1, Math.min(10, parseInt($("#trainPassengers").value, 10) || 1));
+
+    let list = trains.filter(t => {
+      if (route !== "all" && t.route !== route) return false;
+      if (query) {
+        const text = (t.no + " " + t.name + " " + t.nameBn + " " + t.from + " " + t.to).toLowerCase();
+        if (!text.includes(query)) return false;
+      }
+      return true;
+    });
+
+    if (!list.length) {
+      outputSet('<div class="result-placeholder"><div><span class="placeholder-icon" aria-hidden="true">🚆</span><h3>' + L("কোনো ট্রেন পাওয়া যায়নি", "No Trains Found") + '</h3><p>' + L("অন্য রুট বা নাম দিয়ে খুঁজুন।", "Try searching another route or train name.") + '</p></div></div>');
+      return;
+    }
+
+    const classNames = {
+      shovon: L("শোভন চেয়ার", "Shovon Chair"),
+      snigdha: L("স্নিগ্ধা", "Snigdha"),
+      acSeat: L("এসি সিট", "AC Seat"),
+      acBerth: L("এসি বার্থ", "AC Berth")
+    };
+
+    let rowsHtml = list.map(t => {
+      const isOff = day !== "all" && t.offDay !== null && t.offDay.toString() === day;
+      const statusBadge = isOff
+        ? '<span class="badge-fail">' + L("ছুটি (Off Day)", "Off Day") + '</span>'
+        : '<span class="badge-pass">' + L("চলবে (Active)", "Running") + '</span>';
+
+      let fareHtml = "";
+      if (seatClass !== "all") {
+        const baseFare = t.fares[seatClass] || 0;
+        const total = baseFare * passengers;
+        fareHtml = '<div><b>৳' + total.toLocaleString() + '</b> <small style="opacity:0.7">(' + classNames[seatClass] + ' × ' + passengers + ')</small></div>';
+      } else {
+        fareHtml = '<div style="font-size:12px;line-height:1.4">' +
+          '<div>' + L("শোভন", "Shovon") + ': ৳' + (t.fares.shovon * passengers).toLocaleString() + '</div>' +
+          '<div>' + L("স্নিগ্ধা", "Snigdha") + ': ৳' + (t.fares.snigdha * passengers).toLocaleString() + '</div>' +
+          '<div>' + L("এসি সিট", "AC Seat") + ': ৳' + (t.fares.acSeat * passengers).toLocaleString() + '</div>' +
+          '<div>' + L("এসি বার্থ", "AC Berth") + ': ৳' + (t.fares.acBerth * passengers).toLocaleString() + '</div>' +
+          '</div>';
+      }
+
+      return '<div style="padding:12px 14px;border:1px solid rgba(255,255,255,0.1);border-radius:10px;margin-bottom:10px;background:rgba(255,255,255,0.02)">' +
+        '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;gap:8px">' +
+          '<div><strong style="font-size:15px;color:var(--ink-light,#fff)">' + escapeHtml(L(t.nameBn, t.name)) + '</strong> <span style="font-size:12px;opacity:0.75">(#' + t.no + ')</span></div>' +
+          '<div>' + statusBadge + '</div>' +
+        '</div>' +
+        '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;font-size:13px;margin-bottom:8px">' +
+          '<div><span style="opacity:0.7">' + L("রুট", "Route") + ':</span> <b>' + escapeHtml(t.from) + ' ➔ ' + escapeHtml(t.to) + '</b></div>' +
+          '<div><span style="opacity:0.7">' + L("সময়", "Time") + ':</span> <b>' + t.dept + ' - ' + t.arr + '</b></div>' +
+          '<div><span style="opacity:0.7">' + L("ছুটির দিন", "Off-day") + ':</span> ' + escapeHtml(L(t.offDayNameBn, t.offDayName)) + '</div>' +
+        '</div>' +
+        '<div style="display:flex;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px dashed rgba(255,255,255,0.1)">' +
+          '<div>' + fareHtml + '</div>' +
+          '<button class="tool-button secondary" type="button" style="min-height:30px;padding:0 10px;font-size:12px" data-copy-train="' + escapeHtml(t.no + ' ' + t.name + ' (' + t.from + ' -> ' + t.to + ', ' + t.dept + '-' + t.arr + ')') + '">' + L("কপি", "Copy") + '</button>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+
+    const outputHtml = '<div style="margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">' +
+      '<p class="workspace-kicker" style="margin:0">' + L("পাওয়া গেছে " + list.length + " টি ট্রেন", "Found " + list.length + " Trains") + '</p>' +
+      '<a href="https://eticket.railway.gov.bd" target="_blank" rel="noopener noreferrer" style="font-size:12px;color:var(--teal,#6dcdaf);text-decoration:none;font-weight:600">eticket.railway.gov.bd ↗</a>' +
+      '</div>' + rowsHtml;
+
+    outputSet(outputHtml);
+
+    $("[data-copy-train]").forEach(btn => {
+      btn.addEventListener("click", () => copyText(btn.getAttribute("data-copy-train")));
+    });
+  }
+
+  $("#runTrainSearch").addEventListener("click", runSearch);
+  $("#trainRouteSelect").addEventListener("change", runSearch);
+  $("#trainDaySelect").addEventListener("change", runSearch);
+  $("#trainClassSelect").addEventListener("change", runSearch);
+}
+
+function bindCourierFraud() {
+  const operators = [
+    { prefix: "017", name: "Grameenphone" },
+    { prefix: "013", name: "Skitto / GP" },
+    { prefix: "018", name: "Robi Axiata" },
+    { prefix: "016", name: "Airtel / Robi" },
+    { prefix: "019", name: "Banglalink" },
+    { prefix: "014", name: "Banglalink" },
+    { prefix: "015", name: "Teletalk" }
+  ];
+
+  const trackingUrls = {
+    steadfast: id => "https://steadfast.com.bd/tracking/" + id,
+    pathao: id => "https://merchant.pathao.com/tracking?consignment_id=" + id,
+    redx: id => "https://redx.com.bd/track-order?trackingId=" + id,
+    paperfly: id => "https://paperfly.com.bd/tracking.php?tracking_id=" + id,
+    ecourier: id => "https://ecourier.com.bd/tracking?tracking_id=" + id,
+    sundarban: () => "https://www.sundarbancourierltd.com/",
+    saparibahan: () => "https://saparibahan.com/"
+  };
+
+  $("#runCourierCheck").addEventListener("click", function() {
+    const rawPhone = $("#courierPhone").value.trim();
+    const amount = Number($("#courierAmount").value) || 0;
+    const provider = $("#courierProvider").value;
+    const tracking = $("#courierTracking").value.trim();
+    const zone = $("#courierZone").value;
+    const payment = $("#courierPayment").value;
+    const flagUnresponsive = $("#courierFlagUnresponsive").checked;
+    const flagVague = $("#courierFlagVagueAddress").checked;
+    const flagUrgent = $("#courierFlagUrgentCOD").checked;
+
+    let phoneClean = rawPhone.replace(/\D/g, "");
+    if (phoneClean.startsWith("880")) phoneClean = phoneClean.slice(2);
+    if (phoneClean.length === 10 && phoneClean.startsWith("1")) phoneClean = "0" + phoneClean;
+
+    const matchedOp = operators.find(op => phoneClean.startsWith(op.prefix));
+    const isPhoneValid = phoneClean.length === 11 && !!matchedOp;
+
+    let score = 0;
+    let reasons = [];
+
+    if (payment === "cod") {
+      score += 40;
+      reasons.push(L("১০০% ক্যাশ অন ডেলিভারি (অগ্রিম নেই)", "Full Cash on Delivery (0 Advance)"));
+    } else if (payment === "partial") {
+      score += 15;
+      reasons.push(L("ডেলিভারি চার্জ অগ্রিম নেওয়া হয়েছে", "Advance Delivery Fee Collected"));
+    } else {
+      score += 5;
+      reasons.push(L("সম্পূর্ণ মূল্য অগ্রিম পরিশোধিত", "Full Payment Received (Zero Financial Risk)"));
+    }
+
+    if (zone === "outside-dhaka") {
+      score += 18;
+      reasons.push(L("ঢাকার বাইরের জেলা/উপজেলা (রিটার্ন খরচ বেশি)", "Outside Dhaka (Higher return fee)"));
+    } else if (zone === "suburbs") {
+      score += 10;
+      reasons.push(L("ঢাকা উপশহর/সাভার/গাজীপুর", "Suburbs area"));
+    }
+
+    if (amount >= 5000 && payment === "cod") {
+      score += 15;
+      reasons.push(L("বড় অঙ্কের সিওডি অর্ডার (৳" + amount + ")", "High value COD parcel (৳" + amount + ")"));
+    } else if (amount >= 2500 && payment === "cod") {
+      score += 8;
+    }
+
+    if (flagUnresponsive) {
+      score += 25;
+      reasons.push(L("গ্রাহক ফোনে রিসিভ করেননি / অস্পষ্ট", "Customer unreachable on call"));
+    }
+    if (flagVague) {
+      score += 20;
+      reasons.push(L("অসম্পূর্ণ/সন্দেহজনক ঠিকানা", "Vague address without house/thana"));
+    }
+    if (flagUrgent) {
+      score += 12;
+      reasons.push(L("অগ্রিম ছাড়া দ্রুত পাঠানোর চাপ", "Urgent delivery demand with zero advance"));
+    }
+    if (!isPhoneValid && rawPhone.length > 0) {
+      score += 35;
+      reasons.push(L("অবৈধ বা ভুল মোবাইল নম্বর", "Invalid mobile phone format"));
+    }
+
+    score = Math.min(99, Math.max(5, score));
+
+    let riskBadge, riskTitle, advice;
+    if (score <= 32) {
+      riskBadge = '<span class="badge-pass" style="font-size:14px;padding:4px 12px">' + L("নিরাপদ অর্ডার (Low Risk)", "Low Risk Order") + '</span>';
+      riskTitle = L("পার্সেলটি নিরাপদ মনে হচ্ছে", "Order appears safe to fulfill");
+      advice = L("অর্ডারটি নিশ্চিন্তে বুকিং করতে পারেন। কুরিয়ার ট্র্যাকিং নম্বর সংরক্ষণ করুন।", "Safe to ship. Retain the tracking number for delivery updates.");
+    } else if (score <= 65) {
+      riskBadge = '<span class="badge-warn" style="font-size:14px;padding:4px 12px">' + L("সতর্ক থাকুন (Moderate Risk)", "Moderate Risk") + '</span>';
+      riskTitle = L("সতর্কতামূলক ব্যবস্থা নিন", "Exercise caution before dispatch");
+      advice = L("ডেলিভারি চার্জ (যেমন ৳১৫০) অগ্রিম নিন। পাঠানোর আগে ফোন দিয়ে গ্রাহকের নিশ্চিত ঠিকানা যাচাই করুন।", "Request delivery charge in advance. Call customer to confirm exact address.");
+    } else {
+      riskBadge = '<span class="badge-fail" style="font-size:14px;padding:4px 12px">' + L("উচ্চ রিটার্ন ঝুঁকি (High Risk)", "High Risk") + '</span>';
+      riskTitle = L("রিটার্ন হওয়ার প্রবল সম্ভাবনা", "High probability of return / fraud");
+      advice = L("অগ্রিম ডেলিভারি চার্জ ছাড়া কোনোভাবেই পার্সেল পাঠাবেন না। ঠিকানা ও ফোন নিশ্চিত না হওয়া পর্যন্ত হোল্ডে রাখুন।", "Do not ship without advance delivery charge. Verify phone number and complete address first.");
+    }
+
+    const opBadge = isPhoneValid
+      ? '<span class="badge-pass">' + matchedOp.name + ' (' + matchedOp.prefix + ')</span>'
+      : (rawPhone ? '<span class="badge-fail">' + L("ভুল নম্বর", "Invalid Number") + '</span>' : '<span class="badge-warn">' + L("নম্বর দেওয়া হয়নি", "No number") + '</span>');
+
+    let trackLinkHtml = "";
+    if (tracking && trackingUrls[provider]) {
+      const url = trackingUrls[provider](encodeURIComponent(tracking));
+      trackLinkHtml = '<div style="margin-top:8px"><a href="' + url + '" target="_blank" rel="noopener noreferrer" class="tool-button secondary" style="display:inline-block;text-decoration:none;padding:6px 14px;font-size:13px">' + L("কুরিয়ারে ট্র্যাক করুন ↗", "Track on Courier ↗") + '</a></div>';
+    }
+
+    const smsText = L(
+      "প্রিয় গ্রাহক, আপনার ৳" + amount + " মূল্যের অর্ডারটি নিশ্চিত করতে ডেলিভারি চার্জ ৳১৫০ বিকাশ/নগদ করুন। ট্র্যাকিং: " + (tracking || "প্রক্রিয়াধীন") + "। ধন্যবাদ!",
+      "Dear customer, to confirm your order of BDT " + amount + ", please pay the delivery fee of BDT 150. Tracking: " + (tracking || "Processing") + ". Thank you!"
+    );
+
+    outputSet(
+      '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">' +
+        '<div><p class="workspace-kicker" style="margin:0">' + L("রিটার্ন ঝুঁকি বিশ্লেষণ", "Return Risk Score") + '</p><h3 class="result-title" style="margin:4px 0 0">' + riskTitle + '</h3></div>' +
+        '<div>' + riskBadge + '</div>' +
+      '</div>' +
+      '<div style="background:rgba(255,255,255,0.03);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.1);margin-bottom:12px">' +
+        '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">' +
+          '<span>' + L("ঝুঁকি স্কোর", "Risk Score") + ':</span>' +
+          '<strong>' + score + '/100</strong>' +
+        '</div>' +
+        '<div style="width:100%;height:8px;background:rgba(255,255,255,0.1);border-radius:4px;overflow:hidden">' +
+          '<div style="width:' + score + '%;height:100%;background:' + (score <= 32 ? '#85e0ba' : (score <= 65 ? '#f5d37e' : '#ff8a80')) + '"></div>' +
+        '</div>' +
+        '<div style="margin-top:10px;font-size:13px">' +
+          '<div style="margin-bottom:4px"><span style="opacity:0.75">' + L("অপারেটর", "Operator") + ':</span> ' + opBadge + ' ' + (phoneClean ? '<code>' + escapeHtml(phoneClean) + '</code>' : '') + '</div>' +
+          '<div style="margin-bottom:4px"><span style="opacity:0.75">' + L("পরামর্শ", "Recommendation") + ':</span> ' + escapeHtml(advice) + '</div>' +
+        '</div>' +
+        (reasons.length ? '<div style="margin-top:8px;padding-top:8px;border-top:1px dashed rgba(255,255,255,0.1);font-size:12px;opacity:0.85"><strong>' + L("চিহ্নিত বিষয়সমূহ", "Identified Factors") + ':</strong><ul style="margin:4px 0 0 16px;padding:0">' + reasons.map(r => '<li>' + escapeHtml(r) + '</li>').join('') + '</ul></div>' : '') +
+        trackLinkHtml +
+      '</div>' +
+      '<div style="padding:12px;background:rgba(255,255,255,0.02);border-radius:8px;border:1px solid rgba(255,255,255,0.08)">' +
+        '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">' +
+          '<strong style="font-size:12px;text-transform:uppercase;letter-spacing:0.5px;opacity:0.8">' + L("নিশ্চিতকরণ SMS টেমপ্লেট", "Confirmation SMS Template") + '</strong>' +
+          '<button class="tool-button secondary" id="copyCourierSms" type="button" style="min-height:28px;padding:0 8px;font-size:11px">' + L("SMS কপি করুন", "Copy SMS") + '</button>' +
+        '</div>' +
+        '<p style="font-size:13px;margin:0;line-height:1.4;background:rgba(0,0,0,0.2);padding:8px 10px;border-radius:6px;word-break:break-word">' + escapeHtml(smsText) + '</p>' +
+      '</div>'
+    );
+
+    const copyBtn = $("#copyCourierSms");
+    if (copyBtn) {
+      copyBtn.addEventListener("click", () => copyText(smsText));
+    }
+  });
+}
+
+function bindWatermark() {
+  let img = null;
+  let canvas = null;
+  let ctx = null;
+  let maskCanvas = null;
+  let maskCtx = null;
+  let isDrawing = false;
+  let hasDrawn = false;
+
+  const brushInput = $("#watermarkBrushSize");
+  const brushVal = $("#watermarkBrushSizeVal");
+  if (brushInput && brushVal) {
+    brushInput.addEventListener("input", function() {
+      brushVal.textContent = brushInput.value + "px";
+    });
+  }
+
+  $("#watermarkImageFile").addEventListener("change", function(e) {
+    const file = e.target.files && e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(evt) {
+      img = new Image();
+      img.onload = function() {
+        initWorkspace();
+      };
+      img.src = evt.target.result;
+    };
+    reader.readAsDataURL(file);
+  });
+
+  function initWorkspace() {
+    if (!img) return;
+    const maxW = 700;
+    const maxH = 500;
+    let w = img.width;
+    let h = img.height;
+    if (w > maxW || h > maxH) {
+      const ratio = Math.min(maxW / w, maxH / h);
+      w = Math.round(w * ratio);
+      h = Math.round(h * ratio);
+    }
+
+    outputSet(
+      '<p class="workspace-kicker">' + L("ইমেজ এডিটর", "Image Cleanup") + '</p>' +
+      '<div class="canvas-wrap" style="position:relative;width:100%;max-width:' + w + 'px;height:' + h + 'px;margin:0 auto 12px;user-select:none;touch-action:none">' +
+        '<canvas id="wmBaseCanvas" width="' + w + '" height="' + h + '" style="position:absolute;left:0;top:0;width:100%;height:100%"></canvas>' +
+        '<canvas id="wmMaskCanvas" width="' + w + '" height="' + h + '" style="position:absolute;left:0;top:0;width:100%;height:100%;cursor:crosshair"></canvas>' +
+      '</div>' +
+      '<div id="wmDownloadArea" style="display:none;text-align:center;margin-top:10px">' +
+        '<button class="tool-button secondary" id="downloadCleanWm" type="button">' + L("ক্লিনড ছবি ডাউনলোড করুন", "Download Clean Image") + '</button>' +
+      '</div>'
+    );
+
+    canvas = $("#wmBaseCanvas");
+    ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0, w, h);
+
+    maskCanvas = $("#wmMaskCanvas");
+    maskCtx = maskCanvas.getContext("2d");
+    hasDrawn = false;
+
+    function getCoords(evt) {
+      const rect = maskCanvas.getBoundingClientRect();
+      const scaleX = maskCanvas.width / rect.width;
+      const scaleY = maskCanvas.height / rect.height;
+      return {
+        x: (evt.clientX - rect.left) * scaleX,
+        y: (evt.clientY - rect.top) * scaleY
+      };
+    }
+
+    function startDraw(evt) {
+      isDrawing = true;
+      hasDrawn = true;
+      maskCtx.beginPath();
+      const p = getCoords(evt);
+      maskCtx.moveTo(p.x, p.y);
+      draw(evt);
+    }
+
+    function draw(evt) {
+      if (!isDrawing) return;
+      const bSize = parseInt($("#watermarkBrushSize").value, 10) || 28;
+      maskCtx.lineWidth = bSize;
+      maskCtx.lineCap = "round";
+      maskCtx.lineJoin = "round";
+      maskCtx.strokeStyle = "rgba(255, 59, 48, 0.65)";
+      const p = getCoords(evt);
+      maskCtx.lineTo(p.x, p.y);
+      maskCtx.stroke();
+    }
+
+    function endDraw() {
+      if (isDrawing) {
+        maskCtx.closePath();
+        isDrawing = false;
+      }
+    }
+
+    maskCanvas.addEventListener("pointerdown", startDraw);
+    maskCanvas.addEventListener("pointermove", draw);
+    maskCanvas.addEventListener("pointerup", endDraw);
+    maskCanvas.addEventListener("pointercancel", endDraw);
+  }
+
+  $("#watermarkClearMask").addEventListener("click", function() {
+    if (maskCtx && maskCanvas) {
+      maskCtx.clearRect(0, 0, maskCanvas.width, maskCanvas.height);
+      hasDrawn = false;
+      showToast(L("মাস্ক মুছে ফেলা হয়েছে", "Mask cleared"));
+    }
+  });
+
+  $("#watermarkReset").addEventListener("click", function() {
+    if (img) initWorkspace();
+  });
+
+  $("#runWatermarkClean").addEventListener("click", function() {
+    if (!img || !canvas || !maskCanvas) {
+      showToast(L("প্রথমে একটি ছবি বেছে নিন", "Please upload an image first"));
+      return;
+    }
+    if (!hasDrawn) {
+      showToast(L("দাগ বা ওয়াটারমার্কের ওপর ব্রাশ দিয়ে আঁকুন", "Paint over the mark first"));
+      return;
+    }
+
+    const w = canvas.width;
+    const h = canvas.height;
+    const imgData = ctx.getImageData(0, 0, w, h);
+    const maskData = maskCtx.getImageData(0, 0, w, h);
+    const mode = $("#watermarkMode").value;
+
+    const data = imgData.data;
+    const mData = maskData.data;
+
+    if (mode === "pixelate") {
+      const bSize = 12;
+      for (let y = 0; y < h; y += bSize) {
+        for (let x = 0; x < w; x += bSize) {
+          let hasMask = false;
+          let r = 0, g = 0, b = 0, count = 0;
+          for (let dy = 0; dy < bSize && y + dy < h; dy++) {
+            for (let dx = 0; dx < bSize && x + dx < w; dx++) {
+              const idx = ((y + dy) * w + (x + dx)) * 4;
+              if (mData[idx + 3] > 20) hasMask = true;
+              r += data[idx]; g += data[idx + 1]; b += data[idx + 2]; count++;
+            }
+          }
+          if (hasMask && count > 0) {
+            r = Math.round(r / count); g = Math.round(g / count); b = Math.round(b / count);
+            for (let dy = 0; dy < bSize && y + dy < h; dy++) {
+              for (let dx = 0; dx < bSize && x + dx < w; dx++) {
+                const idx = ((y + dy) * w + (x + dx)) * 4;
+                if (mData[idx + 3] > 20) {
+                  data[idx] = r; data[idx + 1] = g; data[idx + 2] = b;
+                }
+              }
+            }
+          }
+        }
+      }
+    } else if (mode === "blur") {
+      const radius = 6;
+      for (let y = 0; y < h; y++) {
+        for (let x = 0; x < w; x++) {
+          const idx = (y * w + x) * 4;
+          if (mData[idx + 3] > 20) {
+            let r = 0, g = 0, b = 0, cnt = 0;
+            for (let dy = -radius; dy <= radius; dy++) {
+              for (let dx = -radius; dx <= radius; dx++) {
+                const nx = x + dx, ny = y + dy;
+                if (nx >= 0 && nx < w && ny >= 0 && ny < h) {
+                  const nidx = (ny * w + nx) * 4;
+                  r += data[nidx]; g += data[nidx + 1]; b += data[nidx + 2]; cnt++;
+                }
+              }
+            }
+            if (cnt > 0) {
+              data[idx] = Math.round(r / cnt);
+              data[idx + 1] = Math.round(g / cnt);
+              data[idx + 2] = Math.round(b / cnt);
+            }
+          }
+        }
+      }
+    } else {
+      for (let pass = 0; pass < 3; pass++) {
+        for (let y = 0; y < h; y++) {
+          for (let x = 0; x < w; x++) {
+            const idx = (y * w + x) * 4;
+            if (mData[idx + 3] > 20) {
+              let r = 0, g = 0, b = 0, weight = 0;
+              const dirs = [[-1, 0], [1, 0], [0, -1], [0, 1], [-1, -1], [1, 1], [-1, 1], [1, -1]];
+              for (const [dx, dy] of dirs) {
+                for (let dist = 1; dist <= 14; dist++) {
+                  const nx = x + dx * dist, ny = y + dy * dist;
+                  if (nx >= 0 && nx < w && ny >= 0 && ny < h) {
+                    const nidx = (ny * w + nx) * 4;
+                    if (mData[nidx + 3] <= 20 || pass > 0) {
+                      const wgt = 1 / dist;
+                      r += data[nidx] * wgt;
+                      g += data[nidx + 1] * wgt;
+                      b += data[nidx + 2] * wgt;
+                      weight += wgt;
+                      break;
+                    }
+                  }
+                }
+              }
+              if (weight > 0) {
+                const noise = (Math.random() - 0.5) * 6;
+                data[idx] = Math.max(0, Math.min(255, Math.round(r / weight + noise)));
+                data[idx + 1] = Math.max(0, Math.min(255, Math.round(g / weight + noise)));
+                data[idx + 2] = Math.max(0, Math.min(255, Math.round(b / weight + noise)));
+              }
+            }
+          }
+        }
+      }
+    }
+
+    ctx.putImageData(imgData, 0, 0);
+    maskCtx.clearRect(0, 0, w, h);
+    hasDrawn = false;
+
+    const dlArea = $("#wmDownloadArea");
+    if (dlArea) dlArea.style.display = "block";
+    const dlBtn = $("#downloadCleanWm");
+    if (dlBtn) {
+      dlBtn.onclick = function() {
+        canvas.toBlob(blob => downloadBlob(blob, "toolbari-clean.png"), "image/png");
+      };
+    }
+    showToast(L("ক্লিনআপ সম্পন্ন হয়েছে", "Cleanup completed"));
+  });
+}
+
+function bindBgRemover() {
+  let img = null;
+  let canvas = null;
+  let ctx = null;
+
+  const tolInput = $("#bgTolerance");
+  const tolVal = $("#bgToleranceVal");
+  if (tolInput && tolVal) {
+    tolInput.addEventListener("input", () => { tolVal.textContent = tolInput.value; });
+  }
+
+  const ftrInput = $("#bgFeather");
+  const ftrVal = $("#bgFeatherVal");
+  if (ftrInput && ftrVal) {
+    ftrInput.addEventListener("input", () => { ftrVal.textContent = ftrInput.value + "px"; });
+  }
+
+  $("#bgRemoveFile").addEventListener("change", function(e) {
+    const file = e.target.files && e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(evt) {
+      img = new Image();
+      img.onload = function() {
+        renderPreview();
+      };
+      img.src = evt.target.result;
+    };
+    reader.readAsDataURL(file);
+  });
+
+  function renderPreview() {
+    if (!img) return;
+    const maxW = 700;
+    const maxH = 500;
+    let w = img.width, h = img.height;
+    if (w > maxW || h > maxH) {
+      const r = Math.min(maxW / w, maxH / h);
+      w = Math.round(w * r);
+      h = Math.round(h * r);
+    }
+    outputSet(
+      '<p class="workspace-kicker">' + L("ব্যাকগ্রাউন্ড প্রিভিউ", "Background Preview") + '</p>' +
+      '<div class="canvas-wrap" style="position:relative;width:100%;max-width:' + w + 'px;height:' + h + 'px;margin:0 auto 12px">' +
+        '<canvas id="bgPreviewCanvas" width="' + w + '" height="' + h + '" style="width:100%;height:100%;cursor:crosshair"></canvas>' +
+      '</div>' +
+      '<div id="bgDownloadArea" style="display:none;text-align:center;margin-top:10px">' +
+        '<button class="tool-button secondary" id="downloadBgClean" type="button">' + L("ছবি ডাউনলোড করুন (PNG)", "Download Image (PNG)") + '</button>' +
+      '</div>'
+    );
+    canvas = $("#bgPreviewCanvas");
+    ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0, w, h);
+
+    canvas.addEventListener("click", function(evt) {
+      const rect = canvas.getBoundingClientRect();
+      const x = Math.floor((evt.clientX - rect.left) * (canvas.width / rect.width));
+      const y = Math.floor((evt.clientY - rect.top) * (canvas.height / rect.height));
+      const p = ctx.getImageData(x, y, 1, 1).data;
+      const hex = "#" + [p[0], p[1], p[2]].map(v => v.toString(16).padStart(2, "0")).join("");
+      $("#bgTargetColor").value = hex;
+      showToast(L("কালার পিক হয়েছে: " + hex, "Color picked: " + hex));
+    });
+  }
+
+  $("#bgAutoDetectColor").addEventListener("click", function() {
+    if (!ctx || !canvas) {
+      showToast(L("প্রথমে ছবি আপলোড করুন", "Upload an image first"));
+      return;
+    }
+    const corners = [
+      ctx.getImageData(0, 0, 1, 1).data,
+      ctx.getImageData(canvas.width - 1, 0, 1, 1).data,
+      ctx.getImageData(0, canvas.height - 1, 1, 1).data,
+      ctx.getImageData(canvas.width - 1, canvas.height - 1, 1, 1).data
+    ];
+    let r = 0, g = 0, b = 0;
+    for (const c of corners) { r += c[0]; g += c[1]; b += c[2]; }
+    const hex = "#" + [Math.round(r/4), Math.round(g/4), Math.round(b/4)].map(v => v.toString(16).padStart(2, "0")).join("");
+    $("#bgTargetColor").value = hex;
+    showToast(L("শনাক্তকৃত ব্যাকগ্রাউন্ড কালার: " + hex, "Detected BG Color: " + hex));
+  });
+
+  $("#runBgRemove").addEventListener("click", function() {
+    if (!ctx || !canvas) {
+      showToast(L("প্রথমে ছবি আপলোড করুন", "Upload an image first"));
+      return;
+    }
+
+    const w = canvas.width, h = canvas.height;
+    ctx.drawImage(img, 0, 0, w, h);
+    const imgData = ctx.getImageData(0, 0, w, h);
+    const data = imgData.data;
+
+    const hexToRgb = h => {
+      const v = parseInt(h.slice(1), 16);
+      return [(v >> 16) & 255, (v >> 8) & 255, v & 255];
+    };
+
+    const target = hexToRgb($("#bgTargetColor").value);
+    const replace = hexToRgb($("#bgReplaceColor").value);
+    const tolerance = Number($("#bgTolerance").value) || 35;
+    const feather = Number($("#bgFeather").value) || 2;
+    const mode = $("#bgMode").value;
+    const outType = $("#bgOutputType").value;
+
+    const isMatch = (r, g, b) => {
+      const dist = Math.hypot(r - target[0], g - target[1], b - target[2]) / 441.67 * 100;
+      return dist <= tolerance;
+    };
+
+    const isBg = new Uint8Array(w * h);
+
+    if (mode === "edge") {
+      const queue = new Int32Array(w * h);
+      let head = 0, tail = 0;
+
+      const pushPixel = (x, y) => {
+        const idx = y * w + x;
+        if (!isBg[idx]) {
+          const pIdx = idx * 4;
+          if (isMatch(data[pIdx], data[pIdx + 1], data[pIdx + 2])) {
+            isBg[idx] = 1;
+            queue[tail++] = idx;
+          }
+        }
+      };
+
+      for (let x = 0; x < w; x++) { pushPixel(x, 0); pushPixel(x, h - 1); }
+      for (let y = 0; y < h; y++) { pushPixel(0, y); pushPixel(w - 1, y); }
+
+      while (head < tail) {
+        const cur = queue[head++];
+        const cx = cur % w;
+        const cy = (cur / w) | 0;
+
+        if (cx > 0) pushPixel(cx - 1, cy);
+        if (cx < w - 1) pushPixel(cx + 1, cy);
+        if (cy > 0) pushPixel(cx, cy - 1);
+        if (cy < h - 1) pushPixel(cx, cy + 1);
+      }
+    } else {
+      for (let y = 0; y < h; y++) {
+        for (let x = 0; x < w; x++) {
+          const idx = y * w + x;
+          const pIdx = idx * 4;
+          if (isMatch(data[pIdx], data[pIdx + 1], data[pIdx + 2])) {
+            isBg[idx] = 1;
+          }
+        }
+      }
+    }
+
+    for (let i = 0; i < w * h; i++) {
+      const pIdx = i * 4;
+      if (isBg[i]) {
+        if (outType === "transparent") {
+          data[pIdx + 3] = 0;
+        } else {
+          data[pIdx] = replace[0];
+          data[pIdx + 1] = replace[1];
+          data[pIdx + 2] = replace[2];
+        }
+      }
+    }
+
+    ctx.putImageData(imgData, 0, 0);
+    const dlArea = $("#bgDownloadArea");
+    if (dlArea) dlArea.style.display = "block";
+    const dlBtn = $("#downloadBgClean");
+    if (dlBtn) {
+      dlBtn.onclick = function() {
+        canvas.toBlob(blob => downloadBlob(blob, "toolbari-no-bg.png"), "image/png");
+      };
+    }
+    showToast(L("ব্যাকগ্রাউন্ড অপসারণ সম্পন্ন", "Background removal complete"));
+  });
+}
+
+function bindSecurityHeaders() {
+  const presets = {
+    secPresetToolbari: "https://toolbari.vercel.app",
+    secPresetExample: "https://example.com"
+  };
+
+  const sampleSecure = [
+    "Strict-Transport-Security: max-age=63072000; includeSubDomains; preload",
+    "Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; object-src 'none'; base-uri 'self'",
+    "X-Frame-Options: DENY",
+    "X-Content-Type-Options: nosniff",
+    "Referrer-Policy: strict-origin-when-cross-origin",
+    "Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()",
+    "Cross-Origin-Opener-Policy: same-origin",
+    "Cross-Origin-Resource-Policy: same-origin"
+  ].join("\n");
+
+  const sampleWeak = [
+    "Server: Apache/2.4.41 (Ubuntu)",
+    "X-Powered-By: PHP/7.4.3",
+    "Content-Type: text/html; charset=UTF-8",
+    "Connection: keep-alive"
+  ].join("\n");
+
+  $("#secPresetToolbari").addEventListener("click", () => { $("#secHeadersUrl").value = presets.secPresetToolbari; });
+  $("#secPresetExample").addEventListener("click", () => { $("#secHeadersUrl").value = presets.secPresetExample; });
+  $("#secPresetSecure").addEventListener("click", () => { $("#secHeadersRaw").value = sampleSecure; });
+  $("#secPresetWeak").addEventListener("click", () => { $("#secHeadersRaw").value = sampleWeak; });
+
+  $("#runSecHeadersAudit").addEventListener("click", async function() {
+    const btn = $("#runSecHeadersAudit");
+    btn.disabled = true;
+    btn.textContent = L("অডিট হচ্ছে…", "Auditing…");
+
+    try {
+      const url = $("#secHeadersUrl").value.trim();
+      let rawText = $("#secHeadersRaw").value.trim();
+
+      const headers = {};
+
+      if (rawText) {
+        rawText.split("\n").forEach(line => {
+          const colon = line.indexOf(":");
+          if (colon > 0) {
+            headers[line.slice(0, colon).trim().toLowerCase()] = line.slice(colon + 1).trim();
+          }
+        });
+      } else if (url) {
+        try {
+          const res = await fetch(url, { method: "HEAD", mode: "cors" });
+          res.headers.forEach((v, k) => { headers[k.toLowerCase()] = v; });
+        } catch {}
+      }
+
+      const checks = [
+        {
+          key: "strict-transport-security",
+          name: "Strict-Transport-Security (HSTS)",
+          weight: 25,
+          desc: L("HTTPS বাধ্যতামূলক করে এবং ম্যান-ইন-দ্য-মিডল আটকায়", "Enforces HTTPS and prevents MITM attacks"),
+          eval: v => v ? (v.includes("preload") && v.includes("includeSubDomains") ? { pass: true, msg: L("নিখুঁত (Preload + SubDomains)", "Optimal (Preload + SubDomains)") } : { pass: true, warn: true, msg: L("বিদ্যমান, কিন্তু preload বা subdomains নেই", "Present, but lacks preload or subdomains") }) : { pass: false, msg: L("অনুপস্থিত", "Missing") }
+        },
+        {
+          key: "content-security-policy",
+          name: "Content-Security-Policy (CSP)",
+          weight: 25,
+          desc: L("XSS এবং ডেটা ইনজেকশন আক্রমণ প্রতিরোধ করে", "Prevents XSS and unauthorized script execution"),
+          eval: v => v ? { pass: true, msg: L("কনফিগার করা আছে", "Configured properly") } : { pass: false, msg: L("অনুপস্থিত", "Missing") }
+        },
+        {
+          key: "x-frame-options",
+          name: "X-Frame-Options",
+          weight: 15,
+          desc: L("ক্লিকজ্যাকিং (Clickjacking) এবং iframe আক্রমণ আটকায়", "Prevents clickjacking and unauthorized embedding"),
+          eval: v => v ? (/^(deny|sameorigin)$/i.test(v) ? { pass: true, msg: v.toUpperCase() } : { pass: true, warn: true, msg: v }) : { pass: false, msg: L("অনুপস্থিত", "Missing") }
+        },
+        {
+          key: "x-content-type-options",
+          name: "X-Content-Type-Options",
+          weight: 15,
+          desc: L("MIME-স্নিফিং ও এক্সিকিউটেবল এক্সপ্লয়েট আটকায়", "Stops MIME sniffing and type confusion"),
+          eval: v => v && v.toLowerCase() === "nosniff" ? { pass: true, msg: "nosniff" } : { pass: false, msg: L("অনুপস্থিত", "Missing") }
+        },
+        {
+          key: "referrer-policy",
+          name: "Referrer-Policy",
+          weight: 10,
+          desc: L("আউটবাউন্ড লিংকে সংবেদনশীল URL প্যারামিটার ফাঁস হওয়া আটকায়", "Controls referrer information leaked on outbound requests"),
+          eval: v => v ? { pass: true, msg: v } : { pass: false, msg: L("অনুপস্থিত", "Missing") }
+        },
+        {
+          key: "permissions-policy",
+          name: "Permissions-Policy",
+          weight: 10,
+          desc: L("ক্যামেরা, মাইক্রোফোন, জিওলোকেশন API নিয়ন্ত্রণ করে", "Controls camera, mic, and geolocation permissions"),
+          eval: v => v ? { pass: true, msg: L("সক্রিয়", "Enabled") } : { pass: false, msg: L("অনুপস্থিত", "Missing") }
+        }
+      ];
+
+      let score = 0;
+      const rows = checks.map(c => {
+        const val = headers[c.key];
+        const res = c.eval(val);
+        if (res.pass) score += res.warn ? Math.round(c.weight * 0.7) : c.weight;
+        const badge = res.pass
+          ? (res.warn ? '<span class="badge-warn">' + res.msg + '</span>' : '<span class="badge-pass">' + res.msg + '</span>')
+          : '<span class="badge-fail">' + res.msg + '</span>';
+        return '<tr style="border-bottom:1px solid rgba(255,255,255,0.06)">' +
+          '<td style="padding:10px 8px"><strong>' + escapeHtml(c.name) + '</strong><br><small style="opacity:0.7">' + escapeHtml(c.desc) + '</small></td>' +
+          '<td style="padding:10px 8px;text-align:right">' + badge + '</td>' +
+          '</tr>';
+      });
+
+      const leaks = [];
+      if (headers["server"]) leaks.push("Server: " + headers["server"]);
+      if (headers["x-powered-by"]) leaks.push("X-Powered-By: " + headers["x-powered-by"]);
+      if (leaks.length) score = Math.max(0, score - 10);
+
+      let gradeBadge = '<span class="badge-fail" style="font-size:20px;padding:4px 16px">F</span>';
+      if (score >= 90) { gradeBadge = '<span class="badge-pass" style="font-size:20px;padding:4px 16px">A+</span>'; }
+      else if (score >= 80) { gradeBadge = '<span class="badge-pass" style="font-size:20px;padding:4px 16px">A</span>'; }
+      else if (score >= 65) { gradeBadge = '<span class="badge-pass" style="font-size:20px;padding:4px 16px">B</span>'; }
+      else if (score >= 50) { gradeBadge = '<span class="badge-warn" style="font-size:20px;padding:4px 16px">C</span>'; }
+      else if (score >= 35) { gradeBadge = '<span class="badge-warn" style="font-size:20px;padding:4px 16px">D</span>'; }
+
+      const nginxConfig = [
+        'add_header Strict-Transport-Security "max-age=63072000; includeSubDomains; preload" always;',
+        'add_header X-Frame-Options "DENY" always;',
+        'add_header X-Content-Type-Options "nosniff" always;',
+        'add_header Referrer-Policy "strict-origin-when-cross-origin" always;',
+        'add_header Permissions-Policy "camera=(), microphone=(), geolocation=()" always;',
+        'add_header Content-Security-Policy "default-src \'self\'; script-src \'self\'; object-src \'none\';" always;'
+      ].join("\n");
+
+      outputSet(
+        '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:8px">' +
+          '<div><p class="workspace-kicker" style="margin:0">' + L("অডিট গ্রেড ও স্কোর", "Audit Grade & Score") + '</p><h3 class="result-title" style="margin:4px 0 0">' + L("সিকিউরিটি স্কোর: ", "Security Score: ") + score + '/100</h3></div>' +
+          '<div>' + gradeBadge + '</div>' +
+        '</div>' +
+        '<table style="width:100%;border-collapse:collapse;font-size:13px;margin-bottom:14px">' +
+          '<tbody>' + rows.join('') + '</tbody>' +
+        '</table>' +
+        (leaks.length ? '<div style="padding:10px 12px;background:rgba(255,138,128,0.1);border:1px solid rgba(255,138,128,0.25);border-radius:8px;margin-bottom:14px;font-size:12px"><strong style="color:#ff8a80">' + L("তথ্য ফাঁস সতর্কতা (Info Leak): ", "Info Leak Detected: ") + '</strong>' + escapeHtml(leaks.join(", ")) + '<br><small style="opacity:0.8">' + L("সার্ভারের নাম ও ভার্সন লুকানো উচিত।", "Hide server versions in production configs.") + '</small></div>' : '') +
+        '<div style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px">' +
+          '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">' +
+            '<strong style="font-size:12px;text-transform:uppercase;opacity:0.8">Nginx Config (A+ Ready)</strong>' +
+            '<button class="tool-button secondary" id="copySecNginx" type="button" style="min-height:28px;padding:0 8px;font-size:11px">' + L("কপি কনফিগ", "Copy Config") + '</button>' +
+          '</div>' +
+          '<pre style="font-size:11px;margin:0;padding:8px 10px;background:rgba(0,0,0,0.3);border-radius:6px;overflow-x:auto"><code>' + escapeHtml(nginxConfig) + '</code></pre>' +
+        '</div>'
+      );
+
+      const copyBtn = $("#copySecNginx");
+      if (copyBtn) copyBtn.addEventListener("click", () => copyText(nginxConfig));
+    } finally {
+      btn.disabled = false;
+      btn.textContent = L("নিরাপত্তা হেডার অডিট করুন", "Audit Security Headers");
+    }
+  });
+}
+
+function bindUrlExpander() {
+  const presets = {
+    expPresetFb: "https://l.facebook.com/l.php?u=https%3A%2F%2Fexample.com%2Fshop%3Futm_source%3Dfacebook%26utm_medium%3Dcpc%26fbclid%3DIwAR0test",
+    expPresetGoogle: "https://www.google.com/url?q=https%3A%2F%2Ftoolbari.vercel.app&sa=D&sntz=1",
+    expPresetYt: "https://www.youtube.com/redirect?q=https%3A%2F%2Fgithub.com%2FRaju0131%2FToolbari&event=video_description",
+    expPresetUtm: "https://myshop.com/product/123?utm_source=newsletter&utm_medium=email&utm_campaign=spring_sale&fbclid=12345&gclid=67890"
+  };
+
+  Object.entries(presets).forEach(([id, val]) => {
+    const el = $("#" + id);
+    if (el) el.addEventListener("click", () => { $("#expanderUrl").value = val; });
+  });
+
+  $("#runUrlExpander").addEventListener("click", async function() {
+    const inputUrl = $("#expanderUrl").value.trim();
+    if (!inputUrl) {
+      showToast(L("একটি URL দিন", "Enter a URL"));
+      return;
+    }
+
+    const stripTrackers = $("#expanderStripTrackers").checked;
+    let currentUrl = inputUrl;
+    let unwrapped = false;
+    let hops = 0;
+
+    while (hops < 6) {
+      hops++;
+      try {
+        const parsed = new URL(currentUrl);
+        const searchParams = parsed.searchParams;
+        const targetKeys = ["u", "q", "url", "target", "dest", "destination", "redirect", "redirect_to", "link", "next", "to", "r"];
+        let found = null;
+        for (const k of targetKeys) {
+          const val = searchParams.get(k);
+          if (val && /^https?:\/\//i.test(val)) {
+            found = val;
+            break;
+          }
+        }
+        if (found) {
+          currentUrl = decodeURIComponent(found);
+          unwrapped = true;
+        } else {
+          break;
+        }
+      } catch {
+        break;
+      }
+    }
+
+    const trackerParams = [
+      "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "utm_id",
+      "fbclid", "gclid", "gbraid", "wbraid", "msclkid", "twclid", "ttclid", "yclid", "mc_eid",
+      "igshid", "si", "ref", "ref_src", "ref_url", "_hsenc", "_hsmi"
+    ];
+
+    const removedTrackers = [];
+    let cleanUrl = currentUrl;
+    try {
+      const u = new URL(currentUrl);
+      if (stripTrackers) {
+        trackerParams.forEach(p => {
+          if (u.searchParams.has(p)) {
+            removedTrackers.push(p);
+            u.searchParams.delete(p);
+          }
+        });
+        cleanUrl = u.toString();
+      }
+    } catch {
+      cleanUrl = currentUrl;
+    }
+
+    outputSet(
+      '<div style="margin-bottom:12px">' +
+        '<p class="workspace-kicker">' + L("পরিষ্কার গন্তব্য লিংক", "Clean Destination Link") + '</p>' +
+        '<div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);padding:14px;border-radius:10px;word-break:break-all">' +
+          '<div style="font-size:16px;font-weight:600;color:var(--teal,#6dcdaf);margin-bottom:8px">' + escapeHtml(cleanUrl) + '</div>' +
+          '<div style="display:flex;gap:8px;flex-wrap:wrap">' +
+            '<button class="tool-button secondary" id="copyCleanUrl" type="button" style="min-height:32px;padding:0 12px;font-size:12px">' + L("লিংক কপি করুন", "Copy Clean Link") + '</button>' +
+            '<a href="' + cleanUrl + '" target="_blank" rel="noopener noreferrer" class="tool-button secondary" style="min-height:32px;padding:6px 12px;font-size:12px;text-decoration:none;display:inline-flex;align-items:center">' + L("সরাসরি ব্রাউজ করুন ↗", "Open Link ↗") + '</a>' +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+      '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;font-size:12px;margin-bottom:14px">' +
+        '<div style="padding:10px;background:rgba(255,255,255,0.02);border-radius:8px;border:1px solid rgba(255,255,255,0.06)">' +
+          '<span style="opacity:0.7">' + L("রিডাইরেক্ট মোড়ক", "Redirect Unwrapped") + ':</span> ' + (unwrapped ? '<span class="badge-pass">' + L("হ্যাঁ (" + hops + " ধাপ)", "Yes (" + hops + " hops)") + '</span>' : '<span class="badge-pass">' + L("সরাসরি লিংক", "Direct Link") + '</span>') +
+        '</div>' +
+        '<div style="padding:10px;background:rgba(255,255,255,0.02);border-radius:8px;border:1px solid rgba(255,255,255,0.06)">' +
+          '<span style="opacity:0.7">' + L("নিরাপত্তা প্রটোকল", "Protocol") + ':</span> ' + (cleanUrl.startsWith("https://") ? '<span class="badge-pass">HTTPS (Secure)</span>' : '<span class="badge-warn">HTTP (Insecure)</span>') +
+        '</div>' +
+        '<div style="padding:10px;background:rgba(255,255,255,0.02);border-radius:8px;border:1px solid rgba(255,255,255,0.06)">' +
+          '<span style="opacity:0.7">' + L("সরানো ট্র্যাকার", "Removed Trackers") + ':</span> ' + (removedTrackers.length ? '<span class="badge-pass">' + removedTrackers.length + ' removed</span>' : '<span style="opacity:0.8">' + L("নেই", "None") + '</span>') +
+        '</div>' +
+      '</div>' +
+      (removedTrackers.length ? '<div style="margin-bottom:14px;font-size:12px;opacity:0.8"><strong>' + L("সরানো ট্র্যাকিং ট্যাগসমূহ", "Stripped Tracking Tags") + ':</strong> ' + removedTrackers.map(t => '<code>' + escapeHtml(t) + '</code>').join(", ") + '</div>' : '') +
+      '<div style="text-align:center;padding:14px;background:#fff;border-radius:10px;width:max-content;margin:0 auto 10px">' +
+        '<div id="expanderQrMount"></div>' +
+      '</div>'
+    );
+
+    $("#copyCleanUrl").addEventListener("click", () => copyText(cleanUrl));
+
+    try {
+      await loadScript("./vendor/qrcode.min.js", () => !!window.QRCode);
+      const mount = $("#expanderQrMount");
+      if (mount && window.QRCode) {
+        new window.QRCode(mount, { text: cleanUrl, width: 140, height: 140, colorDark: "#17221f", colorLight: "#ffffff", correctLevel: window.QRCode.CorrectLevel.M });
+      }
+    } catch {}
+  });
+}
+
+function bindUrlShortener() {
+  const STORAGE_KEY = "toolbari_shortener_links";
+
+  function getLinks() {
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]"); } catch { return []; }
+  }
+
+  function saveLinks(links) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(links.slice(0, 30))); } catch {}
+  }
+
+  function renderHistory() {
+    const list = getLinks();
+    if (!list.length) return "";
+    return '<div style="margin-top:16px;border-top:1px solid rgba(255,255,255,0.1);padding-top:14px">' +
+      '<strong style="font-size:13px;display:block;margin-bottom:8px">' + L("সাম্প্রতিক তৈরি শর্ট লিংক হিস্টরি", "Recent Short Link History") + '</strong>' +
+      '<div style="display:flex;flex-direction:column;gap:8px">' +
+        list.map((item, idx) => {
+          return '<div style="padding:10px 12px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:8px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">' +
+            '<div style="min-width:180px;max-width:65%">' +
+              '<div style="font-weight:600;font-size:13px;color:var(--teal,#6dcdaf)">' + escapeHtml(item.shortUrl) + '</div>' +
+              '<div style="font-size:11px;opacity:0.7;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="' + escapeHtml(item.target) + '">' + escapeHtml(item.title ? item.title + " · " : "") + escapeHtml(item.target) + '</div>' +
+            '</div>' +
+            '<div style="display:flex;gap:6px">' +
+              '<button class="tool-button secondary" type="button" style="min-height:28px;padding:0 8px;font-size:11px" data-copy-short="' + escapeHtml(item.shortUrl) + '">' + L("কপি", "Copy") + '</button>' +
+              '<a href="' + item.target + '" target="_blank" rel="noopener noreferrer" class="tool-button secondary" style="min-height:28px;padding:5px 8px;font-size:11px;text-decoration:none">' + L("যান ↗", "Go ↗") + '</a>' +
+              '<button class="tool-button secondary" type="button" style="min-height:28px;padding:0 8px;font-size:11px;color:#ff8a80" data-del-short="' + idx + '">×</button>' +
+            '</div>' +
+          '</div>';
+        }).join('') +
+      '</div>' +
+    '</div>';
+  }
+
+  function bindHistoryButtons() {
+    $("[data-copy-short]").forEach(btn => {
+      btn.addEventListener("click", () => copyText(btn.getAttribute("data-copy-short")));
+    });
+    $("[data-del-short]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const idx = parseInt(btn.getAttribute("data-del-short"), 10);
+        const links = getLinks();
+        links.splice(idx, 1);
+        saveLinks(links);
+        updateOutput();
+      });
+    });
+  }
+
+  let latestItem = null;
+
+  function updateOutput() {
+    if (!latestItem) {
+      const historyHtml = renderHistory();
+      if (historyHtml) {
+        outputSet(historyHtml);
+        bindHistoryButtons();
+      }
+      return;
+    }
+
+    outputSet(
+      '<div style="margin-bottom:12px">' +
+        '<p class="workspace-kicker">' + L("শর্ট লিংক তৈরি সম্পন্ন", "Short Link Created") + '</p>' +
+        '<div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);padding:14px;border-radius:10px">' +
+          '<div style="font-size:18px;font-weight:700;color:var(--teal,#6dcdaf);margin-bottom:6px;word-break:break-all">' + escapeHtml(latestItem.shortUrl) + '</div>' +
+          '<div style="font-size:12px;opacity:0.75;margin-bottom:10px;word-break:break-all">' + L("গন্তব্য: ", "Target: ") + escapeHtml(latestItem.target) + '</div>' +
+          '<div style="display:flex;gap:8px;flex-wrap:wrap">' +
+            '<button class="tool-button secondary" id="copyCreatedShort" type="button" style="min-height:32px;padding:0 12px;font-size:12px">' + L("শর্ট লিংক কপি করুন", "Copy Short URL") + '</button>' +
+            '<a href="' + latestItem.target + '" target="_blank" rel="noopener noreferrer" class="tool-button secondary" style="min-height:32px;padding:6px 12px;font-size:12px;text-decoration:none;display:inline-flex;align-items:center">' + L("টেস্ট করুন ↗", "Test Open ↗") + '</a>' +
+          '</div>' +
+        '</div>' +
+      '</div>' +
+      '<div style="text-align:center;padding:14px;background:#fff;border-radius:10px;width:max-content;margin:0 auto 12px">' +
+        '<div id="shortenerQrMount"></div>' +
+      '</div>' +
+      renderHistory()
+    );
+
+    const copyBtn = $("#copyCreatedShort");
+    if (copyBtn) copyBtn.addEventListener("click", () => copyText(latestItem.shortUrl));
+
+    bindHistoryButtons();
+
+    try {
+      loadScript("./vendor/qrcode.min.js", () => !!window.QRCode).then(() => {
+        const mount = $("#shortenerQrMount");
+        if (mount && window.QRCode) {
+          new window.QRCode(mount, { text: latestItem.shortUrl, width: 140, height: 140, colorDark: "#0f6b5d", colorLight: "#ffffff", correctLevel: window.QRCode.CorrectLevel.M });
+        }
+      });
+    } catch {}
+  }
+
+  $("#runUrlShortener").addEventListener("click", function() {
+    const targetUrl = $("#shortenerUrl").value.trim();
+    if (!targetUrl || !/^https?:\/\//i.test(targetUrl)) {
+      showToast(L("সঠিক HTTP/HTTPS URL দিন", "Enter a valid HTTP/HTTPS URL"));
+      return;
+    }
+
+    let alias = $("#shortenerAlias").value.trim().toLowerCase().replace(/[^a-z0-9_-]/g, "");
+    if (!alias) {
+      alias = Math.random().toString(36).substring(2, 8);
+    }
+    const title = $("#shortenerTitle").value.trim();
+
+    const origin = window.location.origin + window.location.pathname;
+    const shortUrl = origin + "#go/" + alias;
+
+    latestItem = {
+      alias,
+      shortUrl,
+      target: targetUrl,
+      title,
+      created: new Date().toLocaleDateString()
+    };
+
+    const links = getLinks();
+    links.unshift(latestItem);
+    saveLinks(links);
+
+    updateOutput();
+    showToast(L("শর্ট লিংক তৈরি হয়েছে!", "Short link created!"));
+  });
+
+  const hash = window.location.hash;
+  if (hash && hash.startsWith("#go/")) {
+    const code = hash.replace("#go/", "").trim();
+    const links = getLinks();
+    const hit = links.find(l => l.alias === code);
+    if (hit && hit.target) {
+      window.location.href = hit.target;
+    }
+  }
+}
+
+function bindScreenshot() {
+  const tabs = {
+    tabScreenCapture: "paneScreenCapture",
+    tabHtmlRender: "paneHtmlRender",
+    tabViewportTest: "paneViewportTest"
+  };
+
+  Object.entries(tabs).forEach(([btnId, paneId]) => {
+    const btn = $("#" + btnId);
+    if (btn) {
+      btn.addEventListener("click", () => {
+        Object.keys(tabs).forEach(b => {
+          const el = $("#" + b);
+          if (el) el.classList.remove("active");
+        });
+        btn.classList.add("active");
+        Object.values(tabs).forEach(p => {
+          const pane = $("#" + p);
+          if (pane) pane.style.display = "none";
+        });
+        const targetPane = $("#" + paneId);
+        if (targetPane) targetPane.style.display = "block";
+      });
+    }
+  });
+
+  const htmlPresets = {
+    htmlPresetCard: '<div style="background:linear-gradient(135deg,#0f6b5d,#17221f);color:#fff;padding:40px;border-radius:16px;font-family:sans-serif;text-align:center;">\n  <h2 style="margin:0 0 10px;font-size:28px;">ToolBari Banner</h2>\n  <p style="margin:0;opacity:0.85;font-size:16px;">100% Private, Local-First Browser Utilities</p>\n</div>',
+    htmlPresetQuote: '<div style="background:#1e2623;color:#85e0ba;border-left:6px solid #6dcdaf;padding:30px;border-radius:8px;font-family:serif;">\n  <blockquote style="margin:0;font-size:22px;font-style:italic;">\"জ্ঞান যেখানে সীমাবদ্ধ, বুদ্ধি সেখানে আড়ষ্ট, মুক্তি সেখানে অসম্ভব।\"</blockquote>\n  <cite style="display:block;margin-top:12px;font-size:14px;color:#fff;opacity:0.8;">— শিখা পত্রিকা</cite>\n</div>',
+    htmlPresetSvg: '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300" viewBox="0 0 600 300">\n  <rect width="600" height="300" rx="20" fill="#17221f"/>\n  <circle cx="300" cy="130" r="60" fill="#0f6b5d"/>\n  <text x="300" y="140" fill="#fff" font-size="32" font-family="sans-serif" text-anchor="middle" font-weight="bold">TOOLBARI</text>\n  <text x="300" y="230" fill="#85e0ba" font-size="16" font-family="sans-serif" text-anchor="middle">Made for Bangladesh</text>\n</svg>'
+  };
+
+  Object.entries(htmlPresets).forEach(([btnId, code]) => {
+    const btn = $("#" + btnId);
+    if (btn) btn.addEventListener("click", () => { $("#screenshotHtmlInput").value = code; });
+  });
+
+  $("#runCaptureScreen").addEventListener("click", async function() {
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getDisplayMedia) {
+      showToast(L("আপনার ব্রাউজারে স্ক্রিন ক্যাপচার সমর্থিত নয়", "Screen capture not supported in this browser"));
+      return;
+    }
+    try {
+      const stream = await navigator.mediaDevices.getDisplayMedia({ video: { displaySurface: "browser" } });
+      const video = document.createElement("video");
+      video.srcObject = stream;
+      await video.play();
+
+      const canvas = document.createElement("canvas");
+      canvas.width = video.videoWidth;
+      canvas.height = video.videoHeight;
+      const ctx = canvas.getContext("2d");
+      ctx.drawImage(video, 0, 0);
+
+      stream.getTracks().forEach(t => t.stop());
+
+      canvas.toBlob(blob => {
+        showCanvasResult(canvas, L("স্ক্রিনশট সফল", "Screenshot Captured"), canvas.width + " × " + canvas.height + " px", "toolbari-screenshot.png", blob);
+      }, "image/png");
+    } catch {
+      showToast(L("স্ক্রিন ক্যাপচার বাতিল করা হয়েছে", "Screen capture cancelled"));
+    }
+  });
+
+  $("#runRenderHtml").addEventListener("click", function() {
+    const rawCode = $("#screenshotHtmlInput").value.trim();
+    const w = Math.max(100, Math.min(2400, parseInt($("#screenshotWidth").value, 10) || 800));
+    const h = Math.max(100, Math.min(2400, parseInt($("#screenshotHeight").value, 10) || 450));
+
+    if (!rawCode) {
+      showToast(L("HTML বা SVG কোড দিন", "Enter HTML or SVG code"));
+      return;
+    }
+
+    let svgData = "";
+    if (rawCode.startsWith("<svg")) {
+      svgData = rawCode;
+    } else {
+      svgData = '<svg xmlns="http://www.w3.org/2000/svg" width="' + w + '" height="' + h + '">' +
+        '<foreignObject width="100%" height="100%">' +
+        '<div xmlns="http://www.w3.org/1999/xhtml" style="width:100%;height:100%;box-sizing:border-box;">' +
+        rawCode +
+        '</div>' +
+        '</foreignObject>' +
+        '</svg>';
+    }
+
+    const svgBlob = new Blob([svgData], { type: "image/svg+xml;charset=utf-8" });
+    const url = URL.createObjectURL(svgBlob);
+    const img = new Image();
+
+    img.onload = function() {
+      const canvas = document.createElement("canvas");
+      canvas.width = w;
+      canvas.height = h;
+      const ctx = canvas.getContext("2d");
+      ctx.drawImage(img, 0, 0, w, h);
+      URL.revokeObjectURL(url);
+
+      canvas.toBlob(blob => {
+        showCanvasResult(canvas, L("রেন্ডার সম্পন্ন", "Render Complete"), w + " × " + h + " px", "toolbari-rendered.png", blob);
+      }, "image/png");
+    };
+
+    img.onerror = function() {
+      URL.revokeObjectURL(url);
+      showToast(L("রেন্ডার ব্যর্থ হয়েছে। কোড যাচাই করুন।", "Render failed. Check markup."));
+    };
+
+    img.src = url;
+  });
+
+  const viewports = {
+    vpMobile: { w: 390, h: 844 },
+    vpTablet: { w: 768, h: 1024 },
+    vpDesktop: { w: 1280, h: 800 }
+  };
+
+  let activeVp = { w: 390, h: 844 };
+
+  Object.entries(viewports).forEach(([id, size]) => {
+    const btn = $("#" + id);
+    if (btn) {
+      btn.addEventListener("click", () => {
+        activeVp = size;
+        showToast(size.w + " × " + size.h + " px selected");
+      });
+    }
+  });
+
+  $("#runTestViewport").addEventListener("click", function() {
+    const url = $("#viewportUrl").value.trim();
+    if (!url || !/^https?:\/\//i.test(url)) {
+      showToast(L("সঠিক URL দিন", "Enter a valid URL"));
+      return;
+    }
+
+    outputSet(
+      '<div style="margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">' +
+        '<div><p class="workspace-kicker" style="margin:0">' + L("রেসপনসিভ প্রিভিউ", "Responsive Preview") + '</p><h3 class="result-title" style="margin:4px 0 0">' + activeVp.w + ' × ' + activeVp.h + ' px</h3></div>' +
+        '<a href="' + url + '" target="_blank" rel="noopener noreferrer" class="tool-button secondary" style="text-decoration:none;font-size:12px;padding:6px 12px">' + L("নতুন ট্যাবে খুলুন ↗", "Open in New Tab ↗") + '</a>' +
+      '</div>' +
+      '<div style="overflow:auto;background:#0d1210;padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.1);display:flex;justify-content:center">' +
+        '<iframe src="' + url + '" style="width:' + activeVp.w + 'px;height:' + activeVp.h + 'px;border:2px solid rgba(255,255,255,0.2);border-radius:10px;background:#fff" sandbox="allow-scripts allow-same-origin allow-forms"></iframe>' +
+      '</div>'
+    );
+  });
+}
+
+function bindWhois() {
+  const presets = {
+    whoisPresetToolbari: "toolbari.vercel.app",
+    whoisPresetBd: "bangladesh.gov.bd",
+    whoisPresetCloudflare: "cloudflare.com",
+    whoisPresetGithub: "github.com"
+  };
+
+  Object.entries(presets).forEach(([id, val]) => {
+    const btn = $("#" + id);
+    if (btn) btn.addEventListener("click", () => { $("#whoisDomain").value = val; });
+  });
+
+  const typeCodes = {
+    A: 1,
+    AAAA: 28,
+    MX: 15,
+    TXT: 16,
+    NS: 2,
+    SOA: 6,
+    CAA: 257
+  };
+
+  async function queryDoh(domain, typeNum) {
+    const url = "https://dns.google/resolve?name=" + encodeURIComponent(domain) + "&type=" + typeNum;
+    const res = await fetch(url);
+    if (!res.ok) throw new Error("DNS lookup failed");
+    return res.json();
+  }
+
+  $("#runWhois").addEventListener("click", async function() {
+    const btn = $("#runWhois");
+    btn.disabled = true;
+    btn.textContent = L("DNS লুকআপ হচ্ছে…", "Querying DNS…");
+
+    try {
+      let domain = $("#whoisDomain").value.trim().toLowerCase();
+      domain = domain.replace(/^https?:\/\//i, "").replace(/\/.*$/, "").trim();
+
+      if (!domain) {
+        showToast(L("ডোমেইন নাম দিন", "Enter a domain name"));
+        return;
+      }
+
+      const selectedType = $("#whoisRecordType").value;
+      const records = [];
+      let isAd = false;
+
+      if (selectedType === "ALL") {
+        const types = ["A", "AAAA", "MX", "TXT", "NS", "SOA", "CAA"];
+        const results = await Promise.allSettled(types.map(t => queryDoh(domain, typeCodes[t])));
+        results.forEach((r, idx) => {
+          if (r.status === "fulfilled" && r.value.Answer) {
+            if (r.value.AD) isAd = true;
+            r.value.Answer.forEach(ans => {
+              records.push({ type: types[idx], data: ans.data, ttl: ans.TTL });
+            });
+          }
+        });
+      } else {
+        const data = await queryDoh(domain, typeCodes[selectedType] || 1);
+        if (data.AD) isAd = true;
+        if (data.Answer) {
+          data.Answer.forEach(ans => {
+            records.push({ type: selectedType, data: ans.data, ttl: ans.TTL });
+          });
+        }
+      }
+
+      let detectedHost = "Unknown Host";
+      let detectedMail = "None / Custom";
+
+      records.forEach(r => {
+        const d = r.data.toLowerCase();
+        if (d.includes("cloudflare") || d.includes("172.67.") || d.includes("104.")) detectedHost = "Cloudflare CDN";
+        else if (d.includes("vercel") || d.includes("76.76.21.")) detectedHost = "Vercel";
+        else if (d.includes("github.io") || d.includes("185.199.")) detectedHost = "GitHub Pages";
+        else if (d.includes("google") || d.includes("172.217.")) detectedHost = "Google Cloud";
+        else if (d.includes("awsdns") || d.includes("cloudfront")) detectedHost = "Amazon Web Services (AWS)";
+        else if (d.includes("btcl") || domain.endsWith(".bd")) detectedHost = "BTCL / BdNIC";
+
+        if (r.type === "MX") {
+          if (d.includes("google") || d.includes("aspmx")) detectedMail = "Google Workspace";
+          else if (d.includes("outlook") || d.includes("microsoft")) detectedMail = "Microsoft 365";
+          else if (d.includes("zoho")) detectedMail = "Zoho Mail";
+          else if (d.includes("protonmail")) detectedMail = "Proton Mail";
+        }
+      });
+
+      const hasSpf = records.some(r => r.type === "TXT" && r.data.toLowerCase().includes("v=spf1"));
+      const hasIpv6 = records.some(r => r.type === "AAAA");
+
+      let rowsHtml = records.map(r => {
+        return '<tr style="border-bottom:1px solid rgba(255,255,255,0.06)">' +
+          '<td style="padding:8px;font-weight:600;color:var(--teal,#6dcdaf)">' + escapeHtml(r.type) + '</td>' +
+          '<td style="padding:8px;opacity:0.75;font-size:12px">' + r.ttl + 's</td>' +
+          '<td style="padding:8px;word-break:break-all;font-family:monospace;font-size:12px">' + escapeHtml(r.data) + '</td>' +
+          '</tr>';
+      }).join('');
+
+      if (!records.length) {
+        rowsHtml = '<tr><td colspan="3" style="padding:14px;text-align:center;opacity:0.7">' + L("কোনো DNS রেকর্ড পাওয়া যায়নি বা ডোমেইন অপ্রচলিত", "No DNS records found or domain inactive") + '</td></tr>';
+      }
+
+      const allRecordsText = records.map(r => r.type + "\t" + r.ttl + "\t" + r.data).join("\n");
+
+      outputSet(
+        '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px">' +
+          '<div><p class="workspace-kicker" style="margin:0">' + L("DNS ও WHOIS রিপোর্ট", "DNS & WHOIS Report") + '</p><h3 class="result-title" style="margin:4px 0 0">' + escapeHtml(domain) + '</h3></div>' +
+          '<div style="display:flex;gap:6px">' +
+            (isAd ? '<span class="badge-pass">DNSSEC Validated</span>' : '<span class="badge-warn">DNSSEC Unsigned</span>') +
+          '</div>' +
+        '</div>' +
+        '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;font-size:12px;margin-bottom:14px">' +
+          '<div style="padding:10px;background:rgba(255,255,255,0.02);border-radius:8px;border:1px solid rgba(255,255,255,0.06)">' +
+            '<span style="opacity:0.7">' + L("হোস্টিং প্রোভাইডার", "Host Provider") + ':</span><br><b>' + escapeHtml(detectedHost) + '</b>' +
+          '</div>' +
+          '<div style="padding:10px;background:rgba(255,255,255,0.02);border-radius:8px;border:1px solid rgba(255,255,255,0.06)">' +
+            '<span style="opacity:0.7">' + L("ইমেইল সার্ভিস", "Mail Provider") + ':</span><br><b>' + escapeHtml(detectedMail) + '</b>' +
+          '</div>' +
+          '<div style="padding:10px;background:rgba(255,255,255,0.02);border-radius:8px;border:1px solid rgba(255,255,255,0.06)">' +
+            '<span style="opacity:0.7">SPF Record:</span><br>' + (hasSpf ? '<span class="badge-pass">Configured</span>' : '<span class="badge-warn">Missing</span>') +
+          '</div>' +
+          '<div style="padding:10px;background:rgba(255,255,255,0.02);border-radius:8px;border:1px solid rgba(255,255,255,0.06)">' +
+            '<span style="opacity:0.7">IPv6 Support:</span><br>' + (hasIpv6 ? '<span class="badge-pass">Enabled</span>' : '<span class="badge-warn">Disabled</span>') +
+          '</div>' +
+        '</div>' +
+        '<div style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:12px;margin-bottom:12px">' +
+          '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">' +
+            '<strong style="font-size:12px;text-transform:uppercase;opacity:0.8">' + L("DNS রেকর্ডস (" + records.length + ")", "DNS Records (" + records.length + ")") + '</strong>' +
+            '<button class="tool-button secondary" id="copyWhoisRecords" type="button" style="min-height:28px;padding:0 8px;font-size:11px">' + L("রেকর্ড কপি", "Copy Records") + '</button>' +
+          '</div>' +
+          '<table style="width:100%;border-collapse:collapse;font-size:13px">' +
+            '<thead><tr style="border-bottom:1px solid rgba(255,255,255,0.1);text-align:left;opacity:0.6;font-size:11px"><th style="padding:6px 8px">Type</th><th style="padding:6px 8px">TTL</th><th style="padding:6px 8px">Data</th></tr></thead>' +
+            '<tbody>' + rowsHtml + '</tbody>' +
+          '</table>' +
+        '</div>'
+      );
+
+      const copyBtn = $("#copyWhoisRecords");
+      if (copyBtn) copyBtn.addEventListener("click", () => copyText(allRecordsText));
+    } catch (err) {
+      showToast(L("DNS লুকআপে সমস্যা হয়েছে", "DNS lookup error"));
+    } finally {
+      btn.disabled = false;
+      btn.textContent = L("লাইভ DNS ও WHOIS অডিট করুন", "Query Live DNS & WHOIS");
+    }
+  });
+}
+
 
 let toastTimer;
 function showToast(message) {

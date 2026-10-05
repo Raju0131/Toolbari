@@ -334,6 +334,17 @@ body.modal-open { overflow: hidden; }
   .footer-links { gap: 10px 15px; }
 }
 
+.badge-pass { display: inline-block; color: #85e0ba; background: rgba(109,205,175,.15); padding: 3px 8px; border-radius: 6px; font-weight: 600; font-size: 11px; }
+.badge-warn { display: inline-block; color: #f5d37e; background: rgba(245,211,126,.15); padding: 3px 8px; border-radius: 6px; font-weight: 600; font-size: 11px; }
+.badge-fail { display: inline-block; color: #ff8a80; background: rgba(255,138,128,.15); padding: 3px 8px; border-radius: 6px; font-weight: 600; font-size: 11px; }
+.tab-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,.12); padding-bottom: 8px; }
+.tab-btn { background: transparent; border: 1px solid var(--rule); color: var(--ink); padding: 6px 14px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 550; }
+.output-panel .tab-btn { color: #fff; border-color: rgba(255,255,255,.2); }
+.tab-btn:hover { border-color: var(--teal); }
+.tab-btn.active { background: var(--teal); border-color: var(--teal); color: #fff; }
+.canvas-wrap { position: relative; display: flex; justify-content: center; align-items: center; max-width: 100%; overflow: auto; background: repeating-conic-gradient(#2b3531 0% 25%, #1e2623 0% 50%) 50% / 20px 20px; border-radius: 8px; border: 1px solid rgba(255,255,255,.12); margin: 12px 0; }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
 }
+
