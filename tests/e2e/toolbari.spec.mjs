@@ -25,7 +25,7 @@ const ADVANCED_TOOL_KEYS = [
   "html-entities"
 ];
 
-const EXPECTED_CATALOG_SIZE = 100;
+const EXPECTED_CATALOG_SIZE = 105;
 const TEST_PNG = Buffer.from(
   "iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFklEQVR4nGP4z8DwHwwZGP7//w9kAABHygj4/BTyWgAAAABJRU5ErkJggg==",
   "base64"

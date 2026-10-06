@@ -32,12 +32,12 @@ const tools = [
   defineTool(1, "age", "calculators", "live", "AGE", "বয়স ক্যালকুলেটর", "Age Calculator", "বছর, মাস ও দিনে নির্ভুল বয়স জানুন", "Calculate precise age in years, months and days", "#bc3d26"),
   defineTool(2, "api", "web", "live", "API", "API টেস্টার", "API Tester", "GET ও POST রিকোয়েস্ট পরীক্ষা করুন", "Test GET and POST requests in your browser", "#0f6b5d"),
   defineTool(3, "bn-to-banglish", "text", "live", "অA", "বাংলা থেকে বাংলিশ", "Bangla to Banglish", "বাংলা লেখা রোমান হরফে রূপান্তর করুন", "Convert Bangla writing into Roman characters", "#6b4e9b"),
-  defineTool(4, "banglish-to-bn", "text", "beta", "Aঅ", "বাংলিশ থেকে বাংলা", "Banglish to Bangla", "রোমান হরফের বাংলা লেখাকে বাংলা করুন", "Convert phonetic Banglish into Bangla script", "#6b4e9b"),
+  defineTool(4, "banglish-to-bn", "text", "live", "Aঅ", "বাংলিশ থেকে বাংলা", "Banglish to Bangla", "Avro-স্টাইলে সহজ রোমান হরফে বাংলা লিখুন", "Avro-style phonetic Banglish to Bangla transliteration", "#6b4e9b"),
   defineTool(5, "old-nid", "cards", "beta", "ID", "BD ডামি পুরোনো NID কার্ড", "BD Dummy Old NID Card", "শুধু ডেমোর জন্য স্পষ্ট SAMPLE কার্ড", "Create an unmistakable SAMPLE card for mockups", "#bc3d26"),
   defineTool(6, "smart-nid", "cards", "beta", "ID+", "BD ডামি স্মার্ট NID কার্ড", "BD Dummy Smart NID Card", "নিরাপদ, কাল্পনিক ও ওয়াটারমার্কযুক্ত মকআপ", "A safe fictional mockup with a permanent watermark", "#bc3d26"),
   defineTool(7, "govt-photo", "bangladesh", "live", "300", "সরকারি চাকরির ছবি রিসাইজার", "BD Govt Job Photo Resizer", "চাকরির আবেদনের মাপে ছবি তৈরি করুন", "Resize a photo for common job-application sizes", "#0f6b5d"),
   defineTool(8, "train-info", "bangladesh", "live", "TRN", "বাংলাদেশ ট্রেন তথ্য", "BD Train Info", "বাংলাদেশ রেলওয়ের ট্রেনের সময়সূচি, ছুটি ও ভাড়া", "Search BD train schedules, weekly off-days and fares", "#c9942d"),
-  defineTool(9, "bdix", "bangladesh", "beta", "MS", "BDIX সার্ভার টেস্টার", "BDIX Server Tester", "পাবলিক URL-এর ব্রাউজার লেটেন্সি মাপুন", "Measure browser latency to a public URL", "#0f6b5d"),
+  defineTool(9, "bdix", "bangladesh", "live", "MS", "BDIX সার্ভার টেস্টার", "BDIX Server Tester", "BDIX ও লোকাল ক্যাশ নোডের রিয়েল-টাইম লেটেন্সি মাপুন", "Measure real-time latency across BDIX and local cache nodes", "#0f6b5d"),
   defineTool(10, "birthday-card", "cards", "live", "BDAY", "জন্মদিনের কার্ড মেকার", "Birthday Card Maker", "নাম ও বার্তা দিয়ে শেয়ারযোগ্য কার্ড বানান", "Create a shareable card with a name and message", "#c9942d"),
   defineTool(11, "blur-faces", "image", "live", "BLUR", "মুখ ব্লার করুন", "Blur Faces", "মুখ স্বয়ংক্রিয়ভাবে শনাক্ত করুন বা নিজে অঞ্চল বেছে ব্লার করুন", "Detect faces automatically or manually choose a region to blur", "#6b4e9b"),
   defineTool(12, "bmi", "calculators", "live", "BMI", "BMI ক্যালকুলেটর", "BMI Calculator", "উচ্চতা ও ওজন থেকে BMI হিসাব করুন", "Calculate BMI from your height and weight", "#0f6b5d"),
@@ -58,7 +58,7 @@ const tools = [
   defineTool(27, "img-base64", "image", "live", "64", "ইমেজ থেকে Base64", "Image to Base64", "ছবিকে Base64 ডেটা URL-এ নিন", "Convert an image into a Base64 data URL", "#6b4e9b"),
   defineTool(28, "img-emoji", "image", "live", "🙂", "ইমেজ থেকে ইমোজি", "Image to Emoji", "রঙের ভিত্তিতে ইমোজি মোজাইক বানান", "Build an emoji mosaic from image colors", "#c9942d"),
   defineTool(29, "upscaler", "image", "live", "2X", "ইমেজ আপস্কেলার", "Image Upscaler", "লোকাল রিস্যাম্পলিংয়ে ছবির মাপ বাড়ান", "Increase dimensions with local resampling", "#0f6b5d"),
-  defineTool(30, "speed", "web", "beta", "Mbps", "ইন্টারনেট স্পিড টেস্টার", "Internet Speed Tester", "ব্রাউজার থেকে আনুমানিক ডাউনলোড গতি মাপুন", "Estimate download speed from the browser", "#0f6b5d"),
+  defineTool(30, "speed", "web", "live", "Mbps", "ইন্টারনেট স্পিড টেস্টার", "Internet Speed Tester", "লাইভ ডাউনলোড ব্যান্ডউইথ, পিং ও স্পিড গেজ", "Live download bandwidth, ping and speed gauge", "#0f6b5d"),
   defineTool(31, "invoice", "business", "live", "৳", "ইনভয়েস জেনারেটর", "Invoice Generator", "পরিষ্কার, প্রিন্টযোগ্য ইনভয়েস বানান", "Create a clean, printable invoice", "#bc3d26"),
   defineTool(32, "lorem", "text", "live", "Aa", "Lorem Ipsum", "Lorem Ipsum", "ডিজাইনের জন্য ডামি লেখা তৈরি করুন", "Generate placeholder copy for designs", "#6b4e9b"),
   defineTool(33, "mp3-tags", "business", "live", "MP3", "MP3 ট্যাগ এডিটর", "MP3 Tag Editor", "MP3 ফাইলে শিরোনাম, শিল্পী ও অ্যালবামের তথ্য লিখুন", "Write title, artist and album information to an MP3 file", "#c9942d"),
@@ -73,7 +73,7 @@ const tools = [
   defineTool(42, "pdf-to-word", "document", "beta", "DOC", "PDF থেকে Word", "PDF to Word", "PDF-এর বাছাইযোগ্য লেখা আসল DOCX ফাইলে নিন", "Extract selectable PDF text into a real DOCX file", "#4285f4"),
   defineTool(43, "photo-filter", "image", "live", "FX", "ফটো ফিল্টার", "Photo Filter", "ছবিতে সুন্দর ফিল্টার প্রয়োগ করুন", "Apply tasteful filters to a photo", "#c9942d"),
   defineTool(44, "qr-maker", "links", "live", "QR", "QR কোড মেকার", "QR Code Maker", "লিংক বা লেখা থেকে QR কোড বানান", "Create a QR code from a link or text", "#17221f"),
-  defineTool(45, "qr-scanner", "links", "beta", "SCAN", "QR কোড স্ক্যানার", "QR Code Scanner", "ছবি থেকে QR কোড পড়ুন", "Read a QR code from an image", "#0f6b5d"),
+  defineTool(45, "qr-scanner", "links", "live", "SCAN", "QR কোড স্ক্যানার", "QR Code Scanner", "ক্যামেরা দিয়ে লাইভ বা ছবি থেকে QR কোড পড়ুন", "Scan QR codes with live camera or from image files", "#0f6b5d"),
   defineTool(46, "ats", "calculators", "live", "ATS", "রিজিউমে ATS চেকার", "Resume ATS Checker", "কীওয়ার্ড মিল ও রিজিউমের প্রস্তুতি যাচাই করুন", "Check keyword match and resume readiness", "#6b4e9b"),
   defineTool(47, "security-headers", "web", "live", "HDR", "সিকিউরিটি হেডার", "Security Headers", "ওয়েবসাইটের নিরাপত্তা হেডার অডিট ও সার্ভার কনফিগ তৈরি", "Audit security headers and generate server config snippets", "#c9942d"),
   defineTool(48, "student-card", "cards", "beta", "ID", "স্টুডেন্ট ID কার্ড", "Student ID Card Maker", "স্পষ্ট SAMPLE চিহ্নসহ পরিচয় মকআপ", "Create an identity mockup with a SAMPLE mark", "#0f6b5d"),
@@ -82,7 +82,7 @@ const tools = [
   defineTool(51, "logo", "cards", "live", "LOGO", "টেক্সট লোগো মেকার", "Text Logo Maker", "লেখা থেকে মিনিমাল লোগো বানান", "Create a minimal logo from text", "#c9942d"),
   defineTool(52, "text-ascii", "text", "live", "65", "টেক্সট থেকে ASCII", "Text to ASCII", "লেখাকে ASCII/Unicode কোডে নিন", "Convert text into ASCII or Unicode codes", "#17221f"),
   defineTool(53, "typing", "calculators", "live", "WPM", "টাইপিং টেস্ট", "Typing Test", "গতি ও নির্ভুলতা মাপুন", "Measure typing speed and accuracy", "#0f6b5d"),
-  defineTool(54, "bijoy", "text", "beta", "বি", "Unicode ও Bijoy কনভার্টার", "Unicode & Bijoy Converter", "জনপ্রিয় অক্ষর ম্যাপিং দিয়ে লেখা বদলান", "Convert text with a practical character mapping", "#6b4e9b"),
+  defineTool(54, "bijoy", "text", "live", "বি", "Unicode ও Bijoy কনভার্টার", "Unicode & Bijoy Converter", "Bijoy (ANSI) ও Unicode-এর মধ্যে যুক্তবর্ণসহ শতভাগ রূপান্তর", "Complete bidirectional Bijoy (ANSI) & Unicode converter", "#6b4e9b"),
   defineTool(55, "url-expander", "links", "live", "↗", "URL এক্সপ্যান্ডার", "URL Expander", "রিডাইরেক্ট আনর‍্যাপ, ট্র্যাকিং রিমুভ ও নিরাপদ লিংক দেখুন", "Unwrap redirects, remove tracking parameters and view target URL", "#c9942d"),
   defineTool(56, "url-parser", "links", "live", "URL", "URL পার্সার", "URL Parser", "যেকোনো URL-এর অংশগুলো বুঝে নিন", "Inspect every part of a URL", "#c9942d"),
   defineTool(57, "url-shortener", "links", "live", "↘", "URL শর্টনার", "URL Shortener", "লোকাল শর্ট লিংক, কাস্টম স্লাগ ও QR কোড তৈরি করুন", "Create local short links, custom aliases and instant QR codes", "#0f6b5d"),
@@ -117,6 +117,14 @@ if (Array.isArray(window.TOOLBARI_ADVANCED_DEFINITIONS)) {
     tools.push(defineTool.apply(null, definition));
   });
 }
+
+tools.push(
+  defineTool(101, "signature-maker", "business", "live", "SIG", "ডিজিটাল স্বাক্ষর মেকার", "Digital Signature Maker", "চাকরির আবেদনের মাপে (৩০০×৮০ px) স্বাক্ষর আঁকুন ও সাইজ কমান", "Draw signature and export for BD job applications (300x80 px <60KB)", "#0f6b5d"),
+  defineTool(102, "zakat-calculator", "calculators", "live", "ZKT", "যাকাত ক্যালকুলেটর", "Zakat Calculator", "স্বর্ণ-রৌপ্য নিসাব, সম্পদ ও ঋণের ভিত্তিতে ২.৫% যাকাত হিসাব", "Calculate 2.5% Zakat based on Gold/Silver Nisab and net assets", "#c9942d"),
+  defineTool(103, "income-tax", "bangladesh", "live", "TAX", "বাংলাদেশ আয়কর ক্যালকুলেটর", "BD Income Tax Calculator", "নতুন বাজেট স্ল্যাব, বিনিয়োগ রেয়াত ও ন্যূনতম করের হিসাব", "Calculate personal income tax with slabs, rebates and minimum tax", "#bc3d26"),
+  defineTool(104, "voice-typing", "text", "live", "MIC", "বাংলা ভয়েস টাইপিং", "Bangla Voice Typing", "ব্রাউজারে মুখে বলে বাংলায় রিয়েল-টাইম টাইপ ও টেক্সট ডাউনলোড", "Real-time in-browser speech-to-text dictation in Bangla & English", "#6b4e9b"),
+  defineTool(105, "exif-inspector", "image", "live", "EXIF", "ইমেজ EXIF ও মেটাডাটা ক্লিনার", "Image EXIF Viewer & Stripper", "ছবির ক্যামেরা, লেন্স, তারিখ ও জিপিএস লোকেশন দেখুন এবং মুছুন", "View camera, lens, date and GPS tags or strip them for privacy", "#17221f")
+);
 
 const categories = ["all", "calculators", "bangladesh", "text", "image", "document", "cards", "developer", "web", "links", "business"];
 try {
@@ -203,7 +211,12 @@ const searchAliasGroups = [
   ["palette", ["প্যালেট", "রঙের প্যালেট", "palette", "colors"]],
   ["fileinfo", ["ফাইল টাইপ", "ফাইল সাইজ", "file type", "file size", "mime"]],
   ["numberbase", ["বাইনারি", "অক্টাল", "হেক্সাডেসিমাল", "binary", "octal", "hexadecimal", "number base"]],
-  ["entities", ["এইচটিএমএল এনটিটি", "html entity", "entities"]]
+  ["entities", ["এইচটিএমএল এনটিটি", "html entity", "entities"]],
+  ["signature", ["স্বাক্ষর", "সই", "signature", "sig", "teletalk", "bpsc"]],
+  ["zakat", ["যাকাত", "জাকাত", "zakat", "zakah", "nisab", "নিসাব"]],
+  ["tax", ["আয়কর", "কর", "ইনকাম ট্যাক্স", "tax", "income tax", "nbr", "rebate"]],
+  ["voice", ["ভয়েস", "মুখের কথা", "স্পিচ", "voice", "speech", "dictation", "typing"]],
+  ["exif", ["এক্সইফ", "মেটাডাটা", "ক্যামেরা", "exif", "metadata", "gps", "camera"]]
 ];
 const canonicalSearchTerms = new Set(searchAliasGroups.map(function(group) { return group[0]; }));
 
@@ -257,12 +270,12 @@ function updateDocumentMetadata() {
   const isBangla = state.lang === "bn";
   const title = toolItem
     ? (isBangla ? toolItem.titleBn + " — টুলবাড়ি" : toolItem.titleEn + " — ToolBari")
-    : (isBangla ? "টুলবাড়ি — ১০০টি দরকারি টুল, এক ঠিকানায়" : "ToolBari — 100 useful tools, beautifully organized");
+    : (isBangla ? "টুলবাড়ি — ১০৫টি দরকারি টুল, এক ঠিকানায়" : "ToolBari — 105 useful tools, beautifully organized");
   const description = toolItem
     ? (isBangla ? toolItem.descBn : toolItem.descEn)
     : (isBangla
-      ? "বাংলা ও ইংরেজিতে ১০০টি দরকারি অনলাইন টুল—ছবি, PDF, লেখা, হিসাব, ডেভেলপার ও ওয়েব টুল; দ্রুত এবং গোপনীয়তা-কেন্দ্রিক।"
-      : "100 practical tools in Bangla and English for images, PDFs, text, calculations, links, developer work and the web—fast and privacy-focused.");
+      ? "বাংলা ও ইংরেজিতে ১০৫টি দরকারি অনলাইন টুল—ছবি, PDF, লেখা, হিসাব, ডেভেলপার ও ওয়েব টুল; দ্রুত এবং গোপনীয়তা-কেন্দ্রিক।"
+      : "105 practical tools in Bangla and English for images, PDFs, text, calculations, links, developer work and the web—fast and privacy-focused.");
   const canonical = currentCanonicalUrl();
   document.title = title;
   $("#metaDescription").setAttribute("content", description);
@@ -275,7 +288,7 @@ function updateDocumentMetadata() {
   $("#canonicalLink").setAttribute("href", canonical);
   const graph = [
     { "@type": "WebSite", "@id": siteOrigin + "#website", url: siteOrigin, name: "ToolBari", alternateName: "টুলবাড়ি", inLanguage: ["bn-BD", "en"] },
-    { "@type": "WebApplication", "@id": siteOrigin + "#app", url: siteOrigin, name: "ToolBari", alternateName: "টুলবাড়ি", applicationCategory: "UtilitiesApplication", operatingSystem: "Any modern web browser", isAccessibleForFree: true, inLanguage: ["bn-BD", "en"], description: "A bilingual collection of 100 practical browser-based utilities." }
+    { "@type": "WebApplication", "@id": siteOrigin + "#app", url: siteOrigin, name: "ToolBari", alternateName: "টুলবাড়ি", applicationCategory: "UtilitiesApplication", operatingSystem: "Any modern web browser", isAccessibleForFree: true, inLanguage: ["bn-BD", "en"], description: "A bilingual collection of 105 practical browser-based utilities." }
   ];
   $("#siteStructuredData").textContent = JSON.stringify({ "@context": "https://schema.org", "@graph": graph }).replace(/</g, "\\u003c");
 }
@@ -559,6 +572,16 @@ function renderWorkspace(toolItem) {
       return renderScreenshot(intro);
     case "whois":
       return renderWhois(intro);
+    case "signature-maker":
+      return renderSignatureMaker(intro);
+    case "zakat-calculator":
+      return renderZakatCalculator(intro);
+    case "income-tax":
+      return renderIncomeTax(intro);
+    case "voice-typing":
+      return renderVoiceTyping(intro);
+    case "exif-inspector":
+      return renderExifInspector(intro);
     case "invoice":
       return renderInvoice(intro);
     case "word-pdf":
@@ -629,6 +652,8 @@ function bindTool(toolItem) {
     "pdf-compressor": bindPdfTool, "pdf-merger": bindPdfTool, "pdf-remove": bindPdfTool, "pdf-split": bindPdfTool, "pdf-to-image": bindPdfTool, "pdf-images": bindPdfTool, "pdf-to-word": bindPdfTool,
     "qr-maker": bindQrTool, "qr-scanner": bindQrTool, "youtube-thumb": bindYoutubeThumb,
     speed: bindNetworkTool, bdix: bindNetworkTool, "security-headers": bindSecurityHeaders, "train-info": bindTrainInfo, "courier-fraud": bindCourierFraud, watermark: bindWatermark, "bg-remover": bindBgRemover, "url-expander": bindUrlExpander, "url-shortener": bindUrlShortener, screenshot: bindScreenshot, whois: bindWhois,
+    "signature-maker": bindSignatureMaker, "zakat-calculator": bindZakatCalculator,
+    "income-tax": bindIncomeTax, "voice-typing": bindVoiceTyping, "exif-inspector": bindExifInspector,
     invoice: bindInvoice, "word-pdf": bindWordPdf,
     "birthday-card": bindCardTool, "old-nid": bindCardTool, "smart-nid": bindCardTool, "facebook-card": bindCardTool, "google-card": bindCardTool, cnic: bindCardTool, "student-card": bindCardTool, logo: bindCardTool, "visiting-card": bindCardTool, "youtube-card": bindCardTool,
     "unit-converter": bindExpansionTool, "land-converter": bindExpansionTool, percentage: bindExpansionTool, "loan-emi": bindExpansionTool, "date-business": bindExpansionTool, "taka-words": bindExpansionTool,
@@ -684,8 +709,19 @@ function renderApi(intro) {
 function renderTextConverter(toolItem, intro) {
   let inputPlaceholder = L("এখানে লেখা লিখুন…", "Type or paste text here…");
   let action = L("রূপান্তর করুন", "Convert");
-  if (toolItem.key === "text-ascii") action = L("কোড দেখুন", "Show codes");
-  return workspace(intro + '<div class="tool-form">' + textareaField("converterInput", L("ইনপুট লেখা", "Input text"), inputPlaceholder) + '<button class="tool-button" id="runConverter" type="button">' + action + '</button>' + localNote() + '</div>', L("রূপান্তরিত লেখা", "Converted text"), L("লেখা দিলে ফল এখানে দেখাবে।", "Your converted text appears here."));
+  let extraControls = "";
+  if (toolItem.key === "text-ascii") {
+    action = L("কোড দেখুন", "Show codes");
+  } else if (toolItem.key === "bijoy") {
+    extraControls = selectField("bijoyDirection", L("রূপান্তরের ধরন", "Conversion direction"), [
+      ["bijoy-to-uni", L("Bijoy (ANSI / SutonnyMJ) ➔ Unicode", "Bijoy (ANSI) to Unicode")],
+      ["uni-to-bijoy", L("Unicode ➔ Bijoy (ANSI / SutonnyMJ)", "Unicode to Bijoy (ANSI)")]
+    ]);
+    inputPlaceholder = L("এখানে Bijoy বা Unicode লেখা লিখুন বা পেস্ট করুন…", "Type or paste Bijoy or Unicode text here…");
+  } else if (toolItem.key === "banglish-to-bn") {
+    inputPlaceholder = L("বাংলিশে লিখুন (যেমন: ami banglay gan gai, amader shonar bangla)…", "Type phonetic Banglish (e.g. ami banglay gan gai)…");
+  }
+  return workspace(intro + '<div class="tool-form">' + extraControls + textareaField("converterInput", L("ইনপুট লেখা", "Input text"), inputPlaceholder) + '<div class="action-row"><button class="tool-button" id="runConverter" type="button">' + action + '</button></div>' + (toolItem.key === "banglish-to-bn" ? '<p class="micro-note">' + L("টাইপ করার সাথে সাথে নিচে রিয়েল-টাইম বাংলা প্রিভিউ দেখাবে।", "Live real-time Bangla preview appears below as you type.") + '</p>' : "") + localNote() + '</div>', L("রূপান্তরিত লেখা", "Converted text"), L("লেখা দিলে ফল এখানে দেখাবে।", "Your converted text appears here."));
 }
 
 function renderImageTool(toolItem, intro) {
@@ -764,7 +800,21 @@ function renderQrTool(toolItem, intro) {
   if (toolItem.key === "qr-maker") {
     return workspace(intro + '<div class="tool-form">' + textareaField("qrText", L("লিংক বা লেখা", "Link or text"), "https://toolbari.com") + '<div class="field-row"><label class="field"><span>' + L("সাইজ", "Size") + '</span><select id="qrSize"><option value="220">220 px</option><option value="320">320 px</option><option value="480">480 px</option></select></label>' + field("qrColor", L("রঙ", "Color"), "color", "#17221f") + '</div><button class="tool-button" id="runQr" type="button">' + L("QR কোড বানান", "Create QR code") + '</button></div>', L("QR কোড", "QR code"), L("লিংক বা লেখা দিয়ে কোড তৈরি করুন।", "Enter a link or text to create the code."));
   }
-  return workspace(intro + '<div class="tool-form"><label class="field"><span>' + L("QR কোডের ছবি", "QR code image") + '</span><input id="qrFile" type="file" accept="image/*"></label><button class="tool-button" id="runQr" type="button">' + L("স্ক্যান করুন", "Scan code") + '</button>' + localNote() + limitNote(10) + '</div>', L("স্ক্যান ফল", "Scan result"), L("পরিষ্কার QR ছবি বেছে নিন।", "Choose a clear image of a QR code."));
+  return workspace(intro + '<div class="tool-form">' +
+    '<div class="action-row" style="margin-bottom:12px;gap:8px;">' +
+      '<button class="tool-button accent" id="startQrCamera" type="button"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:6px"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>' + L("ক্যামেরা দিয়ে লাইভ স্ক্যান", "Live camera scan") + '</button>' +
+      '<button class="tool-button secondary" id="stopQrCamera" type="button" style="display:none">' + L("ক্যামেরা বন্ধ করুন", "Stop camera") + '</button>' +
+    '</div>' +
+    '<div id="cameraWrap" style="display:none;position:relative;margin-bottom:14px;background:#000;border-radius:10px;overflow:hidden;max-height:300px;text-align:center;">' +
+      '<video id="qrCameraVideo" playsinline style="width:100%;max-height:280px;object-fit:cover;display:block;"></video>' +
+      '<div style="position:absolute;inset:15%;border:2px dashed rgba(255,255,255,0.7);border-radius:8px;pointer-events:none;box-shadow:0 0 0 9999px rgba(0,0,0,0.35);"></div>' +
+      '<p style="position:absolute;bottom:8px;left:0;right:0;margin:0;color:#fff;font-size:12px;text-shadow:0 1px 2px #000;">' + L("QR কোডটি ফ্রেমের মাঝে রাখুন", "Align QR code inside the frame") + '</p>' +
+    '</div>' +
+    '<label class="field"><span>' + L("অথবা QR কোডের ছবি বেছে নিন", "Or choose a QR code image") + '</span><input id="qrFile" type="file" accept="image/*"></label>' +
+    '<button class="tool-button" id="runQr" type="button">' + L("ছবি স্ক্যান করুন", "Scan image") + '</button>' +
+    localNote() + limitNote(10) + '</div>',
+    L("স্ক্যান ফল", "Scan result"),
+    L("ক্যামেরা চালু করুন অথবা QR কোডের ছবি বেছে নিয়ে স্ক্যান করুন।", "Start live camera or choose a QR image to scan."));
 }
 
 function renderYoutubeThumb(intro) {
@@ -773,9 +823,32 @@ function renderYoutubeThumb(intro) {
 
 function renderNetworkTool(toolItem, intro) {
   if (toolItem.key === "speed") {
-    return workspace(intro + '<div class="tool-form"><button class="tool-button" id="runNetwork" type="button">' + L("স্পিড টেস্ট শুরু করুন", "Start speed test") + '</button><p class="micro-note">' + L("প্রায় ৫ MB টেস্ট ডেটা ডাউনলোড হতে পারে। ফল আনুমানিক।", "About 5 MB of test data may be downloaded. Results are approximate.") + '</p></div>', L("ডাউনলোড স্পিড", "Download speed"), L("বোতাম চাপলে টেস্ট শুরু হবে।", "Start the test when you are ready."));
+    return workspace(intro + '<div class="tool-form">' +
+      '<div id="speedGaugeWrap" style="text-align:center;margin:12px 0 16px;">' +
+        '<svg id="speedGaugeSvg" viewBox="0 0 200 120" style="width:100%;max-width:260px;display:inline-block;">' +
+          '<path d="M 20 105 A 80 80 0 0 1 180 105" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="16" stroke-linecap="round"/>' +
+          '<path id="speedGaugeArc" d="M 20 105 A 80 80 0 0 1 180 105" fill="none" stroke="#0f6b5d" stroke-width="16" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="251" style="transition:stroke-dashoffset 0.25s linear;"/>' +
+          '<line id="speedGaugeNeedle" x1="100" y1="105" x2="35" y2="105" stroke="#bc3d26" stroke-width="4" stroke-linecap="round" style="transform-origin:100px 105px;transform:rotate(0deg);transition:transform 0.25s ease-out;"/>' +
+          '<circle cx="100" cy="105" r="7" fill="#bc3d26"/>' +
+        '</svg>' +
+        '<div id="speedLiveText" style="font-size:28px;font-weight:700;color:#f5d37e;margin-top:-10px;">0.0 <small style="font-size:16px;color:#a9bbb6;">Mbps</small></div>' +
+        '<div id="speedStatusText" style="font-size:13px;color:#a9bbb6;margin-top:4px;">' + L("প্রস্তুত", "Ready") + '</div>' +
+      '</div>' +
+      '<button class="tool-button" id="runNetwork" type="button">' + L("স্পিড টেস্ট শুরু করুন", "Start speed test") + '</button>' +
+      '<p class="micro-note">' + L("মাল্টি-টায়ার স্ট্রিমে ডাউনলোড ব্যান্ডউইথ ও লেটেন্সি রিয়েল-টাইমে পরিমাপ করা হয়।", "Measures download throughput and latency in real time using multi-tier streams.") + '</p>' +
+      '</div>', L("ডাউনলোড স্পিড", "Download speed"), L("বোতাম চাপলে টেস্ট শুরু হবে।", "Start the test when you are ready."));
   }
-  return workspace(intro + '<div class="tool-form">' + field("networkUrl", L("পাবলিক URL", "Public URL"), "url", "https://example.com") + '<button class="tool-button" id="runNetwork" type="button">' + (toolItem.key === "bdix" ? L("লেটেন্সি মাপুন", "Measure latency") : L("হেডার পরীক্ষা করুন", "Inspect headers")) + '</button><p class="micro-note">' + L("লোকাল/প্রাইভেট নেটওয়ার্ক ব্লক করা আছে। CORS নীতি প্রযোজ্য।", "Local/private networks are blocked. Browser CORS rules apply.") + '</p></div>', L("নেটওয়ার্ক ফল", "Network result"), L("একটি নিরাপদ পাবলিক URL দিন।", "Enter a safe public URL."));
+  if (toolItem.key === "bdix") {
+    return workspace(intro + '<div class="tool-form">' +
+      '<div class="action-row" style="margin-bottom:12px;gap:8px;">' +
+        '<button class="tool-button accent" id="runAllNodes" type="button">' + L("সব BDIX/ক্যাশ নোড একসাথে টেস্ট করুন", "Test all BDIX & Cache nodes") + '</button>' +
+      '</div>' +
+      field("networkUrl", L("অথবা কাস্টম পাবলিক URL", "Or custom public URL"), "url", "https://speed.cloudflare.com/cdn-cgi/trace") +
+      '<button class="tool-button" id="runNetwork" type="button">' + L("কাস্টম URL লেটেন্সি মাপুন", "Measure custom URL latency") + '</button>' +
+      '<p class="micro-note">' + L("বাংলাদেশের শীর্ষ পাবলিক BDIX সংযোগ ও CDN ক্যাশ নোডগুলোর ব্রাউজার পিং পরীক্ষা করুন।", "Inspect browser latency across Bangladesh BDIX connections and CDN cache nodes.") + '</p>' +
+      '</div>', L("BDIX লেটেন্সি ফল", "BDIX latency result"), L("নোড টেস্ট শুরু করুন বা URL দিয়ে মাপুন।", "Start the node test or enter a URL."));
+  }
+  return workspace(intro + '<div class="tool-form">' + field("networkUrl", L("পাবলিক URL", "Public URL"), "url", "https://example.com") + '<button class="tool-button" id="runNetwork" type="button">' + L("হেডার পরীক্ষা করুন", "Inspect headers") + '</button><p class="micro-note">' + L("লোকাল/প্রাইভেট নেটওয়ার্ক ব্লক করা আছে। CORS নীতি প্রযোজ্য।", "Local/private networks are blocked. Browser CORS rules apply.") + '</p></div>', L("নেটওয়ার্ক ফল", "Network result"), L("একটি নিরাপদ পাবলিক URL দিন।", "Enter a safe public URL."));
 }
 
 function renderTrainInfo(intro) {
@@ -1560,34 +1633,265 @@ function banglaToRoman(textValue) {
   return Array.from(textValue).map(function(char) { return Object.prototype.hasOwnProperty.call(banglaRomanMap, char) ? banglaRomanMap[char] : char; }).join("").replace(/\s+/g, " ").trim();
 }
 
-const phoneticPairs = [
-  ["sh","শ"],["kh","খ"],["gh","ঘ"],["chh","ছ"],["ch","চ"],["jh","ঝ"],["th","থ"],["dh","ধ"],["ph","ফ"],["bh","ভ"],["ng","ং"],["oi","ৈ"],["ou","ৌ"],
-  ["aa","া"],["ee","ী"],["oo","ূ"],["a","া"],["i","ি"],["u","ু"],["e","ে"],["o","ো"],
-  ["k","ক"],["g","গ"],["j","জ"],["t","ত"],["d","দ"],["n","ন"],["p","প"],["f","ফ"],["b","ব"],["m","ম"],["r","র"],["l","ল"],["s","স"],["h","হ"],["y","য়"]
+// ==========================================
+// Comprehensive Avro-style Phonetic Engine
+// ==========================================
+const avroSpecialWords = {
+  "ami": "আমি", "tumi": "তুমি", "apni": "আপনি", "amader": "আমাদের", "tomader": "তোমাদের", "apnader": "আপনাদের",
+  "amar": "আমার", "tomar": "তোমার", "apnar": "আপনার", "bangla": "বাংলা", "banglay": "বাংলায়",
+  "bangladesh": "বাংলাদেশ", "bangladeshi": "বাংলাদেশী", "dhaka": "ঢাকা", "dhonnobad": "ধন্যবাদ",
+  "shob": "সব", "shobai": "সবাই", "onek": "অনেক", "kemon": "কেমন", "achhen": "আছেন", "achhi": "আছি",
+  "achho": "আছো", "bhalo": "ভালো", "theko": "থেকো", "shonar": "সোনার", "kintu": "কিন্তু",
+  "shundor": "সুন্দর", "shikkha": "শিক্ষা", "shikkhok": "শিক্ষক", "desh": "দেশ", "gan": "গান",
+  "gai": "গাই", "khub": "খুব", "valobashi": "ভালোবাসি", "bhalobashi": "ভালোবাসি", "kichu": "কিছু",
+  "kothay": "কোথায়", "kokhon": "কখন", "ki": "কি", "keno": "কেন", "ekhon": "এখন", "protidin": "প্রতিদিন",
+  "shobshomoy": "সবসময়", "shathe": "সাথে", "bondhu": "বন্ধু", "manush": "মানুষ", "bhabe": "ভাবে"
+};
+
+const avroIndependentVowels = {
+  "a": "আ", "aa": "আ", "i": "ই", "ee": "ঈ", "I": "ঈ", "u": "উ", "oo": "ঊ", "U": "ঊ",
+  "rri": "ঋ", "e": "এ", "oi": "ঐ", "o": "ও", "ou": "ঔ"
+};
+
+const avroVowelKars = {
+  "a": "া", "aa": "া", "i": "ি", "ee": "ী", "I": "ী", "u": "ু", "oo": "ূ", "U": "ূ",
+  "rri": "ৃ", "e": "ে", "oi": "ৈ", "o": "ো", "ou": "ৌ"
+};
+
+const avroConsonants = [
+  ["kkhm", "ক্ষ্ম"], ["kkh", "ক্ষ"], ["jny", "জ্ঞ"], ["gny", "জ্ঞ"], ["ngkh", "ঙ্খ"], ["nggh", "ঙ্ঘ"],
+  ["ngk", "ঙ্ক"], ["ngg", "ঙ্গ"], ["cch", "চ্ছ"], ["shch", "শ্ছ"], ["shc", "শ্চ"], ["shTh", "ষ্ঠ"],
+  ["shT", "ষ্ট"], ["shN", "ষ্ণ"], ["shk", "ষ্ক"], ["shm", "শ্ম"], ["shph", "ষ্ফ"], ["shp", "ষ্প"],
+  ["nch", "ঞ্ছ"], ["njh", "ঞ্ঝ"], ["mph", "ম্ফ"], ["mbh", "ম্ভ"],
+  ["kh", "খ"], ["gh", "ঘ"], ["chh", "ছ"], ["ch", "চ"], ["c", "চ"], ["jh", "ঝ"],
+  ["Th", "ঠ"], ["T", "ট"], ["Dh", "ঢ"], ["D", "ড"], ["th", "থ"], ["t", "ত"],
+  ["dh", "ধ"], ["d", "দ"], ["ph", "ফ"], ["bh", "ভ"], ["sh", "শ"], ["Sh", "ষ"],
+  ["rh", "ঢ়"], ["Rh", "ঢ়"], ["ng", "ং"], ["nc", "ঞ্চ"], ["nj", "ঞ্জ"], ["nT", "ণ্ট"],
+  ["nTh", "ণ্ঠ"], ["nD", "ণ্ড"], ["nth", "ন্থ"], ["nt", "ন্ত"], ["ndh", "ন্ধ"], ["nd", "ন্দ"],
+  ["mp", "ম্প"], ["mb", "ম্ব"], ["mm", "ম্ম"], ["mn", "ম্ন"], ["kt", "ক্ত"], ["pt", "প্ত"],
+  ["bd", "ব্দ"], ["sth", "স্থ"], ["st", "স্ত"], ["sp", "স্প"], ["sk", "স্ক"], ["sn", "স্ন"],
+  ["sm", "স্ম"], ["sl", "স্ল"], ["sw", "স্ব"], ["sb", "স্ব"], ["tth", "ত্থ"], ["tt", "ত্ত"],
+  ["ddh", "দ্ধ"], ["dd", "দ্দ"], ["bb", "ব্ব"], ["kk", "ক্ক"], ["pp", "প্প"], ["ll", "ল্ল"],
+  ["nn", "ন্ন"], ["hn", "হ্ন"], ["hm", "হ্ম"], ["hl", "হ্ল"],
+  ["kr", "ক্র"], ["pr", "প্র"], ["br", "ব্র"], ["gr", "গ্র"], ["dr", "দ্র"], ["dhr", "ধ্র"],
+  ["tr", "ত্র"], ["mr", "ম্র"], ["sr", "স্র"], ["shr", "শ্র"],
+  ["ky", "ক্য"], ["by", "ব্য"], ["sy", "স্য"], ["my", "ম্য"], ["ly", "ল্য"], ["ty", "ত্য"],
+  ["dy", "দ্য"], ["dhy", "ধ্য"], ["ny", "ন্য"], ["py", "প্য"],
+  ["k", "ক"], ["g", "গ"], ["j", "জ"], ["N", "ণ"], ["n", "ন"], ["p", "প"], ["f", "ফ"],
+  ["b", "ব"], ["v", "ভ"], ["m", "ম"], ["z", "য"], ["r", "র"], ["l", "ল"], ["S", "ষ"],
+  ["s", "স"], ["h", "হ"], ["R", "ড়"], ["y", "য়"], ["w", "ও"], ["t\`", "ৎ"]
 ];
 
+function transliterateBanglish(text) {
+  if (!text) return "";
+  return String(text).replace(/[a-zA-Z0-9\`^:]+/g, function(token) {
+    const lower = token.toLowerCase();
+    if (avroSpecialWords[lower]) return avroSpecialWords[lower];
+
+    let result = "";
+    let i = 0;
+    const len = token.length;
+    let lastWasConsonant = false;
+
+    while (i < len) {
+      let matchedVowel = null;
+      let vowelLen = 0;
+
+      if (i + 3 <= len) {
+        const sub3 = token.slice(i, i + 3).toLowerCase();
+        if (avroIndependentVowels[sub3]) { matchedVowel = sub3; vowelLen = 3; }
+      }
+      if (!matchedVowel && i + 2 <= len) {
+        const sub2 = token.slice(i, i + 2).toLowerCase();
+        if (avroIndependentVowels[sub2]) { matchedVowel = sub2; vowelLen = 2; }
+      }
+      if (!matchedVowel && i + 1 <= len) {
+        const sub1 = token.slice(i, i + 1).toLowerCase();
+        if (avroIndependentVowels[sub1]) { matchedVowel = sub1; vowelLen = 1; }
+      }
+
+      if (matchedVowel) {
+        if (lastWasConsonant) {
+          result += avroVowelKars[matchedVowel] || "";
+        } else {
+          result += avroIndependentVowels[matchedVowel] || "";
+        }
+        lastWasConsonant = false;
+        i += vowelLen;
+        continue;
+      }
+
+      let matchedConsonant = null;
+      let consLen = 0;
+      for (let c = 0; c < avroConsonants.length; c++) {
+        const pat = avroConsonants[c][0];
+        if (token.slice(i, i + pat.length) === pat || token.slice(i, i + pat.length).toLowerCase() === pat.toLowerCase()) {
+          matchedConsonant = avroConsonants[c][1];
+          consLen = pat.length;
+          break;
+        }
+      }
+
+      if (matchedConsonant) {
+        result += matchedConsonant;
+        lastWasConsonant = true;
+        i += consLen;
+        continue;
+      }
+
+      const ch = token[i];
+      if (ch >= "0" && ch <= "9") {
+        const bnDigits = ["০", "১", "২", "৩", "৪", "৫", "৬", "৭", "৮", "৯"];
+        result += bnDigits[Number(ch)];
+        lastWasConsonant = false;
+      } else if (ch === "^") {
+        result += "ঁ";
+        lastWasConsonant = false;
+      } else if (ch === ":") {
+        result += "ঃ";
+        lastWasConsonant = false;
+      } else {
+        result += ch;
+        lastWasConsonant = false;
+      }
+      i++;
+    }
+    return result;
+  });
+}
+
 function romanToBangla(textValue) {
-  let output = textValue.toLowerCase();
-  phoneticPairs.forEach(function(pair) { output = output.split(pair[0]).join(pair[1]); });
-  return output.replace(/(^|\s)া/g, "$1আ").replace(/(^|\s)ি/g, "$1ই").replace(/(^|\s)ু/g, "$1উ").replace(/(^|\s)ে/g, "$1এ").replace(/(^|\s)ো/g, "$1ও");
+  return transliterateBanglish(textValue);
+}
+
+// ==========================================
+// Comprehensive Bijoy (ANSI) <-> Unicode Engine
+// ==========================================
+const bijoyToUnicodeMap = {
+  "¶¥": "ক্ষ্ম", "ÿ¥": "ক্ষ্ম", "•L": "ঙ্খ", "½N": "ঙ্ঘ", "Z¥": "ত্ম", "š‘": "ন্ত্ব", "¯’": "স্থ",
+  "›\`": "ন্দ", "›a": "ন্ধ", "¤§": "ম্ম", "gœ": "ম্ন", "cø": "প্ল", "cô": "প্স", "d¬": "ফ্ল",
+  "eø": "ব্ল", "kœ": "শ্ন", "kø": "শ্ল", "¯Í": "স্ত", "¯¿": "স্ত্র", "¯^": "স্ব", "¯§": "স্ম",
+  "¯ø": "স্ল", "nœ": "হ্ন", "n¥": "হ্ম", "n¬": "হ্ল", "n…": "হৃ", "K¬": "ক্ল", "j¬": "ল্ল",
+  "³": "ক্ত", "¶": "ক্ষ", "ÿ": "ক্ষ", "•": "ঙ্ক", "½": "ঙ্গ", "Á": "জ্ঞ", "Â": "ঞ্চ",
+  "Ã": "ঞ্ছ", "Ä": "ঞ্জ", "À": "জ্ঝ", "Æ": "ট্ট", "È": "ড্ড", "É": "ণ্ট", "Ê": "ণ্ঠ",
+  "Ë": "ণ্ড", "Í": "ত্ত", "Î": "ত্র", "Ï": "দ্দ", "Ð": "দ্ধ", "Ø": "দ্ব", "Ù": "দ্ম",
+  "Ú": "ধ্ব", "Û": "ন্ট", "Ü": "ন্ঠ", "Ý": "ন্ড", "š": "ন্ত", "›": "ন্থ", "œ": "ন্ধ",
+  "¤": "ম্প", "¥": "ম্ফ", "¦": "ম্ব", "§": "ম্ভ", "é": "ল্ক", "ê": "ল্প", "ë": "ল্ট",
+  "ì": "ল্ড", "í": "ল্গ", "î": "ল্ম", "ð": "শ্চ", "ñ": "শ্ছ", "ò": "ষ্ক", "ó": "ষ্ফ",
+  "ô": "ষ্ট", "õ": "ষ্ঠ", "ö": "ষ্ণ", "÷": "ষ্প", "ø": "স্ক", "ù": "স্খ", "ú": "স্ট",
+  "û": "স্ত", "ü": "স্থ", "ý": "স্প", "þ": "স্ফ",
+  "0": "০", "1": "১", "2": "২", "3": "৩", "4": "৪", "5": "৫", "6": "৬", "7": "৭", "8": "৮", "9": "৯",
+  "Av": "আ", "A": "অ", "B": "ই", "C": "ঈ", "D": "উ", "E": "ঊ", "F": "ঋ", "G": "এ", "H": "ঐ", "I": "ও", "J": "ঔ",
+  "K": "ক", "L": "খ", "M": "গ", "N": "ঘ", "O": "ঙ", "P": "চ", "Q": "ছ", "R": "জ", "S": "ঝ", "T": "ঞ",
+  "U": "ট", "V": "ঠ", "W": "ড", "X": "ঢ", "Y": "ণ", "Z": "ত", "_": "থ", "\`": "দ", "a": "ধ", "b": "ন",
+  "c": "প", "d": "ফ", "e": "ব", "f": "ভ", "g": "ম", "h": "য", "i": "র", "j": "ল", "k": "শ", "l": "ষ",
+  "m": "স", "n": "হ", "o": "ড়", "p": "ঢ়", "q": "য়",
+  "r": "্", "s": "ং", "t": "ঃ", "&": "ঁ", "Ô": "ৎ",
+  "v": "া", "x": "ী", "y": "ু", "z": "ু", "~": "ূ", "…": "ৃ", "„": "ৃ", "Š": "ৗ", "ª": "্র", "«": "্য", "¨": "্য", "¡": "্ব"
+};
+
+const bijoyCluster = "(?:¶¥|ÿ¥|•L|½N|Z¥|š‘|¯’|›\`|›a|¤§|gœ|cø|cô|d¬|eø|kœ|kø|¯Í|¯¿|¯\\\\^|¯§|¯ø|nœ|n¥|n¬|n…|K¬|j¬|[³¶ÿ•½ÁÂÃÄÀÆÈÉÊËÍÎÏÐØÙÚÛÜÝš›œ¤¥¦§éêëìíîðñòóôõö÷øùúûüýþ]|[K-Z_\`a-q])(?:r[K-Z_\`a-q])*(?:[ª«¨¡])?";
+
+function bijoyToUnicode(src) {
+  if (!src) return "";
+  let text = String(src).replace(/†/g, "‡");
+  text = text.replace(new RegExp("w©(" + bijoyCluster + ")", "g"), "©$1w");
+  text = text.replace(new RegExp("‡©(" + bijoyCluster + ")", "g"), "©$1‡");
+  text = text.replace(new RegExp("‡(" + bijoyCluster + ")v", "g"), "$1ো");
+  text = text.replace(new RegExp("‡(" + bijoyCluster + ")Š", "g"), "$1ৌ");
+  text = text.replace(new RegExp("w(" + bijoyCluster + ")", "g"), "$1ি");
+  text = text.replace(new RegExp("‡(" + bijoyCluster + ")", "g"), "$1ে");
+  text = text.replace(new RegExp("‰(" + bijoyCluster + ")", "g"), "$1ৈ");
+  text = text.replace(new RegExp("©(" + bijoyCluster + ")", "g"), "র্$1");
+
+  const keys = Object.keys(bijoyToUnicodeMap).sort(function(a, b) { return b.length - a.length; });
+  for (let k = 0; k < keys.length; k++) {
+    text = text.split(keys[k]).join(bijoyToUnicodeMap[keys[k]]);
+  }
+  return text.replace(/‡া/g, "ো").replace(/‡ৗ/g, "ৌ").replace(/‡/g, "ে");
+}
+
+const unicodeToBijoyConjuncts = [
+  ["ক্ষ্ম", "ÿ¥"], ["ক্ষ", "ÿ"], ["ঙ্ক", "•"], ["ঙ্খ", "•L"], ["ঙ্গ", "½"], ["ঙ্ঘ", "½N"], ["জ্ঞ", "Á"],
+  ["ঞ্চ", "Â"], ["ঞ্ছ", "Ã"], ["ঞ্জ", "Ä"], ["জ্ঝ", "À"], ["ক্ত", "³"], ["ক্ল", "K¬"], ["ট্ট", "Æ"],
+  ["ড্ড", "È"], ["ণ্ট", "É"], ["ণ্ঠ", "Ê"], ["ণ্ড", "Ë"], ["ত্ত", "Í"], ["ত্থ", "Î"], ["ত্ম", "Z¥"],
+  ["ত্র", "Zª"], ["দ্দ", "Ï"], ["দ্ধ", "Ð"], ["দ্ব", "Ø"], ["দ্ম", "Ù"], ["ধ্ব", "Ú"], ["ন্ট", "Û"],
+  ["ন্ঠ", "Ü"], ["ন্ড", "Ý"], ["ন্ত্ব", "š‘"], ["ন্ত", "š"], ["ন্থ", "›"], ["ন্দ", "›\`"], ["ন্ধ", "œ"],
+  ["ন্ম", "gœ"], ["ম্প", "¤"], ["ম্ফ", "¥"], ["ম্ব", "¦"], ["ম্ভ", "§"], ["ম্ম", "¤§"], ["ম্ন", "gœ"],
+  ["প্ল", "cø"], ["প্স", "cô"], ["ফ্ল", "d¬"], ["ব্ল", "eø"], ["ল্ক", "é"], ["ল্প", "ê"], ["ল্ট", "ë"],
+  ["ল্ড", "ì"], ["ল্গ", "í"], ["ল্ম", "î"], ["ল্ল", "j¬"], ["শ্চ", "ð"], ["শ্ছ", "ñ"], ["শ্ন", "kœ"],
+  ["শ্ল", "kø"], ["ষ্ক", "ò"], ["ষ্ফ", "ó"], ["ষ্ট", "ô"], ["ষ্ঠ", "õ"], ["ষ্ণ", "ö"], ["ষ্প", "÷"],
+  ["স্ক", "ø"], ["স্খ", "ù"], ["স্ট", "ú"], ["স্ত", "û"], ["স্থ", "¯’"], ["স্প", "ý"], ["স্ফ", "þ"],
+  ["স্ত্র", "¯¿"], ["স্ব", "¯^"], ["স্ম", "¯§"], ["স্ল", "¯ø"], ["হ্ন", "nœ"], ["হ্ম", "n¥"], ["হ্ল", "n¬"],
+  ["হৃ", "n…"], ["র-ফলা", "ª"], ["্য", "¨"], ["্র", "ª"], ["্ব", "¡"]
+];
+
+const unicodeToBijoySingles = {
+  "০": "0", "১": "1", "২": "2", "৩": "3", "৪": "4", "৫": "5", "৬": "6", "৭": "7", "৮": "8", "৯": "9",
+  "অ": "A", "আ": "Av", "ই": "B", "ঈ": "C", "উ": "D", "ঊ": "E", "ঋ": "F", "এ": "G", "ঐ": "H", "ও": "I", "ঔ": "J",
+  "ক": "K", "খ": "L", "গ": "M", "ঘ": "N", "ঙ": "O", "চ": "P", "ছ": "Q", "জ": "R", "ঝ": "S", "ঞ": "T",
+  "ট": "U", "ঠ": "V", "ড": "W", "ঢ": "X", "ণ": "Y", "ত": "Z", "থ": "_", "দ": "\`", "ধ": "a", "ন": "b",
+  "প": "c", "ফ": "d", "ব": "e", "ভ": "f", "ম": "g", "য": "h", "র": "i", "ল": "j", "শ": "k", "ষ": "l",
+  "স": "m", "হ": "n", "ড়": "o", "ঢ়": "p", "য়": "q",
+  "্": "r", "ং": "s", "ঃ": "t", "ঁ": "&", "ৎ": "Ô",
+  "া": "v", "ী": "x", "ু": "y", "ূ": "~", "ৃ": "…", "ৌ": "Š"
+};
+
+const uniCluster = "(?:[ক-হড়ঢ়য়](?:্[ক-হড়ঢ়য়])*(?:[্][ক-হড়ঢ়য়])?(?:[্য্র্ব])?)";
+
+function unicodeToBijoy(src) {
+  if (!src) return "";
+  let text = String(src);
+  text = text.replace(new RegExp("র্(" + uniCluster + ")", "g"), "©$1");
+  text = text.replace(new RegExp("(" + uniCluster + ")ো", "g"), "‡$1v");
+  text = text.replace(new RegExp("(" + uniCluster + ")ৌ", "g"), "‡$1Š");
+  text = text.replace(new RegExp("(" + uniCluster + ")ি", "g"), "w$1");
+  text = text.replace(new RegExp("(" + uniCluster + ")ে", "g"), "‡$1");
+  text = text.replace(new RegExp("(" + uniCluster + ")ৈ", "g"), "‰$1");
+
+  for (let i = 0; i < unicodeToBijoyConjuncts.length; i++) {
+    text = text.split(unicodeToBijoyConjuncts[i][0]).join(unicodeToBijoyConjuncts[i][1]);
+  }
+  const chars = Object.keys(unicodeToBijoySingles).sort(function(a, b) { return b.length - a.length; });
+  for (let c = 0; c < chars.length; c++) {
+    text = text.split(chars[c]).join(unicodeToBijoySingles[chars[c]]);
+  }
+  return text;
 }
 
 function simpleBijoy(textValue) {
-  const map = { "Av":"আ","A":"অ","K":"ক","L":"খ","M":"গ","N":"ঘ","P":"চ","Q":"ছ","R":"জ","S":"ঝ","U":"ট","V":"ঠ","W":"ড","X":"ঢ","Z":"ণ","g":"ম","h":"য","i":"র","j":"ল","k":"শ","l":"ষ","m":"স","n":"হ" };
-  return Object.keys(map).sort(function(a, b) { return b.length - a.length; }).reduce(function(value, key) { return value.split(key).join(map[key]); }, textValue);
+  return bijoyToUnicode(textValue);
 }
 
 function bindTextConverter(toolItem) {
-  $("#runConverter").addEventListener("click", function() {
+  function executeConversion() {
     const input = $("#converterInput").value;
     let result = "";
-    if (toolItem.key === "bn-to-banglish") result = banglaToRoman(input);
-    else if (toolItem.key === "banglish-to-bn") result = romanToBangla(input);
-    else if (toolItem.key === "bijoy") result = simpleBijoy(input);
-    else result = Array.from(input).map(function(char) { return char + " → " + char.codePointAt(0); }).join("\n");
-    outputSet('<p class="workspace-kicker">' + L("ফলাফল", "Result") + '</p><div class="code-output">' + escapeHtml(result || L("ইনপুট দিন।", "Enter some text.")) + '</div><button class="tool-button secondary" id="copyConverted" type="button" style="margin-top:15px">' + L("কপি করুন", "Copy result") + '</button>' + (["banglish-to-bn","bijoy"].includes(toolItem.key) ? '<p class="micro-note" style="color:#a9bbb6;margin-top:12px">' + L("এটি বেটা রূপান্তর; প্রকাশের আগে বানান দেখে নিন।", "This is a beta conversion; review spelling before publishing.") + '</p>' : ""));
-    $("#copyConverted").addEventListener("click", function() { copyText(result); });
-  });
+    if (toolItem.key === "bn-to-banglish") {
+      result = banglaToRoman(input);
+    } else if (toolItem.key === "banglish-to-bn") {
+      result = transliterateBanglish(input);
+    } else if (toolItem.key === "bijoy") {
+      const mode = $("#bijoyDirection") ? $("#bijoyDirection").value : "bijoy-to-uni";
+      result = mode === "uni-to-bijoy" ? unicodeToBijoy(input) : bijoyToUnicode(input);
+    } else {
+      result = Array.from(input).map(function(char) { return char + " → " + char.codePointAt(0); }).join("\\n");
+    }
+    outputSet('<p class="workspace-kicker">' + L("ফলাফল", "Result") + '</p><div class="code-output">' + escapeHtml(result || L("ইনপুট দিন।", "Enter some text.")) + '</div><button class="tool-button secondary" id="copyConverted" type="button" style="margin-top:15px">' + L("কপি করুন", "Copy result") + '</button>');
+    const copyBtn = $("#copyConverted");
+    if (copyBtn) copyBtn.addEventListener("click", function() { copyText(result); });
+  }
+
+  $("#runConverter").addEventListener("click", executeConversion);
+
+  if (toolItem.key === "banglish-to-bn" || toolItem.key === "bijoy") {
+    $("#converterInput").addEventListener("input", function() {
+      executeConversion();
+    });
+  }
+  if ($("#bijoyDirection")) {
+    $("#bijoyDirection").addEventListener("change", executeConversion);
+  }
 }
 
 function fileToDataUrl(file) {
@@ -2377,6 +2681,96 @@ function bindPdfTool(toolItem) {
 }
 
 function bindQrTool(toolItem) {
+  let cameraStream = null;
+  let cameraAnimationFrame = null;
+
+  function stopCamera() {
+    if (cameraAnimationFrame) {
+      cancelAnimationFrame(cameraAnimationFrame);
+      cameraAnimationFrame = null;
+    }
+    if (cameraStream) {
+      cameraStream.getTracks().forEach(function(t) { t.stop(); });
+      cameraStream = null;
+    }
+    const video = $("#qrCameraVideo");
+    if (video) { video.pause(); video.srcObject = null; }
+    const wrap = $("#cameraWrap");
+    if (wrap) wrap.style.display = "none";
+    const startBtn = $("#startQrCamera");
+    if (startBtn) startBtn.style.display = "";
+    const stopBtn = $("#stopQrCamera");
+    if (stopBtn) stopBtn.style.display = "none";
+  }
+
+  // Auto teardown when modal closes
+  const modalClose = $("#modalClose");
+  if (modalClose) {
+    modalClose.addEventListener("click", stopCamera, { once: true });
+  }
+
+  if (toolItem.key === "qr-scanner") {
+    const startBtn = $("#startQrCamera");
+    const stopBtn = $("#stopQrCamera");
+
+    if (startBtn) {
+      startBtn.addEventListener("click", async function() {
+        try {
+          await loadScript("./vendor/jsQR.js", function() { return !!window.jsQR; });
+          const stream = await navigator.mediaDevices.getUserMedia({
+            video: { facingMode: "environment", width: { ideal: 640 }, height: { ideal: 480 } }
+          });
+          cameraStream = stream;
+          const video = $("#qrCameraVideo");
+          const wrap = $("#cameraWrap");
+          video.srcObject = stream;
+          await video.play();
+          wrap.style.display = "block";
+          startBtn.style.display = "none";
+          stopBtn.style.display = "";
+
+          async function scanFrame() {
+            if (!cameraStream) return;
+            if (video.readyState === video.HAVE_ENOUGH_DATA) {
+              let detected = "";
+              if ("BarcodeDetector" in window) {
+                try {
+                  const detector = new BarcodeDetector({ formats: ["qr_code"] });
+                  const found = await detector.detect(video);
+                  if (found && found[0]) detected = found[0].rawValue;
+                } catch (_) {}
+              }
+              if (!detected && window.jsQR) {
+                const canvas = createCanvas(video.videoWidth, video.videoHeight);
+                const ctx = canvas.getContext("2d", { willReadFrequently: true });
+                ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                const code = jsQR(imgData.data, imgData.width, imgData.height);
+                if (code) detected = code.data;
+              }
+              if (detected) {
+                stopCamera();
+                outputSet('<p class="workspace-kicker">' + L("ক্যামেরা স্ক্যান ফল", "Camera scan result") + '</p><div class="code-output" style="min-height:90px">' + escapeHtml(detected) + '</div><button class="tool-button secondary" id="copyQrResult" type="button" style="margin-top:15px">' + L("কপি করুন", "Copy result") + '</button>');
+                const copyBtn = $("#copyQrResult");
+                if (copyBtn) copyBtn.addEventListener("click", function() { copyText(detected); });
+                showToast(L("QR কোড পাওয়া গেছে!", "QR code detected!"));
+                return;
+              }
+            }
+            cameraAnimationFrame = requestAnimationFrame(scanFrame);
+          }
+          cameraAnimationFrame = requestAnimationFrame(scanFrame);
+        } catch (err) {
+          showToast(L("ক্যামেরা চালু করা যায়নি: " + err.message, "Could not start camera: " + err.message));
+        }
+      });
+    }
+
+    if (stopBtn) {
+      stopBtn.addEventListener("click", stopCamera);
+    }
+  }
+
   $("#runQr").addEventListener("click", async function() {
     const button = $("#runQr");
     button.disabled = true;
@@ -2463,26 +2857,119 @@ function bindYoutubeThumb() {
 }
 
 function bindNetworkTool(toolItem) {
+  // Preset nodes for BDIX / Cache testing
+  const bdixNodes = [
+    { name: "Cloudflare Dhaka / BDIX Cache", url: "https://speed.cloudflare.com/cdn-cgi/trace" },
+    { name: "Google Bangladesh Cache", url: "https://www.google.com/favicon.ico" },
+    { name: "Akamai CDN Dhaka Edge", url: "https://cdnjs.cloudflare.com/favicon.ico" },
+    { name: "Cloudflare Anycast Mirror", url: "https://cloudflare.com/favicon.ico" }
+  ];
+
+  function getLatencyBadge(ms) {
+    if (ms < 0) return '<span style="display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;background:#ef4444;color:#fff">' + L("সংযোগ ব্যর্থ", "Failed") + '</span>';
+    if (ms <= 25) return '<span style="display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;background:#10b981;color:#fff">' + L("অতি দ্রুত", "Ultra Fast") + '</span>';
+    if (ms <= 60) return '<span style="display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;background:#0f6b5d;color:#fff">' + L("দ্রুত", "Fast") + '</span>';
+    if (ms <= 120) return '<span style="display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;background:#c9942d;color:#fff">' + L("মাঝারি", "Moderate") + '</span>';
+    return '<span style="display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;background:#bc3d26;color:#fff">' + L("ধীর", "High Latency") + '</span>';
+  }
+
+  async function pingNode(endpoint) {
+    const start = performance.now();
+    try {
+      const sep = endpoint.includes("?") ? "&" : "?";
+      await fetch(endpoint + sep + "t=" + Date.now(), { method: "HEAD", mode: "no-cors", cache: "no-store" });
+      return Math.round(performance.now() - start);
+    } catch (_) {
+      try {
+        const sep = endpoint.includes("?") ? "&" : "?";
+        await fetch(endpoint + sep + "t=" + Date.now(), { method: "GET", mode: "no-cors", cache: "no-store" });
+        return Math.round(performance.now() - start);
+      } catch (err) {
+        return -1;
+      }
+    }
+  }
+
+  if (toolItem.key === "bdix" && $("#runAllNodes")) {
+    $("#runAllNodes").addEventListener("click", async function() {
+      const btn = $("#runAllNodes");
+      btn.disabled = true;
+      btn.textContent = L("নোড টেস্ট চলছে…", "Testing all nodes…");
+      try {
+        const results = [];
+        for (let i = 0; i < bdixNodes.length; i++) {
+          const node = bdixNodes[i];
+          const ms = await pingNode(node.url);
+          results.push({ name: node.name, ms: ms });
+        }
+        let listHtml = '<ul class="output-list" style="margin-top:10px">';
+        results.forEach(function(r) {
+          listHtml += '<li><span>' + escapeHtml(r.name) + '</span><div style="display:flex;align-items:center;gap:8px"><strong>' + (r.ms >= 0 ? displayNumber(r.ms) + ' ms' : '—') + '</strong>' + getLatencyBadge(r.ms) + '</div></li>';
+        });
+        listHtml += '</ul>';
+        outputSet('<p class="workspace-kicker">' + L("মাল্টি-নোড BDIX / ক্যাশ ফলাফল", "Multi-node BDIX & Cache Results") + '</p>' + listHtml + '<p class="micro-note" style="color:#a9bbb6;margin-top:12px">' + L("লোকাল BDIX রাউটিং বা ক্যাশ উপস্থিত থাকলে পিং সাধারণত ৫০ মিলিসেকেন্ডের নিচে থাকে।", "Latency below 50ms usually indicates local BDIX routing or ISP cache presence.") + '</p>');
+      } catch (e) {
+        outputSet('<p class="result-copy">' + escapeHtml(e.message || String(e)) + '</p>');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = L("সব BDIX/ক্যাশ নোড একসাথে টেস্ট করুন", "Test all BDIX & Cache nodes");
+      }
+    });
+  }
+
   $("#runNetwork").addEventListener("click", async function() {
     const button = $("#runNetwork");
     button.disabled = true;
     try {
       if (toolItem.key === "speed") {
-        button.textContent = L("ডাউনলোড হচ্ছে…", "Downloading test data…");
+        button.textContent = L("পরিমাপ চলছে…", "Testing speed…");
+        const arc = $("#speedGaugeArc");
+        const needle = $("#speedGaugeNeedle");
+        const liveText = $("#speedLiveText");
+        const statusText = $("#speedStatusText");
+
+        function updateGauge(mbps, label) {
+          if (liveText) liveText.innerHTML = displayNumber(mbps.toFixed(1)) + ' <small style="font-size:16px;color:#a9bbb6;">Mbps</small>';
+          if (statusText && label) statusText.textContent = label;
+          // Gauge: 0 to 100 Mbps maps to 0 to 180 degrees
+          const clamped = Math.min(100, Math.max(0, mbps));
+          const angle = (clamped / 100) * 180;
+          if (needle) needle.style.transform = "rotate(" + angle + "deg)";
+          // Arc dashoffset from 251 (0 Mbps) to 0 (100 Mbps)
+          const offset = 251 - (clamped / 100) * 251;
+          if (arc) arc.style.strokeDashoffset = String(offset);
+        }
+
+        // Tier 1: Initial ping test
+        updateGauge(2, L("পিং পরীক্ষা হচ্ছে…", "Measuring ping…"));
+        const pingStart = performance.now();
+        await fetch("https://speed.cloudflare.com/__down?bytes=50000&t=" + Date.now(), { cache: "no-store" });
+        const pingMs = Math.round(performance.now() - pingStart);
+
+        // Tier 2: Stream 5 MB test data
+        updateGauge(10, L("ডাউনলোড ব্যান্ডউইথ পরিমাপ…", "Measuring download bandwidth…"));
         const bytes = 5000000;
         const started = performance.now();
         const response = await fetch("https://speed.cloudflare.com/__down?bytes=" + bytes + "&t=" + Date.now(), { cache: "no-store" });
         const blob = await response.blob();
         const seconds = (performance.now() - started) / 1000;
-        const mbps = blob.size * 8 / seconds / 1000000;
-        outputSet('<p class="workspace-kicker">' + L("আনুমানিক ডাউনলোড গতি", "Estimated download speed") + '</p><div class="big-result">' + displayNumber(mbps.toFixed(1)) + ' <small style="font-size:18px">Mbps</small></div><div class="metric-grid">' + metric(displayNumber(seconds.toFixed(2)) + " s", L("সময়", "Duration")) + metric(humanBytes(blob.size), L("টেস্ট ডেটা", "Test data")) + '</div><p class="result-copy" style="margin-top:15px">' + L("Wi‑Fi, সার্ভার ও ব্রাউজারের কারণে ফল বদলাতে পারে।", "Results vary with Wi‑Fi, server conditions and the browser.") + '</p>');
+        const mbps = (blob.size * 8) / seconds / 1000000;
+
+        updateGauge(mbps, L("টেস্ট সম্পন্ন", "Complete"));
+
+        let tierLabel = L("মৌলিক গতি", "Basic Broadband");
+        if (mbps >= 50) tierLabel = L("অত্যন্ত দ্রুত — 4K স্ট্রিমিং ও গেমিং উপযোগী", "Ultra Fast — 4K Ready");
+        else if (mbps >= 20) tierLabel = L("উচ্চ গতি — Full HD ও স্মুথ ব্রাউজিং", "High Speed — HD Ready");
+        else if (mbps >= 8) tierLabel = L("মাঝারি গতি — সাধারণ ব্রাউজিং ও ভিডিও", "Standard Speed");
+
+        outputSet('<p class="workspace-kicker">' + L("আনুমানিক ডাউনলোড গতি", "Estimated download speed") + '</p><div class="big-result">' + displayNumber(mbps.toFixed(1)) + ' <small style="font-size:18px">Mbps</small></div><div class="metric-grid">' + metric(displayNumber(seconds.toFixed(2)) + " s", L("সময়", "Duration")) + metric(humanBytes(blob.size), L("টেস্ট ডেটা", "Test data")) + metric(displayNumber(pingMs) + " ms", L("পিং / লেটেন্সি", "Ping")) + '</div><p class="result-copy" style="margin-top:14px;font-weight:600;color:#f5d37e;">' + tierLabel + '</p><p class="result-copy">' + L("Wi‑Fi, সার্ভার ট্রাফিক ও ব্রাউজারের ওপর ভিত্তি করে গতি পরিবর্তিত হতে পারে।", "Results vary with Wi‑Fi, server conditions and the browser.") + '</p>');
       } else {
         const url = validatePublicUrl($("#networkUrl").value.trim());
         const started = performance.now();
         const response = await fetch(url.href, { method: toolItem.key === "security-headers" ? "HEAD" : "GET", mode: toolItem.key === "bdix" ? "no-cors" : "cors", cache: "no-store" });
         const elapsed = Math.round(performance.now() - started);
         if (toolItem.key === "bdix") {
-          outputSet('<p class="workspace-kicker">' + L("ব্রাউজার লেটেন্সি", "Browser latency") + '</p><div class="big-result">' + displayNumber(elapsed) + ' <small style="font-size:18px">ms</small></div><p class="result-copy">' + L("এটি BDIX রাউটিং নিশ্চিত করে না; শুধু ব্রাউজার থেকে পাবলিক URL-এর প্রতিক্রিয়া সময়।", "This does not prove BDIX routing; it is the public URL response time from your browser.") + '</p>');
+          outputSet('<p class="workspace-kicker">' + L("ব্রাউজার লেটেন্সি", "Browser latency") + '</p><div class="big-result">' + displayNumber(elapsed) + ' <small style="font-size:18px">ms</small></div><div style="margin:8px 0 14px">' + getLatencyBadge(elapsed) + '</div><p class="result-copy">' + L("ব্রাউজার থেকে সরাসরি এই URL-এর প্রতিক্রিয়া সময় পরিমাপ করা হয়েছে।", "Measured direct response time from your browser to this URL.") + '</p>');
         } else {
           const names = ["content-security-policy","strict-transport-security","x-content-type-options","x-frame-options","referrer-policy","permissions-policy"];
           outputSet('<p class="workspace-kicker">' + L("দৃশ্যমান সিকিউরিটি হেডার", "Visible security headers") + '</p><ul class="output-list">' + names.map(function(name) { return '<li><span>' + name + '</span><strong>' + escapeHtml(response.headers.get(name) || L("দেখা যায়নি", "Not exposed")) + '</strong></li>'; }).join("") + '</ul><p class="micro-note" style="color:#a9bbb6;margin-top:12px">' + L("CORS-এর কারণে কিছু হেডার ব্রাউজারে লুকানো থাকতে পারে।", "CORS may hide some headers from the browser.") + '</p>');
@@ -4523,6 +5010,1006 @@ function showToast(message) {
   toast.classList.add("visible");
   clearTimeout(toastTimer);
   toastTimer = setTimeout(function() { toast.classList.remove("visible"); }, 2700);
+}
+
+
+// ==========================================
+// TOOL 101: SIGNATURE MAKER
+// ==========================================
+function renderSignatureMaker(intro) {
+  return workspace(
+    intro +
+    '<div class="tool-form">' +
+      '<div class="field-row">' +
+        '<label class="field"><span>' + L("প্রিসেট মোড", "Preset mode") + '</span>' +
+          '<select id="sigPreset">' +
+            '<option value="govt" selected>' + L("সরকারি চাকরি / Teletalk (৩০০ × ৮০ px, <৬০ KB)", "BD Govt Job (300×80 px, <60 KB)") + '</option>' +
+            '<option value="bank">' + L("ব্যাংক ও সাধারণ দলিল (৪০০ × ১৫০ px)", "Bank & General (400×150 px)") + '</option>' +
+            '<option value="large">' + L("বড় সাইজ (৬০০ × ২০০ px)", "Large Signature (600×200 px)") + '</option>' +
+          '</select>' +
+        '</label>' +
+        '<label class="field"><span>' + L("কালির রঙ", "Ink color") + '</span>' +
+          '<select id="sigColor">' +
+            '<option value="#111111" selected>' + L("কালো (Black)", "Black") + '</option>' +
+            '<option value="#002b7f">' + L("নীল (Navy Blue)", "Navy Blue") + '</option>' +
+            '<option value="#b30000">' + L("লাল (Red)", "Red") + '</option>' +
+          '</select>' +
+        '</label>' +
+      '</div>' +
+      '<div class="field-row">' +
+        '<label class="field"><span>' + L("পুরুত্ব (পেন সাইজ)", "Pen thickness") + '</span>' +
+          '<select id="sigWidth">' +
+            '<option value="2">' + L("পাতলা (2px)", "Thin (2px)") + '</option>' +
+            '<option value="3" selected>' + L("স্বাভাবিক (3px)", "Medium (3px)") + '</option>' +
+            '<option value="5">' + L("পুরু (5px)", "Thick (5px)") + '</option>' +
+          '</select>' +
+        '</label>' +
+        '<label class="field"><span>' + L("ব্যাকগ্রাউন্ড", "Background") + '</span>' +
+          '<select id="sigBg">' +
+            '<option value="transparent" selected>' + L("স্বচ্ছ PNG (Transparent)", "Transparent PNG") + '</option>' +
+            '<option value="white">' + L("সাদা (Solid White)", "Solid White") + '</option>' +
+          '</select>' +
+        '</label>' +
+      '</div>' +
+      '<div style="margin:10px 0;text-align:center;">' +
+        '<div style="position:relative;display:inline-block;max-width:100%;border:2px dashed rgba(128,128,128,0.3);border-radius:8px;background:#ffffff;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.06);">' +
+          '<canvas id="sigCanvas" width="600" height="160" style="touch-action:none;display:block;cursor:crosshair;max-width:100%;height:auto;background:transparent;"></canvas>' +
+          '<div style="position:absolute;bottom:25%;left:8%;right:8%;border-bottom:1px dashed rgba(180,180,180,0.45);pointer-events:none;"></div>' +
+        '</div>' +
+        '<p class="micro-note" style="margin-top:6px;">' + L("বক্সের ওপর মাউস বা আঙুল দিয়ে আপনার স্বাক্ষর আঁকুন।", "Sign above using mouse or touch screen.") + '</p>' +
+      '</div>' +
+      '<div class="action-row" style="gap:8px;flex-wrap:wrap;">' +
+        '<button class="tool-button accent" id="sigDownloadGovt" type="button"><svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor" style="vertical-align:middle;margin-right:6px"><path d="M10 2a1 1 0 0 1 1 1v8.586l2.293-2.293a1 1 0 0 1 1.414 1.414l-4 4a1 1 0 0 1-1.414 0l-4-4a1 1 0 1 1 1.414-1.414L9 11.586V3a1 1 0 0 1 1-1Z"/><path d="M3 14a1 1 0 0 1 1 1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-1a1 1 0 1 1 2 0v1a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-1a1 1 0 0 1 1-1Z"/></svg>' + L("চাকরির মাপে ডাউনলোড (৩০০×৮০ px)", "Download BD Govt (300×80 px)") + '</button>' +
+        '<button class="tool-button secondary" id="sigDownloadCustom" type="button">' + L("বর্তমান সাইজে ডাউনলোড", "Download Current Size") + '</button>' +
+        '<button class="tool-button secondary" id="sigUndo" type="button">' + L("আনডু (Undo)", "Undo") + '</button>' +
+        '<button class="tool-button secondary" id="sigClear" type="button">' + L("মুছুন", "Clear") + '</button>' +
+      '</div>' +
+      localNote() +
+    '</div>',
+    L("স্বাক্ষরের প্রিভিউ ও তথ্য", "Signature Preview & Info"),
+    L("স্বাক্ষর আঁকার পর এখানে তাৎক্ষণিক ফাইল সাইজ ও প্রিভিউ দেখতে পাবেন।", "Draw your signature to see real-time file size and download details.")
+  );
+}
+
+function bindSignatureMaker() {
+  const canvas = $("#sigCanvas");
+  if (!canvas) return;
+  const ctx = canvas.getContext("2d");
+  let drawing = false;
+  let strokes = [];
+  let currentStroke = null;
+
+  function redrawAll() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    strokes.forEach(stroke => {
+      if (stroke.points.length < 2) return;
+      ctx.beginPath();
+      ctx.strokeStyle = stroke.color;
+      ctx.lineWidth = stroke.width;
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
+      ctx.moveTo(stroke.points[0].x, stroke.points[0].y);
+      for (let i = 1; i < stroke.points.length; i++) {
+        ctx.lineTo(stroke.points[i].x, stroke.points[i].y);
+      }
+      ctx.stroke();
+    });
+  }
+
+  function getCanvasPos(e) {
+    const rect = canvas.getBoundingClientRect();
+    const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
+    return {
+      x: (clientX - rect.left) * scaleX,
+      y: (clientY - rect.top) * scaleY
+    };
+  }
+
+  function startDraw(e) {
+    e.preventDefault();
+    drawing = true;
+    const pos = getCanvasPos(e);
+    const color = $("#sigColor").value;
+    const width = parseInt($("#sigWidth").value, 10) || 3;
+    currentStroke = { color, width, points: [pos] };
+    strokes.push(currentStroke);
+    ctx.beginPath();
+    ctx.strokeStyle = color;
+    ctx.lineWidth = width;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+    ctx.moveTo(pos.x, pos.y);
+  }
+
+  function moveDraw(e) {
+    if (!drawing || !currentStroke) return;
+    e.preventDefault();
+    const pos = getCanvasPos(e);
+    currentStroke.points.push(pos);
+    ctx.lineTo(pos.x, pos.y);
+    ctx.stroke();
+  }
+
+  function endDraw(e) {
+    if (drawing) {
+      drawing = false;
+      currentStroke = null;
+    }
+  }
+
+  canvas.addEventListener("mousedown", startDraw);
+  canvas.addEventListener("mousemove", moveDraw);
+  window.addEventListener("mouseup", endDraw);
+
+  canvas.addEventListener("touchstart", startDraw, { passive: false });
+  canvas.addEventListener("touchmove", moveDraw, { passive: false });
+  window.addEventListener("touchend", endDraw);
+
+  $("#sigClear").addEventListener("click", () => {
+    strokes = [];
+    redrawAll();
+    outputSet('<p class="micro-note">' + L("ক্যানভাস পরিষ্কার করা হয়েছে। নতুন করে স্বাক্ষর আঁকুন।", "Canvas cleared. Draw a new signature.") + '</p>');
+  });
+
+  $("#sigUndo").addEventListener("click", () => {
+    strokes.pop();
+    redrawAll();
+  });
+
+  function exportSignature(targetWidth, targetHeight, filename, isGovt) {
+    if (strokes.length === 0) {
+      showToast(L("অনুগ্রহ করে আগে স্বাক্ষর আঁকুন।", "Please draw a signature first."));
+      return;
+    }
+
+    // Find bounding box
+    let minX = canvas.width, minY = canvas.height, maxX = 0, maxY = 0;
+    let hasPoints = false;
+    strokes.forEach(s => {
+      s.points.forEach(p => {
+        hasPoints = true;
+        if (p.x < minX) minX = p.x;
+        if (p.y < minY) minY = p.y;
+        if (p.x > maxX) maxX = p.x;
+        if (p.y > maxY) maxY = p.y;
+      });
+    });
+
+    if (!hasPoints) return;
+    const pad = 12;
+    minX = Math.max(0, minX - pad);
+    minY = Math.max(0, minY - pad);
+    maxX = Math.min(canvas.width, maxX + pad);
+    maxY = Math.min(canvas.height, maxY + pad);
+    const boxW = Math.max(1, maxX - minX);
+    const boxH = Math.max(1, maxY - minY);
+
+    const outCanvas = document.createElement("canvas");
+    outCanvas.width = targetWidth;
+    outCanvas.height = targetHeight;
+    const outCtx = outCanvas.getContext("2d");
+
+    const bgType = $("#sigBg").value;
+    if (bgType === "white" || isGovt) {
+      outCtx.fillStyle = "#ffffff";
+      outCtx.fillRect(0, 0, targetWidth, targetHeight);
+    }
+
+    const scale = Math.min((targetWidth - 10) / boxW, (targetHeight - 10) / boxH);
+    const drawW = boxW * scale;
+    const drawH = boxH * scale;
+    const offsetX = (targetWidth - drawW) / 2;
+    const offsetY = (targetHeight - drawH) / 2;
+
+    outCtx.drawImage(canvas, minX, minY, boxW, boxH, offsetX, offsetY, drawW, drawH);
+
+    outCanvas.toBlob(blob => {
+      if (!blob) return;
+      const sizeKb = (blob.size / 1024).toFixed(1);
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(url), 2000);
+
+      const statusPill = isGovt
+        ? '<span class="status-pill status-live" style="background:#0f6b5d;color:#fff;padding:3px 8px;border-radius:4px;font-size:12px;">' + L("✓ সরকারি চাকরির শর্ত পূরণ (< ৬০ KB)", "✓ BD Govt Spec Met (< 60 KB)") + '</span>'
+        : '<span class="status-pill status-live" style="background:#0f6b5d;color:#fff;padding:3px 8px;border-radius:4px;font-size:12px;">' + L("✓ প্রস্তুত", "✓ Ready") + '</span>';
+
+      outputSet(
+        '<div style="text-align:center;padding:12px;">' +
+          '<div style="display:inline-block;padding:8px;background:' + (bgType === "white" ? "#fff" : "repeating-conic-gradient(#eee 0% 25%, transparent 0% 50%) 50% / 16px 16px") + ';border:1px solid var(--border);border-radius:6px;margin-bottom:12px;">' +
+            '<img src="' + url + '" style="max-width:100%;height:auto;display:block;" alt="Signature Preview">' +
+          '</div>' +
+          '<div style="margin-bottom:8px;">' + statusPill + '</div>' +
+          '<div class="metric-row" style="display:flex;justify-content:center;gap:16px;font-size:13px;color:var(--text);margin-top:8px;">' +
+            '<div><strong>' + L("ডাইমেনশন: ", "Dimensions: ") + '</strong>' + targetWidth + ' × ' + targetHeight + ' px</div>' +
+            '<div><strong>' + L("ফাইল সাইজ: ", "File size: ") + '</strong>' + sizeKb + ' KB</div>' +
+          '</div>' +
+          '<p class="micro-note" style="margin-top:10px;">' + L("ফাইলটি ডাউনলোড হয়েছে। প্রয়োজনে আবার নতুন সাইজে ডাউনলোড করতে পারেন।", "File downloaded. You can re-download in another size if needed.") + '</p>' +
+        '</div>'
+      );
+    }, "image/png");
+  }
+
+  $("#sigDownloadGovt").addEventListener("click", () => {
+    exportSignature(300, 80, "signature_300x80.png", true);
+  });
+
+  $("#sigDownloadCustom").addEventListener("click", () => {
+    const preset = $("#sigPreset").value;
+    let w = 600, h = 200;
+    if (preset === "govt") { w = 300; h = 80; }
+    else if (preset === "bank") { w = 400; h = 150; }
+    exportSignature(w, h, "signature_" + w + "x" + h + ".png", false);
+  });
+}
+
+// ==========================================
+// TOOL 102: ZAKAT CALCULATOR
+// ==========================================
+function renderZakatCalculator(intro) {
+  return workspace(
+    intro +
+    '<div class="tool-form">' +
+      '<div class="field-row">' +
+        '<label class="field"><span>' + L("নিসাব নির্ধারণের ভিত্তি", "Nisab standard") + '</span>' +
+          '<select id="zakatNisabStandard">' +
+            '<option value="silver" selected>' + L("রূপার নিসাব (৫২.৫ তোলা / ৬১২.৩৬ গ্রাম) - ফুকাহাদের পরামর্শ", "Silver Nisab (52.5 Tola / 612.36g) - Recommended") + '</option>' +
+            '<option value="gold">' + L("স্বর্ণের নিসাব (৭.৫ তোলা / ৮৭.৪৮ গ্রাম)", "Gold Nisab (7.5 Tola / 87.48g)") + '</option>' +
+          '</select>' +
+        '</label>' +
+      '</div>' +
+      '<div class="field-row">' +
+        field("zakatSilverRate", L("১ ভরি/তোলা রূপার দাম (৳)", "1 Tola Silver rate (BDT)"), "text", "2000", 'inputmode="numeric"') +
+        field("zakatGoldRate", L("১ ভরি/তোলা স্বর্ণের দাম (৳)", "1 Tola Gold rate (BDT)"), "text", "125000", 'inputmode="numeric"') +
+      '</div>' +
+      '<div style="font-weight:600;margin:12px 0 6px;color:var(--text);font-size:14px;">' + L("সম্পদের বিবরণ (যা ১ বছর সংরক্ষিত ছিল)", "Zakatable Assets (held for 1 lunar year)") + '</div>' +
+      '<div class="field-row">' +
+        field("zakatCash", L("নগদ টাকা ও ব্যাংক ব্যালেন্স (৳)", "Cash in hand & bank balance (BDT)"), "text", "0", 'inputmode="numeric"') +
+        field("zakatGoldValue", L("স্বর্ণ ও রূপার বাজারমূল্য (৳)", "Gold & silver value (BDT)"), "text", "0", 'inputmode="numeric"') +
+      '</div>' +
+      '<div class="field-row">' +
+        field("zakatBusinessStock", L("ব্যবসায়িক পণ্য ও মজুদ মাল (৳)", "Business inventory & stock (BDT)"), "text", "0", 'inputmode="numeric"') +
+        field("zakatInvestments", L("শেয়ার, মিউচুয়াল ফান্ড ও সঞ্চয়পত্র (৳)", "Shares, mutual funds & DPS (BDT)"), "text", "0", 'inputmode="numeric"') +
+      '</div>' +
+      '<div class="field-row">' +
+        field("zakatReceivables", L("ফেরতযোগ্য ঋণ ও পাওনা টাকা (৳)", "Receivables / loans given to others (BDT)"), "text", "0", 'inputmode="numeric"') +
+        field("zakatOtherAssets", L("অন্যান্য যাকাতযোগ্য সম্পদ (৳)", "Other liquid assets (BDT)"), "text", "0", 'inputmode="numeric"') +
+      '</div>' +
+      '<div style="font-weight:600;margin:12px 0 6px;color:var(--text);font-size:14px;">' + L("কর্তনযোগ্য ঋণ ও দেনা", "Deductible Liabilities & Debts") + '</div>' +
+      '<div class="field-row">' +
+        field("zakatDebts", L("জরুরি পরিশোধযোগ্য ঋণ (৳)", "Immediate debts payable (BDT)"), "text", "0", 'inputmode="numeric"') +
+        field("zakatBills", L("বকেয়া বিল ও কর্মচারীদের বেতন (৳)", "Due bills & unpaid wages (BDT)"), "text", "0", 'inputmode="numeric"') +
+      '</div>' +
+      '<div class="action-row"><button class="tool-button accent" id="runZakat" type="button">' + L("যাকাত হিসাব করুন", "Calculate Zakat") + '</button></div>' +
+      localNote() +
+    '</div>',
+    L("যাকাতের হিসাব ও বিবরণ", "Zakat Calculation Summary"),
+    L("সম্পদ ও ঋণের তথ্য দিয়ে 'যাকাত হিসাব করুন' বোতামে চাপুন।", "Enter your asset and debt amounts to calculate your Zakat.")
+  );
+}
+
+function bindZakatCalculator() {
+  const btn = $("#runZakat");
+  if (!btn) return;
+
+  function parseVal(id) {
+    const el = $("#" + id);
+    if (!el) return 0;
+    const v = String(el.value || "").replace(/[^0-9.]/g, "");
+    return parseFloat(v) || 0;
+  }
+
+  function fmtMoney(num) {
+    return displayNumber(Math.round(num).toLocaleString("en-US")) + " ৳";
+  }
+
+  btn.addEventListener("click", () => {
+    const standard = $("#zakatNisabStandard").value;
+    const silverRate = parseVal("zakatSilverRate") || 2000;
+    const goldRate = parseVal("zakatGoldRate") || 125000;
+
+    const nisabThreshold = standard === "silver" ? (silverRate * 52.5) : (goldRate * 7.5);
+    const standardName = standard === "silver"
+      ? L("রূপার নিসাব (৫২.৫ তোলা × " + silverRate + " ৳)", "Silver Nisab (52.5 Tola @ " + silverRate + " BDT)")
+      : L("স্বর্ণের নিসাব (৭.৫ তোলা × " + goldRate + " ৳)", "Gold Nisab (7.5 Tola @ " + goldRate + " BDT)");
+
+    const cash = parseVal("zakatCash");
+    const goldVal = parseVal("zakatGoldValue");
+    const stock = parseVal("zakatBusinessStock");
+    const invest = parseVal("zakatInvestments");
+    const receivables = parseVal("zakatReceivables");
+    const other = parseVal("zakatOtherAssets");
+
+    const debts = parseVal("zakatDebts");
+    const bills = parseVal("zakatBills");
+
+    const totalAssets = cash + goldVal + stock + invest + receivables + other;
+    const totalLiabilities = debts + bills;
+    const netWealth = Math.max(0, totalAssets - totalLiabilities);
+
+    const isEligible = netWealth >= nisabThreshold && netWealth > 0;
+    const zakatPayable = isEligible ? Math.round(netWealth * 0.025) : 0;
+
+    const statusBadge = isEligible
+      ? '<span style="background:#0f6b5d;color:#fff;padding:4px 10px;border-radius:20px;font-size:13px;font-weight:600;">' + L("✓ আপনার উপর যাকাত ফরজ হয়েছে", "✓ Zakat is Obligatory") + '</span>'
+      : '<span style="background:#c9942d;color:#fff;padding:4px 10px;border-radius:20px;font-size:13px;font-weight:600;">' + L("নিসাব সীমার নিচে (যাকাত ফরজ নয়)", "Below Nisab Threshold (Not Obligatory)") + '</span>';
+
+    outputSet(
+      '<div style="padding:10px 0;">' +
+        '<div style="text-align:center;margin-bottom:16px;">' +
+          '<div style="margin-bottom:8px;">' + statusBadge + '</div>' +
+          '<div style="font-size:13px;color:var(--text-soft);margin-bottom:6px;">' + L("প্রদেয় যাকাত (২.৫% বা ১/৪০ অংশ)", "Zakat Payable (2.5% / 40th part)") + '</div>' +
+          '<div style="font-size:32px;font-weight:700;color:var(--accent,#0f6b5d);line-height:1.2;">' + fmtMoney(zakatPayable) + '</div>' +
+        '</div>' +
+        '<table style="width:100%;border-collapse:collapse;font-size:13px;margin-top:12px;">' +
+          '<tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 0;color:var(--text-soft);">' + L("মোট যাকাতযোগ্য সম্পদ:", "Gross Zakatable Assets:") + '</td><td style="padding:8px 0;text-align:right;font-weight:600;">' + fmtMoney(totalAssets) + '</td></tr>' +
+          '<tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 0;color:var(--text-soft);">' + L("মোট প্রদেয় ঋণ ও দেনা:", "Total Deductible Debts:") + '</td><td style="padding:8px 0;text-align:right;font-weight:600;">- ' + fmtMoney(totalLiabilities) + '</td></tr>' +
+          '<tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 0;font-weight:600;">' + L("নিট যাকাতযোগ্য সম্পদ:", "Net Zakatable Wealth:") + '</td><td style="padding:8px 0;text-align:right;font-weight:700;color:var(--accent,#0f6b5d);">' + fmtMoney(netWealth) + '</td></tr>' +
+          '<tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 0;color:var(--text-soft);">' + L("নিসাব মানদণ্ড:", "Nisab Standard:") + '</td><td style="padding:8px 0;text-align:right;">' + standardName + '</td></tr>' +
+          '<tr><td style="padding:8px 0;color:var(--text-soft);">' + L("নিসাব সীমা:", "Nisab Threshold:") + '</td><td style="padding:8px 0;text-align:right;font-weight:600;">' + fmtMoney(nisabThreshold) + '</td></tr>' +
+        '</table>' +
+        '<div style="margin-top:16px;text-align:center;">' +
+          '<button class="tool-button secondary" id="copyZakatReport" type="button">' + L("বিবরণ কপি করুন", "Copy Summary") + '</button>' +
+        '</div>' +
+      '</div>'
+    );
+
+    const copyBtn = $("#copyZakatReport");
+    if (copyBtn) {
+      copyBtn.addEventListener("click", () => {
+        const text = L(
+          "টুলবাড়ি যাকাত হিসাব বিবরণ:\n" +
+          "মোট সম্পদ: " + totalAssets + " ৳\n" +
+          "কর্তনযোগ্য ঋণ: " + totalLiabilities + " ৳\n" +
+          "নিট সম্পদ: " + netWealth + " ৳\n" +
+          "নিসাব সীমা: " + nisabThreshold + " ৳\n" +
+          "প্রদেয় যাকাত (২.৫%): " + zakatPayable + " ৳",
+          "ToolBari Zakat Summary:\n" +
+          "Gross Assets: " + totalAssets + " BDT\n" +
+          "Liabilities: " + totalLiabilities + " BDT\n" +
+          "Net Wealth: " + netWealth + " BDT\n" +
+          "Nisab Threshold: " + nisabThreshold + " BDT\n" +
+          "Zakat Payable (2.5%): " + zakatPayable + " BDT"
+        );
+        navigator.clipboard.writeText(text).then(() => showToast(t("copied")));
+      });
+    }
+  });
+}
+
+// ==========================================
+// TOOL 103: INCOME TAX CALCULATOR (BANGLADESH)
+// ==========================================
+function renderIncomeTax(intro) {
+  return workspace(
+    intro +
+    '<div class="tool-form">' +
+      '<div class="field-row">' +
+        '<label class="field"><span>' + L("করদাতার ক্যাটাগরি", "Taxpayer category") + '</span>' +
+          '<select id="taxCategory">' +
+            '<option value="general" selected>' + L("সাধারণ পুরুষ করদাতা (করমুক্ত: ৩,৫০,০০০ ৳)", "General Male Taxpayer (Exempt: 350,000 BDT)") + '</option>' +
+            '<option value="female">' + L("মহিলা এবং ৬৫+ বয়স্ক করদাতা (করমুক্ত: ৪,০০,০০০ ৳)", "Female & Elderly 65+ (Exempt: 400,000 BDT)") + '</option>' +
+            '<option value="disabled">' + L("তৃতীয় লিঙ্গ / প্রতিবন্ধী করদাতা (করমুক্ত: ৪,৭৫,০০০ ৳)", "Third Gender / Disabled (Exempt: 475,000 BDT)") + '</option>' +
+            '<option value="freedom_fighter">' + L("গেজেটভুক্ত যুদ্ধাহত বীর মুক্তিযোদ্ধা (করমুক্ত: ৫,০০,০০০ ৳)", "Gazetted War-wounded Fighter (Exempt: 500,000 BDT)") + '</option>' +
+          '</select>' +
+        '</label>' +
+        '<label class="field"><span>' + L("করদাতার এলাকা (ন্যূনতম করের জন্য)", "Location / Tax jurisdiction") + '</span>' +
+          '<select id="taxLocation">' +
+            '<option value="dhaka_ctg" selected>' + L("ঢাকা ও চট্টগ্রাম সিটি কর্পোরেশন (ন্যূনতম ৫,০০০ ৳)", "Dhaka & Chittagong City Corp (Min 5,000 BDT)") + '</option>' +
+            '<option value="other_city">' + L("অন্যান্য সিটি কর্পোরেশন (ন্যূনতম ৪,০০০ ৳)", "Other City Corporations (Min 4,000 BDT)") + '</option>' +
+            '<option value="non_city">' + L("সিটি কর্পোরেশনের বাইরে / পৌরসভা (ন্যূনতম ৩,০০০ ৳)", "Outside City Corp / Municipalities (Min 3,000 BDT)") + '</option>' +
+          '</select>' +
+        '</label>' +
+      '</div>' +
+      '<div class="field-row">' +
+        '<label class="check-option" style="margin:6px 0 10px;">' +
+          '<input id="taxDisabledChild" type="checkbox">' +
+          '<span>' + L("প্রতিবন্ধী সন্তানের পিতামাতা বা আইনগত অভিভাবক (অতিরিক্ত ৫০,০০০ ৳ ছাড়)", "Parent/legal guardian of disabled child (+50,000 BDT exemption)") + '</span>' +
+        '</label>' +
+      '</div>' +
+      '<div class="field-row">' +
+        field("taxAnnualIncome", L("বাৎসরিক মোট করযোগ্য আয় (৳)", "Annual taxable income (BDT)"), "text", "650000", 'inputmode="numeric"') +
+        field("taxInvestment", L("অনুমোদিত খাতে বিনিয়োগ (সঞ্চয়পত্র, ডিপিএস, শেয়ার) (৳)", "Allowable investment for rebate (BDT)"), "text", "100000", 'inputmode="numeric"') +
+      '</div>' +
+      '<div class="action-row"><button class="tool-button accent" id="runTax" type="button">' + L("আয়কর হিসাব করুন", "Calculate Income Tax") + '</button></div>' +
+      localNote() +
+    '</div>',
+    L("আয়করের হিসাব ও স্ল্যাব বিবরণ", "Income Tax Summary & Slabs"),
+    L("আয় ও বিনিয়োগের তথ্য দিয়ে 'আয়কর হিসাব করুন' বোতাম চাপুন।", "Enter income details to see the progressive slab breakdown.")
+  );
+}
+
+function bindIncomeTax() {
+  const btn = $("#runTax");
+  if (!btn) return;
+
+  function parseVal(id) {
+    const el = $("#" + id);
+    if (!el) return 0;
+    const v = String(el.value || "").replace(/[^0-9.]/g, "");
+    return parseFloat(v) || 0;
+  }
+
+  function fmtMoney(num) {
+    return displayNumber(Math.round(num).toLocaleString("en-US")) + " ৳";
+  }
+
+  btn.addEventListener("click", () => {
+    const category = $("#taxCategory").value;
+    const location = $("#taxLocation").value;
+    const hasDisabledChild = $("#taxDisabledChild") && $("#taxDisabledChild").checked;
+    const income = parseVal("taxAnnualIncome");
+    const investment = parseVal("taxInvestment");
+
+    let exemptLimit = 350000;
+    if (category === "female") exemptLimit = 400000;
+    else if (category === "disabled") exemptLimit = 475000;
+    else if (category === "freedom_fighter") exemptLimit = 500000;
+
+    if (hasDisabledChild) exemptLimit += 50000;
+
+    let remaining = income;
+    const slabs = [];
+    let grossTax = 0;
+
+    // 1st Slab: 0%
+    const slab1Taxable = Math.min(remaining, exemptLimit);
+    slabs.push({ name: L("প্রথম করমুক্ত সীমা (" + (exemptLimit / 1000) + " হাজার)", "Initial Exemption (" + (exemptLimit / 1000) + "k)"), taxable: slab1Taxable, rate: "0%", tax: 0 });
+    remaining = Math.max(0, remaining - exemptLimit);
+
+    // 2nd Slab: Next 100,000 @ 5%
+    if (remaining > 0) {
+      const sTaxable = Math.min(remaining, 100000);
+      const sTax = Math.round(sTaxable * 0.05);
+      grossTax += sTax;
+      slabs.push({ name: L("পরবর্তী ১,০০,০০০ ৳", "Next 100,000 BDT"), taxable: sTaxable, rate: "5%", tax: sTax });
+      remaining = Math.max(0, remaining - 100000);
+    }
+
+    // 3rd Slab: Next 400,000 @ 10%
+    if (remaining > 0) {
+      const sTaxable = Math.min(remaining, 400000);
+      const sTax = Math.round(sTaxable * 0.10);
+      grossTax += sTax;
+      slabs.push({ name: L("পরবর্তী ৪,০০,০০০ ৳", "Next 400,000 BDT"), taxable: sTaxable, rate: "10%", tax: sTax });
+      remaining = Math.max(0, remaining - 400000);
+    }
+
+    // 4th Slab: Next 500,000 @ 15%
+    if (remaining > 0) {
+      const sTaxable = Math.min(remaining, 500000);
+      const sTax = Math.round(sTaxable * 0.15);
+      grossTax += sTax;
+      slabs.push({ name: L("পরবর্তী ৫,০০,০০০ ৳", "Next 500,000 BDT"), taxable: sTaxable, rate: "15%", tax: sTax });
+      remaining = Math.max(0, remaining - 500000);
+    }
+
+    // 5th Slab: Next 500,000 @ 20%
+    if (remaining > 0) {
+      const sTaxable = Math.min(remaining, 500000);
+      const sTax = Math.round(sTaxable * 0.20);
+      grossTax += sTax;
+      slabs.push({ name: L("পরবর্তী ৫,০০,০০০ ৳", "Next 500,000 BDT"), taxable: sTaxable, rate: "20%", tax: sTax });
+      remaining = Math.max(0, remaining - 500000);
+    }
+
+    // 6th Slab: Balance @ 25%
+    if (remaining > 0) {
+      const sTax = Math.round(remaining * 0.25);
+      grossTax += sTax;
+      slabs.push({ name: L("অবশিষ্ট আয়ের ওপর", "Balance Income"), taxable: remaining, rate: "25%", tax: sTax });
+      remaining = 0;
+    }
+
+    // Investment Rebate calculation (15% of investment, max 3% of income or 10,00,000)
+    let allowableRebate = 0;
+    if (investment > 0 && grossTax > 0) {
+      allowableRebate = Math.min(investment * 0.15, income * 0.03, 1000000);
+      allowableRebate = Math.min(allowableRebate, grossTax);
+    }
+    const taxAfterRebate = Math.max(0, grossTax - allowableRebate);
+
+    // Minimum Tax rules
+    let minTax = 5000;
+    if (location === "other_city") minTax = 4000;
+    else if (location === "non_city") minTax = 3000;
+
+    let finalTax = 0;
+    let minTaxApplied = false;
+
+    if (income > exemptLimit) {
+      if (taxAfterRebate > 0 && taxAfterRebate < minTax) {
+        finalTax = minTax;
+        minTaxApplied = true;
+      } else {
+        finalTax = taxAfterRebate;
+      }
+    } else {
+      finalTax = 0;
+    }
+
+    const monthlyTds = Math.round(finalTax / 12);
+    const effectiveRate = income > 0 ? ((finalTax / income) * 100).toFixed(2) : "0.00";
+
+    const rowsHtml = slabs.map(s =>
+      '<tr style="border-bottom:1px solid var(--border);"><td style="padding:6px 0;">' + s.name + '</td><td style="padding:6px 0;text-align:right;">' + fmtMoney(s.taxable) + '</td><td style="padding:6px 0;text-align:center;">' + s.rate + '</td><td style="padding:6px 0;text-align:right;font-weight:600;">' + fmtMoney(s.tax) + '</td></tr>'
+    ).join("");
+
+    outputSet(
+      '<div style="padding:10px 0;">' +
+        '<div style="text-align:center;margin-bottom:16px;">' +
+          '<div style="font-size:13px;color:var(--text-soft);margin-bottom:4px;">' + L("চূড়ান্ত প্রদেয় বাৎসরিক আয়কর", "Final Annual Income Tax Payable") + '</div>' +
+          '<div style="font-size:32px;font-weight:700;color:var(--accent,#0f6b5d);line-height:1.2;">' + fmtMoney(finalTax) + '</div>' +
+          (minTaxApplied ? '<div style="margin-top:6px;"><span style="background:#c9942d;color:#fff;padding:2px 8px;border-radius:4px;font-size:11px;">' + L("ন্যূনতম কর শর্ত প্রযোজ্য", "Minimum tax applies") + '</span></div>' : '') +
+          '<div style="margin-top:8px;font-size:12px;color:var(--text-soft);">' + L("মাসিক সম্ভাব্য TDS কর্তন: ", "Monthly Estimated TDS: ") + '<strong>' + fmtMoney(monthlyTds) + '</strong> | ' + L("কার্যকর কর হার: ", "Effective Rate: ") + '<strong>' + effectiveRate + '%</strong></div>' +
+        '</div>' +
+        '<table style="width:100%;border-collapse:collapse;font-size:12px;margin-top:8px;">' +
+          '<thead><tr style="border-bottom:1px solid var(--border);color:var(--text-soft);text-align:left;"><th style="padding:4px 0;">' + L("স্ল্যাব বিবরণ", "Slab") + '</th><th style="padding:4px 0;text-align:right;">' + L("করযোগ্য আয়", "Taxable") + '</th><th style="padding:4px 0;text-align:center;">' + L("হার", "Rate") + '</th><th style="padding:4px 0;text-align:right;">' + L("কর", "Tax") + '</th></tr></thead>' +
+          '<tbody>' + rowsHtml + '</tbody>' +
+        '</table>' +
+        '<table style="width:100%;border-collapse:collapse;font-size:13px;margin-top:12px;border-top:1px dashed var(--border);">' +
+          '<tr style="border-bottom:1px solid var(--border);"><td style="padding:6px 0;color:var(--text-soft);">' + L("মোট গ্রস প্রদেয় কর:", "Total Gross Tax:") + '</td><td style="padding:6px 0;text-align:right;font-weight:600;">' + fmtMoney(grossTax) + '</td></tr>' +
+          '<tr style="border-bottom:1px solid var(--border);"><td style="padding:6px 0;color:var(--text-soft);">' + L("বিনিয়োগ রেয়াত (১৫%):", "Investment Rebate (15%):") + '</td><td style="padding:6px 0;text-align:right;font-weight:600;color:#0f6b5d;">- ' + fmtMoney(allowableRebate) + '</td></tr>' +
+          '<tr style="border-bottom:1px solid var(--border);"><td style="padding:6px 0;color:var(--text-soft);">' + L("প্রযোজ্য ন্যূনতম কর:", "Applicable Minimum Tax:") + '</td><td style="padding:6px 0;text-align:right;font-weight:600;">' + fmtMoney(minTax) + '</td></tr>' +
+        '</table>' +
+        '<div style="margin-top:16px;text-align:center;">' +
+          '<button class="tool-button secondary" id="copyTaxReport" type="button">' + L("রিপোর্ট কপি করুন", "Copy Tax Report") + '</button>' +
+        '</div>' +
+      '</div>'
+    );
+
+    const copyBtn = $("#copyTaxReport");
+    if (copyBtn) {
+      copyBtn.addEventListener("click", () => {
+        const text = L(
+          "টুলবাড়ি বাংলাদেশ আয়কর রিপোর্ট:\n" +
+          "করযোগ্য আয়: " + income + " ৳\n" +
+          "করমুক্ত সীমা: " + exemptLimit + " ৳\n" +
+          "গ্রস কর: " + grossTax + " ৳\n" +
+          "বিনিয়োগ রেয়াত: " + allowableRebate + " ৳\n" +
+          "চূড়ান্ত প্রদেয় কর: " + finalTax + " ৳\n" +
+          "মাসিক TDS: " + monthlyTds + " ৳",
+          "ToolBari BD Income Tax Report:\n" +
+          "Taxable Income: " + income + " BDT\n" +
+          "Exempt Limit: " + exemptLimit + " BDT\n" +
+          "Gross Tax: " + grossTax + " BDT\n" +
+          "Rebate: " + allowableRebate + " BDT\n" +
+          "Final Net Tax: " + finalTax + " BDT\n" +
+          "Monthly TDS: " + monthlyTds + " BDT"
+        );
+        navigator.clipboard.writeText(text).then(() => showToast(t("copied")));
+      });
+    }
+  });
+}
+
+// ==========================================
+// TOOL 104: BANGLA VOICE TYPING
+// ==========================================
+function renderVoiceTyping(intro) {
+  return workspace(
+    intro +
+    '<div class="tool-form">' +
+      '<div class="field-row">' +
+        '<label class="field"><span>' + L("ভাষার ধরন", "Spoken language") + '</span>' +
+          '<select id="voiceLang">' +
+            '<option value="bn-BD" selected>' + L("বাংলা (বাংলাদেশ) [bn-BD]", "Bangla (Bangladesh) [bn-BD]") + '</option>' +
+            '<option value="en-US">' + L("English (United States) [en-US]", "English (United States) [en-US]") + '</option>' +
+          '</select>' +
+        '</label>' +
+        '<div style="display:flex;align-items:flex-end;margin-bottom:6px;">' +
+          '<span id="voiceBadge" style="display:inline-block;padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600;background:rgba(128,128,128,0.15);color:var(--text);">' + L("মাইক্রোফোন বন্ধ", "Microphone Off") + '</span>' +
+        '</div>' +
+      '</div>' +
+      '<div class="action-row" style="margin-bottom:12px;">' +
+        '<button class="tool-button accent" id="voiceToggle" type="button" style="padding:10px 22px;font-size:15px;"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:8px"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg><span id="voiceBtnText">' + L("ভয়েস টাইপিং শুরু করুন", "Start Voice Typing") + '</span></button>' +
+      '</div>' +
+      '<div style="margin-bottom:10px;">' +
+        '<span style="font-size:12px;color:var(--text-soft);margin-right:8px;">' + L("দ্রুত বিরামচিহ্ন বসান:", "Quick punctuation:") + '</span>' +
+        '<span class="punctuation-palette" style="display:inline-flex;gap:6px;flex-wrap:wrap;">' +
+          '<button class="tool-button secondary punc-btn" type="button" data-punc="।">। (দাঁড়ি)</button>' +
+          '<button class="tool-button secondary punc-btn" type="button" data-punc=",">, (কমা)</button>' +
+          '<button class="tool-button secondary punc-btn" type="button" data-punc="?">? (প্রশ্ন)</button>' +
+          '<button class="tool-button secondary punc-btn" type="button" data-punc="!">! (বিস্ময়)</button>' +
+          '<button class="tool-button secondary punc-btn" type="button" data-punc="\n">↵ (নতুন লাইন)</button>' +
+        '</span>' +
+      '</div>' +
+      textareaField("voiceInput", L("ভয়েসে টাইপকৃত লেখা", "Dictated text"), L("মাইক্রোফোন চালু করে মুখে কথা বলুন, এখানে স্বয়ংক্রিয়ভাবে লেখা হবে…", "Click Start and speak into your microphone to type…"), 'rows="8"') +
+      '<div style="display:flex;justify-content:space-between;align-items:center;margin:6px 0 12px;font-size:12px;color:var(--text-soft);">' +
+        '<span id="voiceStats">' + L("অক্ষর: ০ | শব্দ: ০", "Characters: 0 | Words: 0") + '</span>' +
+        '<div style="display:inline-flex;gap:6px;">' +
+          '<button class="tool-button secondary" id="voiceCopy" type="button">' + L("কপি করুন", "Copy") + '</button>' +
+          '<button class="tool-button secondary" id="voiceDownload" type="button">' + L("ডাউনলোড (.txt)", "Download .txt") + '</button>' +
+          '<button class="tool-button secondary" id="voiceClear" type="button">' + L("মুছুন", "Clear") + '</button>' +
+        '</div>' +
+      '</div>' +
+      localNote() +
+    '</div>',
+    L("ভয়েস টাইপিং স্ট্যাটাস", "Voice Typing Status"),
+    L("মাইক্রোফোন চালু করে স্পষ্ট ও স্বাভাবিক গতিতে কথা বলুন। ব্রাউজার কোনো অডিও রেকর্ড করে রাখে না।", "Speak clearly after starting voice typing. Audio is transcribed locally in your browser.")
+  );
+}
+
+function bindVoiceTyping() {
+  const toggleBtn = $("#voiceToggle");
+  const voiceInput = $("#voiceInput");
+  const badge = $("#voiceBadge");
+  const btnText = $("#voiceBtnText");
+  const stats = $("#voiceStats");
+  if (!toggleBtn || !voiceInput) return;
+
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  let recognition = null;
+  let isListening = false;
+
+  function updateStats() {
+    const text = voiceInput.value;
+    const chars = text.length;
+    const words = (text.trim().match(/\S+/g) || []).length;
+    if (stats) stats.textContent = L("অক্ষর: " + displayNumber(chars) + " | শব্দ: " + displayNumber(words), "Characters: " + chars + " | Words: " + words);
+  }
+
+  voiceInput.addEventListener("input", updateStats);
+
+  Array.from(document.querySelectorAll(".punc-btn")).forEach(btn => {
+    btn.addEventListener("click", () => {
+      const punc = btn.dataset.punc;
+      const start = voiceInput.selectionStart || voiceInput.value.length;
+      const end = voiceInput.selectionEnd || voiceInput.value.length;
+      voiceInput.value = voiceInput.value.slice(0, start) + punc + (punc === "\n" ? "" : " ") + voiceInput.value.slice(end);
+      voiceInput.focus();
+      updateStats();
+    });
+  });
+
+  $("#voiceCopy").addEventListener("click", () => {
+    if (!voiceInput.value) return showToast(L("কপি করার মতো লেখা নেই।", "No text to copy."));
+    navigator.clipboard.writeText(voiceInput.value).then(() => showToast(t("copied")));
+  });
+
+  $("#voiceClear").addEventListener("click", () => {
+    voiceInput.value = "";
+    updateStats();
+  });
+
+  $("#voiceDownload").addEventListener("click", () => {
+    if (!voiceInput.value) return showToast(L("ডাউনলোড করার মতো লেখা নেই।", "No text to download."));
+    const blob = new Blob([voiceInput.value], { type: "text/plain;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "voice_typing_" + Date.now() + ".txt";
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(url), 2000);
+  });
+
+  if (!SpeechRecognition) {
+    toggleBtn.disabled = true;
+    if (btnText) btnText.textContent = L("ব্রাউজার সমর্থিত নয়", "Not Supported in Browser");
+    outputSet(
+      '<div style="padding:12px;background:rgba(188,61,38,0.1);border-radius:8px;border:1px solid #bc3d26;color:var(--text);">' +
+        '<strong>' + L("Web Speech API পাওয়া যায়নি", "Speech API Not Available") + '</strong>' +
+        '<p style="margin-top:6px;font-size:13px;">' + L("আপনার বর্তমান ব্রাউজারে স্পিচ রিকগনিশন সমর্থন নেই। গুগল ক্রোম (Google Chrome), এজ (Microsoft Edge) বা সাফারি (Safari) ব্যবহার করুন।", "Your current browser does not support speech recognition. Please use Google Chrome, Microsoft Edge or Safari.") + '</p>' +
+      '</div>'
+    );
+    return;
+  }
+
+  recognition = new SpeechRecognition();
+  recognition.continuous = true;
+  recognition.interimResults = true;
+
+  recognition.onstart = () => {
+    isListening = true;
+    if (badge) {
+      badge.textContent = L("● কথা শুনছি...", "● Listening...");
+      badge.style.background = "#bc3d26";
+      badge.style.color = "#fff";
+    }
+    if (btnText) btnText.textContent = L("ভয়েস টাইপিং বন্ধ করুন", "Stop Voice Typing");
+    toggleBtn.classList.remove("accent");
+    toggleBtn.classList.add("danger");
+    outputSet('<p style="color:#0f6b5d;font-weight:600;">' + L("মাইক্রোফোন সক্রিয়। কথা বললে নিচে স্বয়ংক্রিয়ভাবে লেখা টাইপ হবে।", "Microphone active. Speak to transcribe text.") + '</p>');
+  };
+
+  recognition.onresult = (event) => {
+    let interim = "";
+    for (let i = event.resultIndex; i < event.results.length; i++) {
+      const transcript = event.results[i][0].transcript;
+      if (event.results[i].isFinal) {
+        voiceInput.value += (voiceInput.value ? " " : "") + transcript;
+      } else {
+        interim += transcript;
+      }
+    }
+    updateStats();
+    if (interim) {
+      outputSet('<div style="font-size:13px;color:var(--text-soft);">' + L("লাইভ শনাক্তকরণ: ", "Live hearing: ") + '<em style="color:var(--text);">' + escapeHtml(interim) + '</em></div>');
+    }
+  };
+
+  recognition.onerror = (event) => {
+    if (event.error === "no-speech") return;
+    showToast(L("ভয়েস ত্রুটি: ", "Speech error: ") + event.error);
+    stopListening();
+  };
+
+  recognition.onend = () => {
+    if (isListening) stopListening();
+  };
+
+  function stopListening() {
+    isListening = false;
+    try { recognition.stop(); } catch(e){}
+    if (badge) {
+      badge.textContent = L("মাইক্রোফোন বন্ধ", "Microphone Off");
+      badge.style.background = "rgba(128,128,128,0.15)";
+      badge.style.color = "var(--text)";
+    }
+    if (btnText) btnText.textContent = L("ভয়েস টাইপিং শুরু করুন", "Start Voice Typing");
+    toggleBtn.classList.remove("danger");
+    toggleBtn.classList.add("accent");
+  }
+
+  toggleBtn.addEventListener("click", () => {
+    if (isListening) {
+      stopListening();
+    } else {
+      const lang = $("#voiceLang").value || "bn-BD";
+      recognition.lang = lang;
+      try {
+        recognition.start();
+      } catch(e) {
+        stopListening();
+      }
+    }
+  });
+}
+
+// ==========================================
+// TOOL 105: EXIF INSPECTOR & STRIPPER
+// ==========================================
+function parseExifBuffer(buffer) {
+  const view = new DataView(buffer);
+  if (view.byteLength < 4) return null;
+  if (view.getUint16(0, false) !== 0xffd8) return null; // JPEG only
+
+  let offset = 2;
+  const length = view.byteLength;
+
+  while (offset < length) {
+    if (view.getUint8(offset) !== 0xff) return null;
+    const marker = view.getUint8(offset + 1);
+    if (marker === 0xffe1) {
+      return parseApp1Segment(view, offset + 4);
+    }
+    offset += 2 + view.getUint16(offset + 2, false);
+  }
+  return null;
+}
+
+function parseApp1Segment(view, tiffOffset) {
+  if (
+    view.getUint8(tiffOffset) !== 0x45 ||
+    view.getUint8(tiffOffset + 1) !== 0x78 ||
+    view.getUint8(tiffOffset + 2) !== 0x69 ||
+    view.getUint8(tiffOffset + 3) !== 0x66 ||
+    view.getUint8(tiffOffset + 4) !== 0x00 ||
+    view.getUint8(tiffOffset + 5) !== 0x00
+  ) return null;
+
+  const base = tiffOffset + 6;
+  const byteOrder = view.getUint16(base, false);
+  const littleEndian = byteOrder === 0x4949;
+  if (!littleEndian && byteOrder !== 0x4d4d) return null;
+
+  const firstIfdOffset = view.getUint32(base + 4, littleEndian);
+  if (firstIfdOffset < 8) return null;
+
+  const tags = {};
+  readIfdEntries(view, base, base + firstIfdOffset, littleEndian, tags);
+
+  if (tags[0x8769]) readIfdEntries(view, base, base + tags[0x8769], littleEndian, tags);
+  if (tags[0x8825]) {
+    const gpsTags = {};
+    readIfdEntries(view, base, base + tags[0x8825], littleEndian, gpsTags);
+    tags.gps = formatGpsEntries(gpsTags);
+  }
+
+  return formatExifData(tags);
+}
+
+function readIfdEntries(view, base, ifdOffset, littleEndian, tags) {
+  if (ifdOffset + 2 > view.byteLength) return;
+  const entryCount = view.getUint16(ifdOffset, littleEndian);
+  let offset = ifdOffset + 2;
+
+  for (let i = 0; i < entryCount; i++) {
+    if (offset + 12 > view.byteLength) break;
+    const tag = view.getUint16(offset, littleEndian);
+    const type = view.getUint16(offset + 2, littleEndian);
+    const count = view.getUint32(offset + 4, littleEndian);
+    const valueOffset = offset + 8;
+
+    let dataOffset = valueOffset;
+    const size = (type === 1 || type === 2 || type === 7) ? 1 : (type === 3 || type === 8) ? 2 : (type === 4 || type === 9) ? 4 : (type === 5 || type === 10) ? 8 : 1;
+    if (type === 5 || type === 10 || count * size > 4) {
+      dataOffset = base + view.getUint32(valueOffset, littleEndian);
+    }
+
+    if (dataOffset + count * size <= view.byteLength) {
+      if (type === 2) {
+        let str = "";
+        for (let j = 0; j < count - 1; j++) str += String.fromCharCode(view.getUint8(dataOffset + j));
+        tags[tag] = str.trim();
+      } else if (type === 3) {
+        tags[tag] = count === 1 ? view.getUint16(dataOffset, littleEndian) : view.getUint16(dataOffset, littleEndian);
+      } else if (type === 4) {
+        tags[tag] = count === 1 ? view.getUint32(dataOffset, littleEndian) : view.getUint32(dataOffset, littleEndian);
+      } else if (type === 5) {
+        const num = view.getUint32(dataOffset, littleEndian);
+        const den = view.getUint32(dataOffset + 4, littleEndian);
+        tags[tag] = den ? num / den : num;
+      }
+    }
+    offset += 12;
+  }
+}
+
+function formatGpsEntries(gpsTags) {
+  if (!gpsTags[2] || !gpsTags[4]) return null;
+  const latRef = gpsTags[1] || "N";
+  const lonRef = gpsTags[3] || "E";
+  const latVal = typeof gpsTags[2] === "number" ? gpsTags[2] : null;
+  const lonVal = typeof gpsTags[4] === "number" ? gpsTags[4] : null;
+  if (latVal === null || lonVal === null) return null;
+  const lat = (latRef === "S" ? -1 : 1) * latVal;
+  const lon = (lonRef === "W" ? -1 : 1) * lonVal;
+  return {
+    latitude: lat,
+    longitude: lon,
+    formatted: lat.toFixed(6) + ", " + lon.toFixed(6)
+  };
+}
+
+function formatExifData(tags) {
+  const res = {};
+  if (tags[0x010f]) res.make = tags[0x010f];
+  if (tags[0x0110]) res.model = tags[0x0110];
+  if (tags[0x0131]) res.software = tags[0x0131];
+  if (tags[0x0132]) res.dateTime = tags[0x0132];
+  if (tags[0x9003]) res.dateTimeOriginal = tags[0x9003];
+  if (tags[0x829a]) {
+    const exp = tags[0x829a];
+    res.exposureTime = exp < 1 ? "1/" + Math.round(1 / exp) + " s" : exp + " s";
+  }
+  if (tags[0x829d]) res.fNumber = "f/" + Number(tags[0x829d]).toFixed(1);
+  if (tags[0x8827]) res.iso = tags[0x8827];
+  if (tags[0x920a]) res.focalLength = Number(tags[0x920a]).toFixed(1) + " mm";
+  if (tags[0xa434]) res.lensModel = tags[0xa434];
+  if (tags.gps) res.gps = tags.gps;
+  return res;
+}
+
+function renderExifInspector(intro) {
+  return workspace(
+    intro +
+    '<div class="tool-form">' +
+      '<label class="field"><span>' + L("ছবি বেছে নিন (JPEG / TIFF)", "Choose image (JPEG / TIFF)") + '</span>' +
+        '<input id="exifFile" type="file" accept="image/jpeg,image/jpg,image/tiff">' +
+      '</label>' +
+      '<div class="action-row" style="margin-top:10px;gap:8px;">' +
+        '<button class="tool-button accent" id="exifInspectBtn" type="button">' + L("EXIF মেটাডাটা পরীক্ষা করুন", "Inspect EXIF metadata") + '</button>' +
+        '<button class="tool-button secondary" id="exifStripBtn" type="button" style="display:none;">' + L("মেটাডাটা ও GPS ছাড়া ছবি ডাউনলোড", "Strip Metadata & Download") + '</button>' +
+      '</div>' +
+      localNote() + limitNote(25) +
+    '</div>',
+    L("ইমেজ মেটাডাটা ও GPS তথ্য", "Image Metadata & GPS Info"),
+    L("যেকোনো JPEG ছবি বেছে নিলে তার ক্যামেরা মডেল, এক্সপোজার ও অবস্থান তথ্য এখানে দেখতে পাবেন।", "Select a JPEG image to view camera tags, exposure settings and GPS coordinates.")
+  );
+}
+
+function bindExifInspector() {
+  const fileInput = $("#exifFile");
+  const inspectBtn = $("#exifInspectBtn");
+  const stripBtn = $("#exifStripBtn");
+  if (!fileInput || !inspectBtn) return;
+
+  let currentFile = null;
+
+  fileInput.addEventListener("change", () => {
+    currentFile = fileInput.files && fileInput.files[0];
+    if (currentFile && stripBtn) stripBtn.style.display = "inline-flex";
+  });
+
+  inspectBtn.addEventListener("click", () => {
+    const file = currentFile || (fileInput.files && fileInput.files[0]);
+    if (!file) return showToast(L("অনুগ্রহ করে একটি ছবি ফাইল বেছে নিন।", "Please select an image file first."));
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const buffer = e.target.result;
+      const exif = parseExifBuffer(buffer);
+      const thumbUrl = URL.createObjectURL(file);
+
+      if (!exif || Object.keys(exif).length === 0) {
+        outputSet(
+          '<div style="text-align:center;padding:12px;">' +
+            '<img src="' + thumbUrl + '" style="max-height:160px;max-width:100%;border-radius:6px;margin-bottom:12px;border:1px solid var(--border);" alt="Preview">' +
+            '<div style="margin-bottom:8px;"><span style="background:#0f6b5d;color:#fff;padding:4px 10px;border-radius:20px;font-size:13px;font-weight:600;">' + L("✓ ছবিটিতে কোনো লুকানো EXIF মেটাডাটা নেই", "✓ No hidden EXIF metadata found") + '</span></div>' +
+            '<p class="micro-note">' + L("ছবিটি নিরাপদ। এতে কোনো ক্যামেরা সিরিয়াল বা GPS অবস্থান রেকর্ড নেই।", "This image is clean of sensitive camera or GPS tags.") + '</p>' +
+          '</div>'
+        );
+        return;
+      }
+
+      let rows = "";
+      if (exif.make || exif.model) rows += '<tr style="border-bottom:1px solid var(--border);"><td style="padding:6px 0;color:var(--text-soft);">' + L("ক্যামেরা/ডিভাইস:", "Camera / Device:") + '</td><td style="padding:6px 0;text-align:right;font-weight:600;">' + escapeHtml((exif.make || "") + " " + (exif.model || "")) + '</td></tr>';
+      if (exif.lensModel) rows += '<tr style="border-bottom:1px solid var(--border);"><td style="padding:6px 0;color:var(--text-soft);">' + L("লেন্স মডেল:", "Lens Model:") + '</td><td style="padding:6px 0;text-align:right;">' + escapeHtml(exif.lensModel) + '</td></tr>';
+      if (exif.dateTimeOriginal || exif.dateTime) rows += '<tr style="border-bottom:1px solid var(--border);"><td style="padding:6px 0;color:var(--text-soft);">' + L("তোলার তারিখ ও সময়:", "Date & Time:") + '</td><td style="padding:6px 0;text-align:right;">' + escapeHtml(exif.dateTimeOriginal || exif.dateTime) + '</td></tr>';
+      if (exif.fNumber) rows += '<tr style="border-bottom:1px solid var(--border);"><td style="padding:6px 0;color:var(--text-soft);">' + L("অ্যাপারচার (Aperture):", "Aperture:") + '</td><td style="padding:6px 0;text-align:right;">' + escapeHtml(exif.fNumber) + '</td></tr>';
+      if (exif.exposureTime) rows += '<tr style="border-bottom:1px solid var(--border);"><td style="padding:6px 0;color:var(--text-soft);">' + L("শাটার স্পিড:", "Shutter Speed:") + '</td><td style="padding:6px 0;text-align:right;">' + escapeHtml(exif.exposureTime) + '</td></tr>';
+      if (exif.iso) rows += '<tr style="border-bottom:1px solid var(--border);"><td style="padding:6px 0;color:var(--text-soft);">' + L("ISO স্পিড:", "ISO:") + '</td><td style="padding:6px 0;text-align:right;">' + escapeHtml(String(exif.iso)) + '</td></tr>';
+      if (exif.focalLength) rows += '<tr style="border-bottom:1px solid var(--border);"><td style="padding:6px 0;color:var(--text-soft);">' + L("ফোকাল লেংথ:", "Focal Length:") + '</td><td style="padding:6px 0;text-align:right;">' + escapeHtml(exif.focalLength) + '</td></tr>';
+      if (exif.software) rows += '<tr style="border-bottom:1px solid var(--border);"><td style="padding:6px 0;color:var(--text-soft);">' + L("সফটওয়্যার/ফার্মওয়্যার:", "Software:") + '</td><td style="padding:6px 0;text-align:right;">' + escapeHtml(exif.software) + '</td></tr>';
+
+      let gpsHtml = "";
+      if (exif.gps) {
+        const mapsUrl = "https://www.google.com/maps?q=" + exif.gps.latitude + "," + exif.gps.longitude;
+        gpsHtml = '<div style="margin-top:14px;padding:10px;background:rgba(188,61,38,0.08);border:1px solid #bc3d26;border-radius:6px;">' +
+          '<div style="font-weight:600;color:#bc3d26;margin-bottom:4px;">⚠️ ' + L("সতর্কতা: ছবিতে নিখুঁত GPS লোকেশন রয়েছে!", "Warning: Precise GPS location found!") + '</div>' +
+          '<div style="font-size:12px;margin-bottom:6px;">' + L("অক্ষাংশ ও দ্রাঘিমাংশ: ", "Coordinates: ") + '<strong>' + exif.gps.formatted + '</strong></div>' +
+          '<a href="' + mapsUrl + '" target="_blank" rel="noopener" class="tool-button secondary" style="font-size:12px;padding:4px 10px;text-decoration:none;">' + L("Google Maps-এ ম্যাপ পিন দেখুন ↗", "View on Google Maps ↗") + '</a>' +
+        '</div>';
+      }
+
+      outputSet(
+        '<div style="padding:8px 0;">' +
+          '<div style="text-align:center;margin-bottom:12px;">' +
+            '<img src="' + thumbUrl + '" style="max-height:140px;max-width:100%;border-radius:6px;border:1px solid var(--border);" alt="Preview">' +
+          '</div>' +
+          '<table style="width:100%;border-collapse:collapse;font-size:13px;">' + rows + '</table>' +
+          gpsHtml +
+        '</div>'
+      );
+    };
+    reader.readAsArrayBuffer(file);
+  });
+
+  if (stripBtn) {
+    stripBtn.addEventListener("click", () => {
+      const file = currentFile || (fileInput.files && fileInput.files[0]);
+      if (!file) return;
+
+      const img = new Image();
+      const objUrl = URL.createObjectURL(file);
+      img.onload = () => {
+        const c = document.createElement("canvas");
+        c.width = img.naturalWidth;
+        c.height = img.naturalHeight;
+        const ctx = c.getContext("2d");
+        ctx.drawImage(img, 0, 0);
+        c.toBlob(blob => {
+          URL.revokeObjectURL(objUrl);
+          if (!blob) return;
+          const cleanUrl = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = cleanUrl;
+          a.download = "clean_" + file.name.replace(/\.[^/.]+$/, "") + ".jpg";
+          a.click();
+          setTimeout(() => URL.revokeObjectURL(cleanUrl), 2000);
+          showToast(L("মেটাডাটা ও GPS মুছে ছবি ডাউনলোড করা হয়েছে!", "Metadata & GPS stripped and saved!"));
+        }, "image/jpeg", 0.95);
+      };
+      img.src = objUrl;
+    });
+  }
 }
 
 function calculateQuickAge() {
